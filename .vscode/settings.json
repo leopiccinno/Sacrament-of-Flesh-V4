@@ -60,13 +60,13 @@
         "*.asset": "yaml",
         "*.meta": "yaml",
         "*.prefab": "yaml",
-        "*.unity": "yaml",
+        "*.unity": "yaml"
     },
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Sacrament of Flesh V4.slnx",
+    "dotnet.defaultSolution": "Sacrament-of-Flesh-V4.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }

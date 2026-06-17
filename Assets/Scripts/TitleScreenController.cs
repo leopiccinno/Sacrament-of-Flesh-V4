@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenController : MonoBehaviour
 {
-    public string gameSceneName = "TestScene";
+    public string gameSceneName = "RoomScene";
 
     public void StartGame()
     {
