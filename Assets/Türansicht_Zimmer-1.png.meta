@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7773e6f4fcb9b704eba8d367b8ed6bac
+guid: b54242744d8673c448969326fd06deb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6355524124129821454
-    second: room_light_0
+      213: 4895778163075586768
+    second: "Tu\u0308ransicht_Zimmer-1_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: room_light_0
+      name: "Tu\u0308ransicht_Zimmer-1_0"
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e030f24948b533850800000000000000
-      internalID: 6355524124129821454
+      spriteID: 0da1c35ec4c41f340800000000000000
+      internalID: 4895778163075586768
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      room_light_0: 6355524124129821454
+      "Tu\u0308ransicht_Zimmer-1_0": 4895778163075586768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

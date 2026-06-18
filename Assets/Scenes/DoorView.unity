@@ -186,7 +186,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278848011
-  m_fontColor: {r: 0.6679245, g: 0.06414045, b: 0.054190047, a: 1}
+  m_fontColor: {r: 0.04150939, g: 0.037828367, b: 0.037828367, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -802,7 +802,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1003639520}
-  - {fileID: 1328308332}
   - {fileID: 52560830}
   - {fileID: 1697814876}
   - {fileID: 1604306690}
@@ -879,15 +878,15 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: -100
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
-  m_Color: {r: 0.5613208, g: 0.5613208, b: 0.5613208, a: 1}
+  m_Sprite: {fileID: 4895778163075586768, guid: b54242744d8673c448969326fd06deb3, type: 3}
+  m_Color: {r: 0.8207547, g: 0.81301177, b: 0.81301177, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 19.2, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
 --- !u!4 &700668164
 Transform:
@@ -979,121 +978,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732443817}
   m_CullTransparentMesh: 1
---- !u!1 &778994574
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 778994576}
-  - component: {fileID: 778994575}
-  m_Layer: 0
-  m_Name: IntroDialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &778994575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778994574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f76a038390ba3743af2ce47cb84e707, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::IntroDialogueController
-  textBox: {fileID: 1604306687}
-  nameText: {fileID: 1065098609}
-  dialogueText: {fileID: 1479537607}
-  blackOverlay: {fileID: 1328308330}
-  characterName: YOU
-  dialogueLines:
-  - After a long day, you come home and close the door harder than you meant to.
-  - '*BANG*'
-  - The loud sound echoes through the small hut before dying out quickly.
-  - ...
-  - "Silence. Not the kind you\u2019re used to."
-  - Not the quiet of the night or the soft stillness of sleep.
-  - This silence... it lingers. Heavy. Pressing.
-  - ...
-  - 'You stand still for a moment, hand still resting against the door, hoping something
-
-    might
-    answer and break the tension.'
-  - Nothing does. Of course not.
-  - You let your hand drop.
-  - '*Jingle*'
-  - 'The bells of your jester cap make an ironically cheerful sound as you pull it
-    of and
-
-    toss it onto the table.'
-  - Once, they sounded so bright and alive to you...
-  - ...now they just sound dull. Like everything else.
-  - "\u201CFitting.\u201D"
-  - You step further into the room.
-  - '*CREAAAK*'
-  - 'The floorboards creak beneath your weight, louder than usual, as if they were
-
-    laughing
-    at you.'
-  - The air smells of damp wood and old straw.
-  - A faint trace of mold clings to the corners of the walls.
-  - ...
-  - You sit down on the edge of your bed.
-  - '*creak*'
-  - It groans quietly in protest.
-  - You stare down on the old wood floor, your arms supporting your body.
-  - ...
-  - Your thoughts are quiet.
-  - You start to ponder on the meaning of your life.
-  - What is the purpose now?
-  - "You can still see the king\u2019s face in your mind... Bored. Distant."
-  - A single motion with his hand and you were dismissed.
-  - Just like that.
-  - '*Huff*'
-  - No coin. No position. No place to return to tomorrow.
-  - No Purpose. Nothing Left
-  - 'Your eyes drift across the small room, searching without purpose, until they
-
-    settle
-    on the small wooden table lit by the bright moonlight.'
-  - '*Creak-creak*'
-  - You walk over to the table to examine the bottle that caught your eye.
-  - "\u201CRat Poison\u201D"
-  - You stare at the yellowed label for a long moment.
-  - "\u201CEven they get mercy in the end.\u201D"
-  - You turn the cold bottle slightly, watching the dark liquid shift inside.
-  - 'After a moment of hesitation, you pull out the cork separating you and the
-
-    substance
-    which will free you from this pain.'
-  - Slowly... you bring the opening of the bottle closer to your mouth.
-  - "\u201CThis is it. This is how it \u2013 \u201C*KNOCK*"
-  revealBackgroundAfterLine: 7
-  fadeBlackOverlay: 1
-  fadeDuration: 1
-  typingSpeed: 0.03
---- !u!4 &778994576
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778994574}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 949.59045, y: 526.57336, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1003639519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,14 +991,13 @@ GameObject:
   - component: {fileID: 1003639522}
   - component: {fileID: 1003639521}
   - component: {fileID: 1003639524}
-  - component: {fileID: 1003639525}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1003639520
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1124,15 +1007,15 @@ RectTransform:
   m_GameObject: {fileID: 1003639519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 640437982}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101.56775, y: 10.758293}
-  m_SizeDelta: {x: 812.5464, y: 1187.4763}
+  m_AnchoredPosition: {x: 100, y: 0}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1003639521
 MonoBehaviour:
@@ -1177,19 +1060,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1003639522}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1003639525}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: SwitchScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1003639522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,15 +1074,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: a7103f1eadff4684589881182aa2f4eb, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1242,21 +1113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverText
   hoverTextObject: {fileID: 52560829}
   hoverText: {fileID: 52560831}
-  textToShow: Door
+  textToShow: Hallway
   offset: {x: 20, y: 25}
---- !u!114 &1003639525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1003639519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abef3cc3db6a1a74f9f45a3f794ab351, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
-  sceneToLoad: DoorView
 --- !u!1 &1065098607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,15 +1142,15 @@ RectTransform:
   m_GameObject: {fileID: 1065098607}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5569004, y: 1.3222338, z: 1}
+  m_LocalScale: {x: 1.8758287, y: 1.6125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1604306690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 526, y: -243.97028}
-  m_SizeDelta: {x: 498.7345, y: 52.9802}
+  m_AnchoredPosition: {x: 700, y: -301}
+  m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065098609
 MonoBehaviour:
@@ -1380,7 +1238,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 244.87599, w: 0}
+  m_margin: {x: 0, y: 0, z: 311.94708, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1438,81 +1296,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1328308329
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1328308332}
-  - component: {fileID: 1328308331}
-  - component: {fileID: 1328308330}
-  m_Layer: 5
-  m_Name: BlackOverlay
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1328308330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328308329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1328308331
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328308329}
-  m_CullTransparentMesh: 1
---- !u!224 &1328308332
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1328308329}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 640437982}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1479537605
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,14 +1323,14 @@ RectTransform:
   m_GameObject: {fileID: 1479537605}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4.0988054, y: 5.15024, z: 1}
+  m_LocalScale: {x: 4.0988054, y: 5.016558, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1604306690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 118, y: -48}
+  m_AnchoredPosition: {x: -2, y: -32}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479537607
@@ -1597,8 +1380,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 10
+  m_fontSizeBase: 10
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1636,7 +1419,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -86.59811, y: 2.7287807, z: -35.149765, w: 9.575082}
+  m_margin: {x: -86.59811, y: 2.7287807, z: -88.987045, w: 1.7201004}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1799,8 +1582,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 6, y: 179.0362}
-  m_SizeDelta: {x: 1423.6, y: 733.0148}
+  m_AnchoredPosition: {x: 0, y: 200}
+  m_SizeDelta: {x: 1800, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1697814875
 GameObject:
@@ -2009,7 +1792,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022042318}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3067427ae1b359f4695f30efeeaae66d, type: 3}
   m_Name: 
@@ -2037,7 +1820,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022042318}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3706017a4e698e94fbe23be07004831c, type: 3}
   m_Name: 
@@ -2059,4 +1842,3 @@ SceneRoots:
   - {fileID: 292543681}
   - {fileID: 1168258742}
   - {fileID: 2022042320}
-  - {fileID: 778994576}
