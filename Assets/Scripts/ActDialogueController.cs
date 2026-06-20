@@ -401,6 +401,13 @@ public class SpeakerChangeInChoice
     if (choicePanel != null)
         choicePanel.SetActive(false);
 
+    // alle Antwort-Buttons ausblenden
+    foreach (Button button in choiceButtons)
+    {
+        if (button != null)
+            button.gameObject.SetActive(false);
+    }
+
     currentChoice = choices[index];
 
     StartLines(currentChoice.resultLines, DialogueState.BranchLines);
