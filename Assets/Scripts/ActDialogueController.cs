@@ -5,14 +5,28 @@ using TMPro;
 
 public class ActDialogueController : MonoBehaviour
 {
-    // Die verschiedenen Phasen des Dialogs
     private enum DialogueState
     {
-        IntroLines,      // linearer Text bis zur Entscheidung
-        ShowingChoices,  // die Antwort-Buttons sind sichtbar
-        BranchLines,     // der gewaehlte Antwort-Zweig laeuft
-        EndingLines,     // gemeinsame Zeilen nach dem Zweig (optional)
-        Finished         // fertig -> naechste Szene
+        IntroLines,
+        ShowingChoices,
+        BranchLines,
+        EndingLines,
+        Finished
+    }
+
+    public enum DialogueSection
+    {
+        IntroLines,
+        BranchLines,
+        EndingLines
+    }
+
+    [System.Serializable]
+    public class SpeakerChange
+    {
+        public DialogueSection section;
+        public int lineIndex;
+        public string speakerName;
     }
 
     [Header("UI Elements")]
@@ -20,24 +34,37 @@ public class ActDialogueController : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
 
+    [Header("Character Appearance")]
+    public GameObject characterObject;
+    public Image characterImage;
+    public Sprite characterSprite;
+
+    [Tooltip("Bei welcher Intro-Zeile der Character erscheinen soll. 0 = erste Zeile, 1 = zweite Zeile usw.")]
+    public int characterAppearsAtIntroLine = 3;
+
+    public bool fadeCharacterIn = true;
+    public float characterFadeDuration = 1f;
+
+    [Header("Speaker Name Changes")]
+    public string defaultSpeakerName = "YOU";
+    public SpeakerChange[] speakerChanges;
+
     [Header("Choice UI")]
-    public GameObject choicePanel;               // Panel, das die Antwort-Buttons enthaelt
-    public Button[] choiceButtons;               // die Antwort-Buttons (z.B. 4 Stueck)
-    public TextMeshProUGUI[] choiceButtonLabels; // die Beschriftung auf jedem Button
+    public GameObject choicePanel;
+    public Button[] choiceButtons;
+    public TextMeshProUGUI[] choiceButtonLabels;
 
     [Header("Optional End Button")]
-    public GameObject nextSceneButton;           // erscheint am Ende -> laedt naechste Szene
+    public GameObject nextSceneButton;
 
     [Header("Dialogue")]
-    public string characterName = "YOU";
+    [TextArea(2, 5)]
+    public string[] introLines;
+
+    public DialogueChoice[] choices;
 
     [TextArea(2, 5)]
-    public string[] introLines;                  // der lineare Teil bis zur Entscheidung
-
-    public DialogueChoice[] choices;             // die Antwortmoeglichkeiten
-
-    [TextArea(2, 5)]
-    public string[] endingLines;                 // gemeinsame Zeilen nach JEDEM Zweig (kann leer bleiben)
+    public string[] endingLines;
 
     [Header("Typing Settings")]
     public float typingSpeed = 0.03f;
@@ -46,16 +73,29 @@ public class ActDialogueController : MonoBehaviour
     private string[] currentLines;
     private int currentLineIndex = 0;
     private bool isTyping = false;
+    private bool characterHasAppeared = false;
     private Coroutine typingCoroutine;
+    private Coroutine characterFadeCoroutine;
+    private DialogueChoice currentChoice;
 
-    // Eine einzelne Antwortmoeglichkeit (Button-Text + der Text, der danach kommt)
     [System.Serializable]
-    public class DialogueChoice
-    {
-        public string buttonText;        // z.B. "Yes."
-        [TextArea(2, 5)]
-        public string[] resultLines;     // die Zeilen, die nach dieser Wahl gezeigt werden
-    }
+public class DialogueChoice
+{
+    public string buttonText;
+
+    [TextArea(2, 5)]
+    public string[] resultLines;
+
+    public SpeakerChangeInChoice[] speakerChanges;
+}
+
+[System.Serializable]
+public class SpeakerChangeInChoice
+{
+    public int lineIndex;
+    public string speakerName;
+}
+
 
     private void Start()
     {
@@ -69,14 +109,36 @@ public class ActDialogueController : MonoBehaviour
             textBox.SetActive(true);
 
         if (nameText != null)
-            nameText.text = characterName;
+            nameText.text = defaultSpeakerName;
+
+        SetupCharacterAtStart();
 
         StartLines(introLines, DialogueState.IntroLines);
     }
 
+    private void SetupCharacterAtStart()
+    {
+        if (characterImage != null && characterSprite != null)
+        {
+            characterImage.sprite = characterSprite;
+            characterImage.preserveAspect = true;
+        }
+
+        if (characterObject != null)
+            characterObject.SetActive(false);
+
+        if (characterImage != null)
+        {
+            Color color = characterImage.color;
+            color.a = 0f;
+            characterImage.color = color;
+        }
+
+        characterHasAppeared = false;
+    }
+
     private void Update()
     {
-        // Weiterschalten mit Enter (wie in deiner Opening Scene)
         if (Input.GetKeyDown(KeyCode.Return))
         {
             if (state == DialogueState.IntroLines ||
@@ -108,7 +170,6 @@ public class ActDialogueController : MonoBehaviour
 
     private void HandleEnter()
     {
-        // Wenn gerade getippt wird: Zeile sofort komplett anzeigen
         if (isTyping)
         {
             FinishLineInstantly();
@@ -128,10 +189,130 @@ public class ActDialogueController : MonoBehaviour
 
     private void StartCurrentLine()
     {
+        CheckCharacterAppearance();
+        ApplySpeakerNameForCurrentLine();
+
         if (typingCoroutine != null)
             StopCoroutine(typingCoroutine);
 
         typingCoroutine = StartCoroutine(TypeLine(currentLines[currentLineIndex]));
+    }
+
+    private void ApplySpeakerNameForCurrentLine()
+{
+    if (nameText == null)
+        return;
+
+    DialogueSection currentSection = GetCurrentDialogueSection();
+
+    string speakerToUse = defaultSpeakerName;
+
+    if (speakerChanges != null)
+    {
+        foreach (SpeakerChange speakerChange in speakerChanges)
+        {
+            if (speakerChange.section == currentSection &&
+                speakerChange.lineIndex == currentLineIndex)
+            {
+                speakerToUse = speakerChange.speakerName;
+            }
+        }
+    }
+
+    if (state == DialogueState.BranchLines && currentChoice != null && currentChoice.speakerChanges != null)
+    {
+        foreach (SpeakerChangeInChoice speakerChange in currentChoice.speakerChanges)
+        {
+            if (speakerChange.lineIndex == currentLineIndex)
+            {
+                speakerToUse = speakerChange.speakerName;
+            }
+        }
+    }
+
+    nameText.text = speakerToUse;
+}
+
+    private DialogueSection GetCurrentDialogueSection()
+    {
+        if (state == DialogueState.BranchLines)
+            return DialogueSection.BranchLines;
+
+        if (state == DialogueState.EndingLines)
+            return DialogueSection.EndingLines;
+
+        return DialogueSection.IntroLines;
+    }
+
+    private void CheckCharacterAppearance()
+    {
+        if (characterHasAppeared)
+            return;
+
+        if (state != DialogueState.IntroLines)
+            return;
+
+        if (currentLineIndex < characterAppearsAtIntroLine)
+            return;
+
+        ShowCharacter();
+    }
+
+    private void ShowCharacter()
+    {
+        characterHasAppeared = true;
+
+        if (characterObject != null)
+            characterObject.SetActive(true);
+
+        if (characterImage != null && characterSprite != null)
+        {
+            characterImage.sprite = characterSprite;
+            characterImage.preserveAspect = true;
+        }
+
+        if (characterImage != null)
+        {
+            if (characterFadeCoroutine != null)
+                StopCoroutine(characterFadeCoroutine);
+
+            if (fadeCharacterIn)
+                characterFadeCoroutine = StartCoroutine(FadeInCharacter());
+            else
+            {
+                Color color = characterImage.color;
+                color.a = 1f;
+                characterImage.color = color;
+            }
+        }
+    }
+
+    private IEnumerator FadeInCharacter()
+    {
+        float timer = 0f;
+
+        Color color = characterImage.color;
+        color.a = 0f;
+        characterImage.color = color;
+
+        while (timer < characterFadeDuration)
+        {
+            timer += Time.deltaTime;
+
+            float alpha = Mathf.Lerp(0f, 1f, timer / characterFadeDuration);
+
+            color = characterImage.color;
+            color.a = alpha;
+            characterImage.color = color;
+
+            yield return null;
+        }
+
+        color = characterImage.color;
+        color.a = 1f;
+        characterImage.color = color;
+
+        characterFadeCoroutine = null;
     }
 
     private IEnumerator TypeLine(string line)
@@ -167,12 +348,10 @@ public class ActDialogueController : MonoBehaviour
     {
         if (state == DialogueState.IntroLines)
         {
-            // linearer Teil vorbei -> Entscheidung anzeigen
             ShowChoices();
         }
         else if (state == DialogueState.BranchLines)
         {
-            // Zweig vorbei -> gemeinsame Schlusszeilen, falls vorhanden, sonst Ende
             if (endingLines != null && endingLines.Length > 0)
                 StartLines(endingLines, DialogueState.EndingLines);
             else
@@ -203,29 +382,29 @@ public class ActDialogueController : MonoBehaviour
                 if (i < choiceButtonLabels.Length && choiceButtonLabels[i] != null)
                     choiceButtonLabels[i].text = choices[i].buttonText;
 
-                int choiceIndex = i; // eigene Variable pro Button (wichtig in der Schleife!)
+                int choiceIndex = i;
                 choiceButtons[i].onClick.RemoveAllListeners();
                 choiceButtons[i].onClick.AddListener(() => OnChoiceSelected(choiceIndex));
             }
             else
             {
-                // ueberzaehlige Buttons ausblenden
                 choiceButtons[i].gameObject.SetActive(false);
             }
         }
     }
 
-    // Wird aufgerufen, wenn der Spieler eine Antwort anklickt
     public void OnChoiceSelected(int index)
-    {
-        if (state != DialogueState.ShowingChoices)
-            return;
+{
+    if (state != DialogueState.ShowingChoices)
+        return;
 
-        if (choicePanel != null)
-            choicePanel.SetActive(false);
+    if (choicePanel != null)
+        choicePanel.SetActive(false);
 
-        StartLines(choices[index].resultLines, DialogueState.BranchLines);
-    }
+    currentChoice = choices[index];
+
+    StartLines(currentChoice.resultLines, DialogueState.BranchLines);
+}
 
     private void Finish()
     {

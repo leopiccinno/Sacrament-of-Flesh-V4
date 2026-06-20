@@ -119,6 +119,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &105555754 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 224148259823009172, guid: 1bc71a38aa6c9ad4e9a9f3e3fbb345ff, type: 3}
+  m_PrefabInstance: {fileID: 1958011582}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abef3cc3db6a1a74f9f45a3f794ab351, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
 --- !u!1001 &376897984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -284,6 +295,14 @@ PrefabInstance:
     - target: {fileID: 1965978352010738253, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549063650788090928, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 105555754}
+    - target: {fileID: 3549063650788090928, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SwitchScene
       objectReference: {fileID: 0}
     - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -544,6 +563,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 224148259823009172, guid: 1bc71a38aa6c9ad4e9a9f3e3fbb345ff, type: 3}
+      propertyPath: sceneToLoad
+      value: First Act
+      objectReference: {fileID: 0}
     - target: {fileID: 2284223105571119609, guid: 1bc71a38aa6c9ad4e9a9f3e3fbb345ff, type: 3}
       propertyPath: m_Name
       value: SceneManager

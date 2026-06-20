@@ -24,10 +24,10 @@ EditorBuildSettings:
     path: Assets/OutsideView.unity
     guid: 431f5b6db1731dc45a8533e999101014
   - enabled: 1
-    path: Assets/RoomScene2.unity
+    path: Assets/Scenes/RoomScene2.unity
     guid: 87bfe2944a773de4ab99ff23909ac4fb
   - enabled: 1
-    path: Assets/DoorView2.unity
+    path: Assets/Scenes/DoorView2.unity
     guid: efe3cbcf5e930b84986832ad2ed34cfa
   - enabled: 1
     path: Assets/Scenes/First Act.unity
