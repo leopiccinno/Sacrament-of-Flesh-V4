@@ -1,0 +1,455 @@
+fileFormatVersion: 2
+guid: b11ebae936e99e848bb25d85f3281d39
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5548261885827912909
+    second: Invitation Note_0
+  - first:
+      213: 6200982348860820166
+    second: Invitation Note_1
+  - first:
+      213: 3854078430900360654
+    second: Invitation Note_2
+  - first:
+      213: -5345216924197250282
+    second: Invitation Note_3
+  - first:
+      213: 321093837753795966
+    second: Invitation Note_4
+  - first:
+      213: -190370698885042903
+    second: Invitation Note_5
+  - first:
+      213: 141257991300639071
+    second: Invitation Note_6
+  - first:
+      213: 2912558309028542284
+    second: Invitation Note_7
+  - first:
+      213: -4055979314274867480
+    second: Invitation Note_8
+  - first:
+      213: 5611725970075954011
+    second: Invitation Note_9
+  - first:
+      213: 1462636607266124139
+    second: Invitation Note_10
+  - first:
+      213: 5229197104770019573
+    second: Invitation Note_11
+  - first:
+      213: 6333605619923644562
+    second: Invitation Note_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Invitation Note_0
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 2165
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33b6366f53d9003b0800000000000000
+      internalID: -5548261885827912909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_1
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 413
+        width: 1574
+        height: 1742
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ca015297905e0650800000000000000
+      internalID: 6200982348860820166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_2
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 2152
+        width: 107
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec59f42c9ef6c7530800000000000000
+      internalID: 3854078430900360654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_3
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 2147
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61b11d11789f1d5b0800000000000000
+      internalID: -5345216924197250282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_4
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 2065
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75c1eae421c47400800000000000000
+      internalID: 321093837753795966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_5
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 2053
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d6055abdaab5df0800000000000000
+      internalID: -190370698885042903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_6
+      rect:
+        serializedVersion: 2
+        x: 1607
+        y: 1962
+        width: 12
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59e8290569d5f100800000000000000
+      internalID: 141257991300639071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_7
+      rect:
+        serializedVersion: 2
+        x: 1608
+        y: 1767
+        width: 20
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c473245c95c7b6820800000000000000
+      internalID: 2912558309028542284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_8
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 1679
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e6605c9d4446b7c0800000000000000
+      internalID: -4055979314274867480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_9
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 623
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b263f990bd0ed40800000000000000
+      internalID: 5611725970075954011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_10
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 0
+        width: 87
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b617493be345c4410800000000000000
+      internalID: 1462636607266124139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_11
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 89
+        width: 83
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f07152bf07d19840800000000000000
+      internalID: 5229197104770019573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invitation Note_12
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 0
+        width: 67
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29077f221cc75e750800000000000000
+      internalID: 6333605619923644562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Invitation Note_0: -5548261885827912909
+      Invitation Note_1: 6200982348860820166
+      Invitation Note_10: 1462636607266124139
+      Invitation Note_11: 5229197104770019573
+      Invitation Note_12: 6333605619923644562
+      Invitation Note_2: 3854078430900360654
+      Invitation Note_3: -5345216924197250282
+      Invitation Note_4: 321093837753795966
+      Invitation Note_5: -190370698885042903
+      Invitation Note_6: 141257991300639071
+      Invitation Note_7: 2912558309028542284
+      Invitation Note_8: -4055979314274867480
+      Invitation Note_9: 5611725970075954011
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,19 +5,43 @@ using TMPro;
 
 public class IntroDialogueController : MonoBehaviour
 {
+    private enum DialogueState
+    {
+        IntroDialogue,
+        WaitingForNoteClick,
+        ReadingNote,
+        AfterNoteDialogue,
+        Finished
+    }
+
     [Header("UI Elements")]
     public GameObject textBox;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Image blackOverlay;
 
+   [Header("Note UI")]
+public bool useNoteInteraction = true;
+public GameObject button;
+public GameObject bigNotePanel;
+
+    [Header("Optional End Button")]
+    public GameObject nextSceneButton;
+
     [Header("Dialogue")]
-    public string characterName = "Character";
+    public string characterName = "YOU";
 
     [TextArea(2, 5)]
-    public string[] dialogueLines;
+    public string[] introDialogueLines;
 
-    [Header("Reveal Settings")]
+    [TextArea(2, 5)]
+    public string[] afterNoteDialogueLines;
+
+    [Header("Pause Settings")]
+    public string pauseMarker = "[PAUSE]";
+
+    [Header("Overlay Settings")]
+    public bool useBlackOverlay = true;
     public int revealBackgroundAfterLine = 2;
     public bool fadeBlackOverlay = true;
     public float fadeDuration = 1f;
@@ -25,44 +49,114 @@ public class IntroDialogueController : MonoBehaviour
     [Header("Typing Settings")]
     public float typingSpeed = 0.03f;
 
+    private DialogueState state = DialogueState.IntroDialogue;
+
+    private string[] currentDialogueLines;
     private int currentLineIndex = 0;
+
     private bool isTyping = false;
+    private bool isPaused = false;
     private bool backgroundRevealed = false;
+
     private Coroutine typingCoroutine;
 
-    private void Start()
-    {
-        if (textBox != null)
-        {
-            textBox.SetActive(true);
-        }
+   private void Start()
+{
+    if (button != null)
+        button.SetActive(false);
 
-        if (blackOverlay != null)
+    if (bigNotePanel != null)
+        bigNotePanel.SetActive(false);
+
+    if (nextSceneButton != null)
+        nextSceneButton.SetActive(false);
+
+    if (textBox != null)
+        textBox.SetActive(true);
+
+    if (blackOverlay != null)
+    {
+        if (useBlackOverlay)
         {
             Color color = blackOverlay.color;
             color.a = 1f;
             blackOverlay.color = color;
             blackOverlay.gameObject.SetActive(true);
         }
-
-        if (nameText != null)
+        else
         {
-            nameText.text = characterName;
+            blackOverlay.gameObject.SetActive(false);
         }
-
-        StartCurrentLine();
     }
+
+    if (nameText != null)
+        nameText.text = characterName;
+
+    StartDialogue(introDialogueLines, DialogueState.IntroDialogue);
+}
+
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            HandleEnterPressed();
+            if (state == DialogueState.ReadingNote)
+            {
+                CloseNoteAndStartAfterDialogue();
+                return;
+            }
+
+            if (state == DialogueState.IntroDialogue || state == DialogueState.AfterNoteDialogue)
+            {
+                HandleDialogueEnter();
+            }
         }
     }
 
-    private void HandleEnterPressed()
+    private void StartDialogue(string[] lines, DialogueState newState)
     {
+        state = newState;
+        currentDialogueLines = lines;
+        currentLineIndex = 0;
+        isPaused = false;
+
+        if (textBox != null)
+            textBox.SetActive(true);
+
+        if (nameText != null)
+            nameText.text = characterName;
+
+        if (currentDialogueLines == null || currentDialogueLines.Length == 0)
+        {
+            FinishCurrentDialogueSequence();
+            return;
+        }
+
+        StartCurrentLine();
+    }
+
+    private void HandleDialogueEnter()
+    {
+        if (isPaused)
+        {
+            isPaused = false;
+
+            if (textBox != null)
+                textBox.SetActive(true);
+
+            currentLineIndex++;
+
+            if (currentLineIndex >= currentDialogueLines.Length)
+            {
+                FinishCurrentDialogueSequence();
+                return;
+            }
+
+            StartCurrentLine();
+            CheckBackgroundReveal();
+            return;
+        }
+
         if (isTyping)
         {
             FinishCurrentLineInstantly();
@@ -71,35 +165,57 @@ public class IntroDialogueController : MonoBehaviour
 
         currentLineIndex++;
 
-        if (currentLineIndex >= dialogueLines.Length)
+        if (currentLineIndex >= currentDialogueLines.Length)
         {
-            EndDialogue();
+            FinishCurrentDialogueSequence();
             return;
         }
 
         StartCurrentLine();
-
-        if (!backgroundRevealed && currentLineIndex >= revealBackgroundAfterLine)
-        {
-            backgroundRevealed = true;
-            RevealBackground();
-        }
+        CheckBackgroundReveal();
     }
 
     private void StartCurrentLine()
     {
+        if (currentDialogueLines[currentLineIndex] == pauseMarker)
+        {
+            StartPause();
+            return;
+        }
+
+        if (textBox != null)
+            textBox.SetActive(true);
+
+        if (typingCoroutine != null)
+            StopCoroutine(typingCoroutine);
+
+        typingCoroutine = StartCoroutine(TypeLine(currentDialogueLines[currentLineIndex]));
+    }
+
+    private void StartPause()
+    {
+        isPaused = true;
+        isTyping = false;
+
         if (typingCoroutine != null)
         {
             StopCoroutine(typingCoroutine);
+            typingCoroutine = null;
         }
 
-        typingCoroutine = StartCoroutine(TypeLine(dialogueLines[currentLineIndex]));
+        if (dialogueText != null)
+            dialogueText.text = "";
+
+        if (textBox != null)
+            textBox.SetActive(false);
     }
 
     private IEnumerator TypeLine(string line)
     {
         isTyping = true;
-        dialogueText.text = "";
+
+        if (dialogueText != null)
+            dialogueText.text = "";
 
         foreach (char letter in line)
         {
@@ -114,21 +230,91 @@ public class IntroDialogueController : MonoBehaviour
     private void FinishCurrentLineInstantly()
     {
         if (typingCoroutine != null)
-        {
             StopCoroutine(typingCoroutine);
-        }
 
-        dialogueText.text = dialogueLines[currentLineIndex];
+        if (dialogueText != null)
+            dialogueText.text = currentDialogueLines[currentLineIndex];
+
         isTyping = false;
         typingCoroutine = null;
+    }
+
+    private void FinishCurrentDialogueSequence()
+{
+    if (textBox != null)
+        textBox.SetActive(false);
+
+    if (state == DialogueState.IntroDialogue)
+    {
+        if (useNoteInteraction)
+        {
+            state = DialogueState.WaitingForNoteClick;
+
+            if (button != null)
+                button.SetActive(true);
+        }
+        else
+        {
+            state = DialogueState.Finished;
+
+            if (nextSceneButton != null)
+                nextSceneButton.SetActive(true);
+            else
+                Debug.LogWarning("NextSceneButton is not assigned in the IntroDialogueController.");
+        }
+    }
+    else if (state == DialogueState.AfterNoteDialogue)
+    {
+        state = DialogueState.Finished;
+
+        if (nextSceneButton != null)
+            nextSceneButton.SetActive(true);
+        else
+            Debug.LogWarning("NextSceneButton is not assigned in the IntroDialogueController.");
+    }
+}
+
+    public void OnNoteClicked()
+    {
+        if (state != DialogueState.WaitingForNoteClick)
+            return;
+
+        state = DialogueState.ReadingNote;
+
+        if (button != null)
+            button.SetActive(false);
+
+        if (textBox != null)
+            textBox.SetActive(false);
+
+        if (bigNotePanel != null)
+            bigNotePanel.SetActive(true);
+    }
+
+    private void CloseNoteAndStartAfterDialogue()
+    {
+        if (bigNotePanel != null)
+            bigNotePanel.SetActive(false);
+
+        StartDialogue(afterNoteDialogueLines, DialogueState.AfterNoteDialogue);
+    }
+
+    private void CheckBackgroundReveal()
+    {
+        if (!useBlackOverlay)
+            return;
+
+        if (!backgroundRevealed && currentLineIndex >= revealBackgroundAfterLine)
+        {
+            backgroundRevealed = true;
+            RevealBackground();
+        }
     }
 
     private void RevealBackground()
     {
         if (blackOverlay == null)
-        {
             return;
-        }
 
         if (fadeBlackOverlay)
         {
@@ -165,11 +351,10 @@ public class IntroDialogueController : MonoBehaviour
         blackOverlay.gameObject.SetActive(false);
     }
 
-    private void EndDialogue()
-    {
-        if (textBox != null)
-        {
-            textBox.SetActive(false);
-        }
-    }
+    public void StartAfterNoteDialogue()
+{
+    StartDialogue(afterNoteDialogueLines, DialogueState.AfterNoteDialogue);
+}
+
+
 }

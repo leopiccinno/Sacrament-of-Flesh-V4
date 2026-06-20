@@ -9,8 +9,8 @@ public class ButtonHoverText : MonoBehaviour, IPointerEnterHandler, IPointerExit
     public TextMeshProUGUI hoverText;
 
     [Header("Settings")]
-    public string textToShow = "Hallway";
-    public Vector2 offset = new Vector2(20f, -20f);
+    public string textToShow = "Button";
+    public Vector2 offset = new Vector2(0f, 15f);
 
     private RectTransform hoverTextRect;
     private RectTransform canvasRect;
@@ -18,33 +18,48 @@ public class ButtonHoverText : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     private bool isHovering = false;
 
+    private static ButtonHoverText currentOwner;
+
     private void Awake()
     {
-        hoverTextRect = hoverTextObject.GetComponent<RectTransform>();
-        canvas = GetComponentInParent<Canvas>();
-        canvasRect = canvas.GetComponent<RectTransform>();
+        if (hoverTextObject != null)
+            hoverTextRect = hoverTextObject.GetComponent<RectTransform>();
 
-        hoverTextObject.SetActive(false);
-        hoverText.text = textToShow;
+        canvas = GetComponentInParent<Canvas>();
+
+        if (canvas != null)
+            canvasRect = canvas.GetComponent<RectTransform>();
+
+        HideHoverText();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (hoverTextObject == null || hoverText == null)
+            return;
+
         isHovering = true;
+        currentOwner = this;
+
         hoverText.text = textToShow;
         hoverTextObject.SetActive(true);
+
         MoveText(eventData);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         isHovering = false;
-        hoverTextObject.SetActive(false);
+
+        if (currentOwner == this)
+        {
+            HideHoverText();
+        }
     }
 
     public void OnPointerMove(PointerEventData eventData)
     {
-        if (isHovering)
+        if (isHovering && currentOwner == this)
         {
             MoveText(eventData);
         }
@@ -52,6 +67,9 @@ public class ButtonHoverText : MonoBehaviour, IPointerEnterHandler, IPointerExit
 
     private void MoveText(PointerEventData eventData)
     {
+        if (hoverTextRect == null || canvasRect == null || canvas == null)
+            return;
+
         Vector2 localPoint;
 
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
@@ -62,5 +80,36 @@ public class ButtonHoverText : MonoBehaviour, IPointerEnterHandler, IPointerExit
         );
 
         hoverTextRect.anchoredPosition = localPoint + offset;
+    }
+
+    private void HideHoverText()
+    {
+        isHovering = false;
+
+        if (hoverTextObject != null)
+        {
+            hoverTextObject.SetActive(false);
+        }
+
+        if (currentOwner == this)
+        {
+            currentOwner = null;
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (currentOwner == this)
+        {
+            HideHoverText();
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (currentOwner == this)
+        {
+            HideHoverText();
+        }
     }
 }

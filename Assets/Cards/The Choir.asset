@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02647e154c0b6cc4da6a44fdf6b96e9c, type: 3}
+  m_Name: The Choir
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  cardName: The Choir
+  description: 
+  cardValue: 4
+  smallSprite: {fileID: 7215592914004681806, guid: 661d7d9037e3e66498ad58d4d5ec0fec, type: 3}
+  bigSprite: {fileID: 7215592914004681806, guid: 661d7d9037e3e66498ad58d4d5ec0fec, type: 3}
