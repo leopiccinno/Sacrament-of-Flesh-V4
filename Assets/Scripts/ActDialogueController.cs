@@ -44,6 +44,16 @@ public class ActDialogueController : MonoBehaviour
 
     public bool fadeCharacterIn = true;
     public float characterFadeDuration = 1f;
+    [Header("Background Change")]
+    public SpriteRenderer backgroundRenderer;
+    public Sprite secondBackground;
+    public int changeBackgroundAtIntroLine = 8;
+    public Sprite thirdBackground;
+    public int changeBackgroundAtIntroLine2 = -1;
+    public int characterLeavesAtIntroLine = -1;
+    [Header("Gathering Characters")]
+    public GameObject gatheringCharactersObject;
+    public int gatheringAppearsAtIntroLine = -1;
 
     [Header("Speaker Name Changes")]
     public string defaultSpeakerName = "YOU";
@@ -56,6 +66,7 @@ public class ActDialogueController : MonoBehaviour
 
     [Header("Optional End Button")]
     public GameObject nextSceneButton;
+    public string autoNextSceneName = "";
 
     [Header("Dialogue")]
     [TextArea(2, 5)]
@@ -74,6 +85,10 @@ public class ActDialogueController : MonoBehaviour
     private int currentLineIndex = 0;
     private bool isTyping = false;
     private bool characterHasAppeared = false;
+    private bool backgroundHasChanged = false;
+    private bool backgroundHasChanged2 = false;
+    private bool characterHasLeft = false;
+    private bool gatheringHasAppeared = false;
     private Coroutine typingCoroutine;
     private Coroutine characterFadeCoroutine;
     private DialogueChoice currentChoice;
@@ -104,6 +119,9 @@ public class SpeakerChangeInChoice
 
         if (nextSceneButton != null)
             nextSceneButton.SetActive(false);
+
+        if (gatheringCharactersObject != null)
+        gatheringCharactersObject.SetActive(false);
 
         if (textBox != null)
             textBox.SetActive(true);
@@ -190,6 +208,9 @@ public class SpeakerChangeInChoice
     private void StartCurrentLine()
     {
         CheckCharacterAppearance();
+        CheckBackgroundChange();
+        CheckCharacterLeaves();
+        CheckGatheringAppearance();
         ApplySpeakerNameForCurrentLine();
 
         if (typingCoroutine != null)
@@ -256,6 +277,100 @@ public class SpeakerChangeInChoice
             return;
 
         ShowCharacter();
+    }
+    private void CheckBackgroundChange()
+    {
+        if (backgroundRenderer == null) return;
+        if (state != DialogueState.IntroLines) return;
+
+        if (!backgroundHasChanged && secondBackground != null
+            && currentLineIndex >= changeBackgroundAtIntroLine)
+        {
+            backgroundRenderer.sprite = secondBackground;
+            backgroundHasChanged = true;
+        }
+
+        if (!backgroundHasChanged2 && thirdBackground != null
+            && changeBackgroundAtIntroLine2 >= 0
+            && currentLineIndex >= changeBackgroundAtIntroLine2)
+        {
+            backgroundRenderer.sprite = thirdBackground;
+            backgroundHasChanged2 = true;
+        }
+    }
+
+        private void CheckCharacterLeaves()
+    {
+        if (characterHasLeft) return;
+        if (state != DialogueState.IntroLines) return;
+        if (characterLeavesAtIntroLine < 0) return;
+        if (currentLineIndex < characterLeavesAtIntroLine) return;
+
+        HideCharacter();
+    }
+
+    private void CheckGatheringAppearance()
+    {
+        if (gatheringHasAppeared) return;
+        if (state != DialogueState.IntroLines) return;
+        if (gatheringAppearsAtIntroLine < 0) return;
+        if (currentLineIndex < gatheringAppearsAtIntroLine) return;
+
+        if (gatheringCharactersObject != null)
+        {
+            gatheringCharactersObject.SetActive(true);
+            gatheringHasAppeared = true;
+        }
+    }
+
+    private void HideCharacter()
+    {
+        characterHasLeft = true;
+
+        if (characterImage != null && fadeCharacterIn)
+        {
+            if (characterFadeCoroutine != null)
+                StopCoroutine(characterFadeCoroutine);
+
+            characterFadeCoroutine = StartCoroutine(FadeOutCharacter());
+        }
+        else
+        {
+            if (characterImage != null)
+            {
+                Color color = characterImage.color;
+                color.a = 0f;
+                characterImage.color = color;
+            }
+            if (characterObject != null)
+                characterObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator FadeOutCharacter()
+    {
+        float timer = 0f;
+
+        while (timer < characterFadeDuration)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(1f, 0f, timer / characterFadeDuration);
+
+            Color color = characterImage.color;
+            color.a = alpha;
+            characterImage.color = color;
+
+            yield return null;
+        }
+
+        Color finalColor = characterImage.color;
+        finalColor.a = 0f;
+        characterImage.color = finalColor;
+
+        if (characterObject != null)
+            characterObject.SetActive(false);
+
+        characterFadeCoroutine = null;
     }
 
     private void ShowCharacter()
@@ -348,7 +463,10 @@ public class SpeakerChangeInChoice
     {
         if (state == DialogueState.IntroLines)
         {
-            ShowChoices();
+            if (choices != null && choices.Length > 0)
+                ShowChoices();
+            else
+                Finish();
         }
         else if (state == DialogueState.BranchLines)
         {
@@ -420,7 +538,13 @@ public class SpeakerChangeInChoice
         if (textBox != null)
             textBox.SetActive(false);
 
-        if (nextSceneButton != null)
+        if (!string.IsNullOrEmpty(autoNextSceneName))
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(autoNextSceneName);
+        }
+        else if (nextSceneButton != null)
+        {
             nextSceneButton.SetActive(true);
+        }
     }
 }
