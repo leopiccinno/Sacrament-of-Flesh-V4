@@ -372,6 +372,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -239621025731974607, guid: afbfaee349b3b0e459bba46c8fac14c6, type: 3}
     - target: {fileID: 9048767490938709724, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Name
       value: Background
@@ -581,10 +585,46 @@ PrefabInstance:
       propertyPath: 'possibleCards.Array.data[8]'
       value: 
       objectReference: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+    - target: {fileID: 2671715328966173257, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2671715328966173257, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2799692873189853672, guid: 7ad99dcd05708184da1c43a9f81f1c9c, type: 3}
+    - target: {fileID: 2671715328966173257, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3549063650788090928, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 595919542}
+    - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 258.4784
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999952
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0031123022
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -806
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 3698956540530090911, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.357
+      objectReference: {fileID: 0}
     - target: {fileID: 3895713083008069511, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 976.74835
@@ -626,6 +666,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4934708720950201059, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 795084272578566123}
+    - target: {fileID: 4934708720950201059, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnCardClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 4934708720950201059, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: RandomCardPickup, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -639,6 +687,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+--- !u!114 &795084272578566123 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1373900820049315415, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+  m_PrefabInstance: {fileID: 795084272578566122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29b98514e53f4d4e93445eb1fa60b04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CardPickup
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

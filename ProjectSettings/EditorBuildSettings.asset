@@ -38,5 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ThirdAct.unity
     guid: c813c4d577c0c28478ec8a345f95c38a
+  - enabled: 1
+    path: Assets/Scenes/FourthAct.unity
+    guid: 03fdd59440c23634595387cde873e50d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

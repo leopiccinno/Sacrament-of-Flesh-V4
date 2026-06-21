@@ -298,8 +298,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f39650c72ff20449c37073da9ffc0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PersistentCardHUD
-  cardIconObject: {fileID: 1623235351}
-  cardIconImage: {fileID: 1623235352}
+  iconContainer: {fileID: 1623235354}
+  cardIconPrefab: {fileID: 3888353075280187208, guid: bfd7238533378d140a0a3a0586d12953, type: 3}
 --- !u!4 &527800474
 Transform:
   m_ObjectHideFlags: 0
@@ -703,7 +703,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1000
+  m_SortingOrder: 10000
   m_TargetDisplay: 0
 --- !u!1 &1079239995
 GameObject:
@@ -806,13 +806,14 @@ GameObject:
   - component: {fileID: 1623235354}
   - component: {fileID: 1623235353}
   - component: {fileID: 1623235352}
+  - component: {fileID: 1623235355}
   m_Layer: 0
-  m_Name: CardIconImage
+  m_Name: CardIconContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1623235352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,7 +827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -870,6 +871,32 @@ RectTransform:
   m_AnchoredPosition: {x: -89, y: -80}
   m_SizeDelta: {x: 40, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1623235355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623235351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.HorizontalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 2
+  m_Spacing: 10
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &2038035527
 GameObject:
   m_ObjectHideFlags: 0

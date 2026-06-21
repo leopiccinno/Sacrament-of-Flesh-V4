@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class RandomCardPickup : MonoBehaviour
 {
@@ -39,22 +40,45 @@ public class RandomCardPickup : MonoBehaviour
     }
 
     private void ChooseRandomCard()
+{
+    if (possibleCards == null || possibleCards.Length == 0)
     {
-        if (possibleCards == null || possibleCards.Length == 0)
-        {
-            Debug.LogWarning("No possible cards assigned to RandomCardPickup.");
-            return;
-        }
+        Debug.LogWarning("No possible cards assigned to RandomCardPickup.");
+        return;
+    }
 
-        int randomIndex = Random.Range(0, possibleCards.Length);
-        selectedCard = possibleCards[randomIndex];
+    List<CardData> availableCards = new List<CardData>();
 
-        if (smallCardImage != null && selectedCard != null)
+    foreach (CardData card in possibleCards)
+    {
+        if (card == null)
+            continue;
+
+        if (GameState.Instance == null || !GameState.Instance.HasCollectedCard(card))
         {
-            smallCardImage.sprite = selectedCard.smallSprite;
-            smallCardImage.preserveAspect = true;
+            availableCards.Add(card);
         }
     }
+
+    if (availableCards.Count == 0)
+    {
+        Debug.LogWarning("Alle möglichen Karten wurden bereits eingesammelt.");
+
+        gameObject.SetActive(false);
+        return;
+    }
+
+    int randomIndex = Random.Range(0, availableCards.Count);
+    selectedCard = availableCards[randomIndex];
+
+    if (smallCardImage != null && selectedCard != null)
+    {
+        smallCardImage.sprite = selectedCard.smallSprite;
+        smallCardImage.preserveAspect = true;
+    }
+
+    Debug.Log("Random card selected: " + selectedCard.cardName);
+}
 
     public void OnCardClicked()
     {

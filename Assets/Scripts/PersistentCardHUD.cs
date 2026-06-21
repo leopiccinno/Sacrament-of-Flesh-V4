@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,8 +8,10 @@ public class PersistentCardHUD : MonoBehaviour
     public static PersistentCardHUD Instance;
 
     [Header("Card Icon UI")]
-    public GameObject cardIconObject;
-    public Image cardIconImage;
+    public Transform iconContainer;
+    public GameObject cardIconPrefab;
+
+    private List<GameObject> spawnedIcons = new List<GameObject>();
 
     private void Awake()
     {
@@ -43,37 +46,59 @@ public class PersistentCardHUD : MonoBehaviour
     }
 
     public void RefreshCardIcon()
+{
+    ClearIcons();
+
+    if (GameState.Instance == null)
     {
-        if (GameState.Instance == null)
-        {
-            HideCardIcon();
-            return;
-        }
-
-        if (!GameState.Instance.hasCard || GameState.Instance.collectedCard == null)
-        {
-            HideCardIcon();
-            return;
-        }
-
-        ShowCardIcon(GameState.Instance.collectedCard);
+        Debug.LogWarning("GameState.Instance ist null, kann Karten-Icons nicht aktualisieren.");
+        return;
     }
 
-    private void ShowCardIcon(CardData card)
+    foreach (CardData card in GameState.Instance.collectedCards)
     {
-        if (cardIconObject != null)
-            cardIconObject.SetActive(true);
+        SpawnIcon(card);
+    }
+}
 
-        if (cardIconImage != null)
-        {
-            cardIconImage.sprite = card.smallSprite;
-            cardIconImage.preserveAspect = true;
-        }
+private void SpawnIcon(CardData card)
+{
+    if (cardIconPrefab == null)
+    {
+        Debug.LogWarning("cardIconPrefab ist nicht zugewiesen in PersistentCardHUD.");
+        return;
     }
 
-    private void HideCardIcon()
+    if (iconContainer == null)
     {
-        if (cardIconObject != null)
-            cardIconObject.SetActive(false);
+        Debug.LogWarning("iconContainer ist nicht zugewiesen in PersistentCardHUD.");
+        return;
+    }
+
+    GameObject icon = Instantiate(cardIconPrefab, iconContainer);
+    Image iconImage = icon.GetComponent<Image>();
+
+    if (iconImage != null)
+    {
+        iconImage.sprite = card.smallSprite;
+        iconImage.preserveAspect = true;
+    }
+    else
+    {
+        Debug.LogWarning("cardIconPrefab hat keine Image-Komponente auf dem Root-Objekt.");
+    }
+
+    spawnedIcons.Add(icon);
+}
+
+    private void ClearIcons()
+    {
+        foreach (GameObject icon in spawnedIcons)
+        {
+            if (icon != null)
+                Destroy(icon);
+        }
+
+        spawnedIcons.Clear();
     }
 }

@@ -489,7 +489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &367111708
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Follow Me
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: beebf09f2700f0e478b011960898190c, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -520,7 +520,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4279835097
-  m_fontColor: {r: 0.8490566, g: 0.09611959, b: 0.09611959, a: 1}
+  m_fontColor: {r: 0.6666667, g: 0.0627451, b: 0.05490196, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -579,7 +579,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &367111709
@@ -753,8 +753,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -307.753, y: 18.944}
-  m_SizeDelta: {x: 215.505, y: 407.434}
+  m_AnchoredPosition: {x: -335.8059, y: -20.1297}
+  m_SizeDelta: {x: 447.9433, y: 754.0875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400745363
 MonoBehaviour:
@@ -770,7 +770,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverText
   hoverTextObject: {fileID: 367111707}
   hoverText: {fileID: 367111708}
-  textToShow: Follow Me
+  textToShow: Follow him.
   offset: {x: 0, y: 15}
 --- !u!1 &519420028
 GameObject:
@@ -1156,6 +1156,14 @@ MonoBehaviour:
   characterAppearsAtIntroLine: 24
   fadeCharacterIn: 1
   characterFadeDuration: 1
+  backgroundRenderer: {fileID: 0}
+  secondBackground: {fileID: 0}
+  changeBackgroundAtIntroLine: 8
+  thirdBackground: {fileID: 0}
+  changeBackgroundAtIntroLine2: -1
+  characterLeavesAtIntroLine: -1
+  gatheringCharactersObject: {fileID: 0}
+  gatheringAppearsAtIntroLine: -1
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
@@ -1182,6 +1190,7 @@ MonoBehaviour:
   - {fileID: 1891679652}
   - {fileID: 619485680}
   nextSceneButton: {fileID: 400745357}
+  autoNextSceneName: 
   introLines:
   - "\u201EThe cold night air bites at your skin as you leave your home behind.\""
   - "\u201EFor a moment you consider turning back.\""
