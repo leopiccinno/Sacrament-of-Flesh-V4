@@ -1479,7 +1479,44 @@ MonoBehaviour:
   - {fileID: 625179528}
   nextSceneButton: {fileID: 0}
   autoNextSceneName: FourthAct
-  introDialogueLines: []
+  introDialogueLines:
+  - 'The crowd falls silent, as a tall figure approaches the bonfire.
+
+'
+  - "Brother Garrick lowers his head respectfully \u2013 the others follow."
+  - "You try to get a better look at the stranger\u2019s face, but their hood hinders
+    you from\r\ndoing so."
+  - He stands still for a moment. Then he raises his Hand.
+  - "\u201CMy brothers and sisters.\u201D"
+  - "\u201CTonight we welcome another lost soul.\u201D"
+  - " \u201CA jester who arrived troubled by hardship.\u201D"
+  - "\u201CJust like many of us once did.\u201D"
+  - Several people in the crowd nod.
+  - "\u201CThe world beyond these woods\u2026 its cruel\u2026\u201D"
+  - "\u201CThey believe in taking everything you\u2019ve got to give - Your money,
+    your time, your\r\ndignity.\u201D\r\n"
+  - "\u201CBut here \u2013 no soul is discarded or forgotten. No soul shall suffer
+    alone.\u201D"
+  - ' *applause*'
+  - The crowd murmurs in agreement.
+  - A strange warmth spreads through the gathering.
+  - And for the first time since being dismissed from court, you feel like you belong.
+  - '"Tonight we share food."'
+  - '"We share stories."'
+  - '"And we give thanks for another soul finding their way home."
+
+'
+  - Several faces turn toward you.
+  - ' Some smiling.'
+  - Some merely watching.
+  - '"You are welcome here."'
+  - '"May the Flesh embrace you."'
+  - '"May the Flesh embrace you."'
+  - 'The stranger turns around and leaves, while all the others start to embrace
+    in
+
+    conversations.'
+  - " \u201CI should talk to some of the others, before going to bed.\u201D\r\n"
   afterNoteDialogueLines: []
   choices: []
   endingLines:
@@ -1502,18 +1539,6 @@ MonoBehaviour:
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
-    lineIndex: 0
-    speakerName: YOU
-  - section: 0
-    lineIndex: 1
-    speakerName: YOU
-  - section: 0
-    lineIndex: 2
-    speakerName: YOU
-  - section: 0
-    lineIndex: 3
-    speakerName: ???
-  - section: 0
     lineIndex: 4
     speakerName: ???
   - section: 0
@@ -1524,9 +1549,6 @@ MonoBehaviour:
     speakerName: ???
   - section: 0
     lineIndex: 7
-    speakerName: YOU
-  - section: 0
-    lineIndex: 8
     speakerName: ???
   - section: 0
     lineIndex: 9
@@ -1536,19 +1558,10 @@ MonoBehaviour:
     speakerName: ???
   - section: 0
     lineIndex: 11
-    speakerName: Everyone
+    speakerName: ???
   - section: 0
     lineIndex: 12
-    speakerName: YOU
-  - section: 0
-    lineIndex: 13
-    speakerName: YOU
-  - section: 0
-    lineIndex: 14
-    speakerName: YOU
-  - section: 0
-    lineIndex: 15
-    speakerName: ???
+    speakerName: Everyone
   - section: 0
     lineIndex: 16
     speakerName: ???
@@ -1557,25 +1570,16 @@ MonoBehaviour:
     speakerName: ???
   - section: 0
     lineIndex: 18
-    speakerName: YOU
-  - section: 0
-    lineIndex: 19
-    speakerName: YOU
-  - section: 0
-    lineIndex: 21
     speakerName: ???
   - section: 0
     lineIndex: 22
     speakerName: ???
   - section: 0
     lineIndex: 23
-    speakerName: Everyone
+    speakerName: ???
   - section: 0
     lineIndex: 24
-    speakerName: YOU
-  - section: 0
-    lineIndex: 25
-    speakerName: YOU
+    speakerName: Everyone
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
   revealBackgroundAfterLine: 2
