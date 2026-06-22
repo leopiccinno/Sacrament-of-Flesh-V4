@@ -119,183 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &89380663
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1582250157}
-    m_Modifications:
-    - target: {fileID: 4369054301391109406, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 745127506}
-    - target: {fileID: 4369054301391109406, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnCardClicked
-      objectReference: {fileID: 0}
-    - target: {fileID: 4369054301391109406, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: RandomCardPickup, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4855839690317899408, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: hoverText
-      value: 
-      objectReference: {fileID: 2115950804}
-    - target: {fileID: 4855839690317899408, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: hoverTextObject
-      value: 
-      objectReference: {fileID: 2115950803}
-    - target: {fileID: 7175054680500227504, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_Name
-      value: SmallCardButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 7447048863627599287, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_PreserveAspect
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: bigCardImage
-      value: 
-      objectReference: {fileID: 985915836}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: bigCardPanel
-      value: 
-      objectReference: {fileID: 985915835}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: smallCardImage
-      value: 
-      objectReference: {fileID: 745127503}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: possibleCards.Array.size
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: continueDialogueAfterPickup
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[0]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 85740473d308047449365116d321447f, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[1]'
-      value: 
-      objectReference: {fileID: 11400000, guid: e6abcf1033dfe254f937cf09af889489, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[2]'
-      value: 
-      objectReference: {fileID: 11400000, guid: f5f8962e8d69a22429c2a65ccd060780, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[3]'
-      value: 
-      objectReference: {fileID: 11400000, guid: ebe2df4c7280cb84bb0552a6bc7c77d5, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[4]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 7afd007ec6d2c4543a5080b6fc4a618c, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: b39c6c6934c77a54689c1f3befc1752c, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 3beb18b9c2deba244810fe98bc177bf1, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 38d83c6f92b0af9449b79c3117748407, type: 2}
-    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: 'possibleCards.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 77.0155
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 129.2524
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.91876936
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.3947949
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -190
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -457
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 46.506
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
 --- !u!1 &224567844
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,8 +645,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -690, y: -107}
-  m_SizeDelta: {x: 335.35, y: 476.7444}
+  m_AnchoredPosition: {x: 29, y: -47}
+  m_SizeDelta: {x: 1038.9299, y: 1099.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590094281
 MonoBehaviour:
@@ -1402,38 +1225,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &745127499 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7175054680500227504, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-  m_PrefabInstance: {fileID: 89380663}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &745127503 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7447048863627599287, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-  m_PrefabInstance: {fileID: 89380663}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745127499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!224 &745127505 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 8891643080485835332, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-  m_PrefabInstance: {fileID: 89380663}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &745127506 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
-  m_PrefabInstance: {fileID: 89380663}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 745127499}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c29b98514e53f4d4e93445eb1fa60b04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CardPickup
 --- !u!1 &846230691 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3325800201850910146, guid: 731684afd6d8913489f07d461455a505, type: 3}
@@ -1446,7 +1237,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846230691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1060a9730154573478d2328e0e51aa73, type: 3}
   m_Name: 
@@ -1455,10 +1246,10 @@ MonoBehaviour:
   nameText: {fileID: 1065098609}
   dialogueText: {fileID: 1479537607}
   blackOverlay: {fileID: 0}
-  useNoteInteraction: 1
-  button: {fileID: 745127499}
-  bigNotePanel: {fileID: 985915835}
-  useGatheringCharacters: 0
+  useNoteInteraction: 0
+  button: {fileID: 0}
+  bigNotePanel: {fileID: 0}
+  useGatheringCharacters: 1
   gatheringCharacters:
   - characterName: Ozric
     characterObject: {fileID: 590094279}
@@ -1467,75 +1258,200 @@ MonoBehaviour:
     normalPosition: {x: -690, y: -107}
     focusedPosition: {x: -690, y: -107}
     introLinesBeforeChoices:
-    - The mantis notices you approaching.
-    - His posture immediately straightens.
-    - "\u201CThe newcomer.\u201D"
-    - "\u201CIt is good to see another soul find their way here.\u201D"
-    - "\u201CI am Ozric.\u201D"
+    - Ozric bows his head slightly
+    - "\u201CGood morning.\u201D\r\n"
+    - You sit down opposite of him.
+    - "\u2026\r\n"
+    - "\u201CI saw you speaking to Ash yesterday.\u201D"
+    - His statement catches you off guard.
+    - "\u201CShould I not have?\u201D"
+    - Ozric shakes his head.
+    - "\u201CYou are free to speak with whomever you wish.\u201D"
+    - "\u2026"
+    - "\u201CAlthough I do perceive his company as unsettling\u2026\u201D"
+    - ' He finally takes a spoonful of stew.
+
+'
+    - "\u201CHe asks too many questions\u2026 \u201C"
+    - "\u201CQuestions lead souls away from saving.\u201D"
+    - "\u2026"
+    - "\u201CStill \u2013 you are new.\u201D"
+    - "\u201CThere is much for you to learn.\u201D"
+    - "\u201CAnd much for me to teach.\u201D\r\n"
+    - A faint smile appears on his face.
+    - "\u201CIf you are willing.\u201D"
+    - You nod.
+    - "\u201CTeach me what?\u201D"
+    - Ozric sets down his spoon.
+    - "\u201CPatience\u2026 Discipline\u2026 Devotion\u2026\u201D"
+    - "\u2026"
+    - "\u201CThe things I lacked when I first arrived.\u201D"
+    - 'He studies you carefully.
+
+'
+    - "\u201CI was much like you one, you know.\u201D"
+    - "\u201CLost\u2026 Angry\u2026\u201D"
+    - "\u201CThen the Leader found me.\u201D"
+    - A faint smile appears on his face.
+    - "\u201CI owe him everything.\u201D"
+    - "\u201CA debt that I can truly never repay.\u201D"
+    - "\u2026"
+    - ' Ozric quietly resumes eating.'
+    - For a while, neither of you speak.
+    - "\u2026"
+    - "\u201CMany mistake doubt for wisdom.\u201D"
+    - "\u201CI used to. Now I know better.\u201D"
+    - "\u2026"
+    - Ozric picks up his bowl to his mouth to finish the rest of the stew.
+    - "\u2026"
+    - After putting the empty dish back on the table, he gives you a slight nod.
+    - "\u201CForgive me, I have duties to attend to.\u201D"
+    - "\u201CShould you wish to learn more\u2026\u201D"
+    - "\u201C\u2026 you only need to ask.\u201D"
+    - "\u201CMay the Flesh embrace you.\u201D"
+    - "\u2026"
+    - 'As Ozric turns to leave, his offer lingers in your mind.
+
+'
+    - "\u201CWait.\u201D"
+    - Surprised, Ozric turns around.
+    - You pull out a card.
     introSpeakerChanges:
-    - lineIndex: 0
-      speakerName: YOU
     - lineIndex: 1
-      speakerName: YOU
-    - lineIndex: 2
-      speakerName: Ozric
-    - lineIndex: 3
       speakerName: Ozric
     - lineIndex: 4
       speakerName: Ozric
+    - lineIndex: 8
+      speakerName: Ozric
+    - lineIndex: 10
+      speakerName: Ozric
+    - lineIndex: 12
+      speakerName: Ozric
+    - lineIndex: 13
+      speakerName: Ozric
+    - lineIndex: 15
+      speakerName: Ozric
+    - lineIndex: 16
+      speakerName: Ozric
+    - lineIndex: 17
+      speakerName: Ozric
+    - lineIndex: 19
+      speakerName: Ozric
+    - lineIndex: 23
+      speakerName: Ozric
+    - lineIndex: 25
+      speakerName: Ozric
+    - lineIndex: 27
+      speakerName: Ozric
+    - lineIndex: 28
+      speakerName: Ozric
+    - lineIndex: 29
+      speakerName: Ozric
+    - lineIndex: 31
+      speakerName: Ozric
+    - lineIndex: 32
+      speakerName: Ozric
+    - lineIndex: 37
+      speakerName: Ozric
+    - lineIndex: 38
+      speakerName: Ozric
+    - lineIndex: 43
+      speakerName: Ozric
+    - lineIndex: 44
+      speakerName: Ozric
+    - lineIndex: 45
+      speakerName: Ozric
+    - lineIndex: 46
+      speakerName: Ozric
     cardChoiceSettings:
-      useCardChoiceAfterIntro: 0
-      flagRules: []
-      specialCard: {fileID: 0}
-      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
-      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
-      specialCardDialogueLines: []
-      specialCardSpeakerChanges: []
-      normalCardDialogueLines: []
-      normalCardSpeakerChanges: []
-    choices:
-    - buttonText: How long have you been here?
-      resultLines:
-      - "\u201CLong enough.\u201D"
-      - "\u201CTime doesn\u2019t matter. Purpose does.\u201D"
-      - "\u201CSee you around. May the Flesh embrace you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ozric
+      useCardChoiceAfterIntro: 1
+      flagRules:
+      - ruleName: Already took ash route
+        requiredFlags:
+        - ASHBURN
+        forbiddenFlags: []
+        dialogueLines:
+        - His smile drops.
+        - "\u201CI just think, you may need to stop hanging around withered souls
+          first.\u201D"
+        - "\u201CJust a word of advice.\u201D"
+        - Ozric turns back around and leaves.
+        - ...
+        speakerChanges:
+        - lineIndex: 1
+          speakerName: Ozric
+        - lineIndex: 2
+          speakerName: Ozric
+        setRouteFlag: 0
+        routeFlagToSet: 
+        countsAsSpecialRoute: 0
+      specialCard: {fileID: 11400000, guid: 85740473d308047449365116d321447f, type: 2}
+      specialRouteFlag: OZRICETERNAL
+      normalRouteFlag: GAMEOVER
+      specialCardDialogueLines:
+      - "Ozric let\u2019s out a quiet breath."
+      - "\u201CI see myself in you. You\u2019re a good soul.\u201D"
+      - ...
+      - "\u201CTell me, do you know what peace is?\u201D"
+      - "\u201CTrue peace.\u201D"
+      - ...
+      - "\u201CI\u2019ve spent years searching for it...\u201D"
+      - "\u201CAnd when I stopped searching... I found it.\u201D"
+      - A faint smile appears on his face.
+      - "\u201CPerhaps one day, you will too.\u201D"
+      - "\u201CI shall have the honour of welcoming you.\u201D"
+      - "\u201CWe are friends now.\u201D"
+      - "\u201CRight?\u201D"
+      - You stay silent for a while.
+      - "\u201CYes, Ozric. You are my friend.\u201D"
+      - "\u201CWell, see you around. Friend.\u201D"
+      - Smiling, he turns back around and leaves.
+      - ...
+      specialCardSpeakerChanges:
       - lineIndex: 1
-        speakerName: Ozric
-      - lineIndex: 2
-        speakerName: Ozric
-    - buttonText: "\u201CWho was that guy?\u201D"
-      resultLines:
-      - His eyes brighten
-      - "\u201CA remarkable man.\u201D"
-      - "\u201CWithout him, many of us would have perished.\u201D"
-      - "\u201CI certainly would have.\u201D"
-      - "\u201CSee you around. May the Flesh embrace you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: YOU
-      - lineIndex: 1
-        speakerName: Ozric
-      - lineIndex: 2
         speakerName: Ozric
       - lineIndex: 3
         speakerName: Ozric
       - lineIndex: 4
         speakerName: Ozric
-    - buttonText: "\u201CWhat exactly is this place?\u201D"
-      resultLines:
-      - "\u201CHome.\u201D"
-      - "\u201CFor those the world has abandoned.\u201D"
-      - "\u201CSee you around. May the Flesh embrace you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
+      - lineIndex: 6
         speakerName: Ozric
+      - lineIndex: 7
+        speakerName: Ozric
+      - lineIndex: 9
+        speakerName: Ozric
+      - lineIndex: 10
+        speakerName: Ozric
+      - lineIndex: 11
+        speakerName: Ozric
+      - lineIndex: 12
+        speakerName: Ozric
+      - lineIndex: 14
+        speakerName: Ozric
+      - lineIndex: 15
+        speakerName: Ozric
+      normalCardDialogueLines:
+      - Ozric studies you for a moment.
+      - "\u201CI\u2019m sorry... but I believe I\u2019ve said all I can.\u201D"
+      - He folds his hands neatly.
+      - "\u201CSometimes what you\u2019re looking for is not where you are searching.\u201D"
+      - "\u201CIn time, you will find your path.\u201D"
+      - "\u201CBut I believe, you won\u2019 find it through me.\u201D"
+      - He bows his head slightly.
+      - "\u201CMay the Flesh guide you.\u201D"
+      - Without another word, Ozric quietly leaves.
+      normalCardSpeakerChanges:
       - lineIndex: 1
         speakerName: Ozric
-      - lineIndex: 2
+      - lineIndex: 3
         speakerName: Ozric
+      - lineIndex: 4
+        speakerName: Ozric
+      - lineIndex: 5
+        speakerName: Ozric
+      - lineIndex: 7
+        speakerName: Ozric
+    choices: []
     hasTalkedToCharacter: 0
   - characterName: Bramble
     characterObject: {fileID: 942175340}
@@ -1544,74 +1460,146 @@ MonoBehaviour:
     normalPosition: {x: 230, y: -249}
     focusedPosition: {x: -690, y: -107}
     introLinesBeforeChoices:
-    - Before you can say a word, the beetle waves enthusiastically.
-    - "\u201CYou made it!\u201D"
-    - "\u201CWell obviously you made it.\u201D"
-    - "\u201CYou\u2019re standing here!\u201D"
-    - "\u201CI\u2019m Bramble \u2013 it is so pleasant to meet you!\u201D"
+    - "\u201CWonderful!\u201D"
+    - "\u201CI was beginning to think I\u2019d have to eat all of this myself.\u201D\r\n"
+    - Bramble slides a Bowl of stew to you.
+    - "\u201CEat!\u201D"
+    - "\u201CTrust me. Breakfast is the best meal around here.\u201D"
+    - "\u201CActually, lunch is pretty good too\u2026 and dinner!\u201D\r\n"
+    - "\u2026"
+    - "\u201CI just like food.\u201D"
+    - He laughs
+    - "\u2026"
+    - "\u201CHow\u2019d you sleep?\u201D"
+    - "\u201CHopefully better than me\u2026 I dreamt I was chased by chickens.\u201D"
+    - "\u201CTerrifying creatures\u2026\u201D"
+    - You laugh.
+    - "\u201CChickens?\u201D"
+    - He grins.
+    - "\u201CI\u2019m glad you\u2019re laughing.\u201D"
+    - "\u201CMost spend their first morning staring down at their plate.\u201D"
+    - "\u201CI know I did.\u201D"
+    - "\u2026"
+    - ' Bramble tears of a piece of bread and hands it to you.'
+    - "\u201CActually, when I first arrived, I cried for three days straight.\u201D"
+    - He laughs awkwardly.
+    - "\u201CNot my proudest moment\u2026\u201D"
+    - "\u201CBut everyone was really kind.\u201D"
+    - '"Well, almost everyone."'
+    - ...
+    - '"Ozric barely spoke a word."'
+    - '"Ash kept to himself."'
+    - '"But I figured eventually we''d all become friends."'
+    - '"Life''s easier that way."
+
+'
+    - '...
+
+'
+    - '"Say..."'
+    - '"You don''t regret coming here, do you?"'
+    - ' Bramble pauses.
+
+'
+    - '"Because I''d hate to think I made a new friend only for them to disappear."'
+    - "\u2026"
+    - ' Something about his words catches your attention.'
+    - Suddenly, you remember cards in your pocket.
     introSpeakerChanges:
     - lineIndex: 0
-      speakerName: YOU
-    - lineIndex: 1
       speakerName: Bramble
-    - lineIndex: 2
+    - lineIndex: 1
       speakerName: Bramble
     - lineIndex: 3
       speakerName: Bramble
     - lineIndex: 4
       speakerName: Bramble
+    - lineIndex: 5
+      speakerName: Bramble
+    - lineIndex: 7
+      speakerName: Bramble
+    - lineIndex: 10
+      speakerName: Bramble
+    - lineIndex: 11
+      speakerName: Bramble
+    - lineIndex: 12
+      speakerName: Bramble
+    - lineIndex: 16
+      speakerName: Bramble
+    - lineIndex: 17
+      speakerName: Bramble
+    - lineIndex: 18
+      speakerName: Bramble
+    - lineIndex: 21
+      speakerName: Bramble
+    - lineIndex: 23
+      speakerName: Bramble
+    - lineIndex: 24
+      speakerName: Bramble
+    - lineIndex: 25
+      speakerName: Bramble
+    - lineIndex: 27
+      speakerName: Bramble
+    - lineIndex: 28
+      speakerName: Bramble
+    - lineIndex: 29
+      speakerName: Bramble
+    - lineIndex: 30
+      speakerName: Bramble
+    - lineIndex: 32
+      speakerName: Bramble
+    - lineIndex: 33
+      speakerName: Bramble
+    - lineIndex: 35
+      speakerName: Bramble
     cardChoiceSettings:
-      useCardChoiceAfterIntro: 0
-      flagRules: []
-      specialCard: {fileID: 0}
-      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
-      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
-      specialCardDialogueLines: []
-      specialCardSpeakerChanges: []
-      normalCardDialogueLines: []
-      normalCardSpeakerChanges: []
-    choices:
-    - buttonText: You seem happy here
-      resultLines:
-      - "\u201CI am!\u201D"
-      - "\u201CMost days anyway.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Bramble
+      useCardChoiceAfterIntro: 1
+      flagRules:
+      - ruleName: Already took Ash route
+        requiredFlags:
+        - ASHBURN
+        forbiddenFlags: []
+        dialogueLines:
+        - "\u201CForget about it.\u201D"
+        - "\u201CIt\u2019s probably a stupid idea.\u201D"
+        - "\u201CI\u2019m sorry, my minds all over the place.\u201D"
+        - ...
+        speakerChanges:
+        - lineIndex: 0
+          speakerName: Bramble
+        - lineIndex: 1
+          speakerName: Bramble
+        - lineIndex: 2
+          speakerName: Bramble
+        - lineIndex: 3
+          speakerName: Bramble
+        setRouteFlag: 0
+        routeFlagToSet: 
+        countsAsSpecialRoute: 0
+      specialCard: {fileID: 11400000, guid: b39c6c6934c77a54689c1f3befc1752c, type: 2}
+      specialRouteFlag: BRAMBLEESCAPE
+      normalRouteFlag: GAMEOVER
+      specialCardDialogueLines:
+      - Bramble chuckles at you being visibly off guard by his question.
+      - "\u201CI can see what you really think.\u201D"
+      - Bramble leans forward and looks into your eyes.
+      - "\u201CDid you know everyone runs to the square when the evening bell rings?\u201D"
+      - "\u201CEvery. Single. Time.\u201D"
+      - "\u201CLike they are trained. Or scared something might happen if they don\u2019t...\u201D"
+      - ...
+      - He grins.
+      - "\u201CWouldn\u2019t take much to get everybody\u2019s attention.\u201D"
+      - Bramble comes even closer. Whispering.
+      - "\u201CI know you don\u2019t like it here.\u201D"
+      - "\u201CI can see it in your eyes. They never lie...\u201D"
+      - "\u201CAnd I need you to promise me not to tell anyone.\u201D"
+      - "\u201CBut there is a world out there. Purpose. Freedom.\u201D"
+      - "\u201CBut I can\u2019t see that world without your help.\u201D"
+      - "\u201CWe\u2019ll talk later.\u201D"
+      - "\u201CToo many eyes and ears.\u201D"
+      - ...
+      specialCardSpeakerChanges:
       - lineIndex: 1
-        speakerName: Bramble
-      - lineIndex: 2
-        speakerName: Bramble
-    - buttonText: How long have you been here?
-      resultLines:
-      - "\u201CThree years.\u201D"
-      - "\u201COr four.\u201D"
-      - "\u201CActually... maybe five.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Bramble
-      - lineIndex: 1
-        speakerName: Bramble
-      - lineIndex: 2
-        speakerName: Bramble
-      - lineIndex: 3
-        speakerName: Bramble
-    - buttonText: What do the people here do all day?
-      resultLines:
-      - "\u201CMostly work.\u201D"
-      - "\u201CGather supplies, Pray, Eat, ...\u201D"
-      - "\u201CAttend sacrif- well ceremonies...!\u201D"
-      - "\u201C...\u201D"
-      - "\u201CActually, maybe forget about the last part.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Bramble
-      - lineIndex: 1
-        speakerName: Bramble
-      - lineIndex: 2
         speakerName: Bramble
       - lineIndex: 3
         speakerName: Bramble
@@ -1619,95 +1607,60 @@ MonoBehaviour:
         speakerName: Bramble
       - lineIndex: 5
         speakerName: Bramble
-    - buttonText: What do the people here do all day?
-      resultLines:
-      - "\u201CMostly work.\u201D"
-      - "\u201CGather supplies, Pray, Eat, ...\u201D"
-      - "\u201CAttend sacrif- well ceremonies...!\u201D"
-      - "\u201C...\u201D"
-      - "\u201CActually, maybe forget about the last part.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
+      - lineIndex: 8
         speakerName: Bramble
+      - lineIndex: 10
+        speakerName: Bramble
+      - lineIndex: 11
+        speakerName: Bramble
+      - lineIndex: 12
+        speakerName: Bramble
+      - lineIndex: 13
+        speakerName: Bramble
+      - lineIndex: 14
+        speakerName: Bramble
+      - lineIndex: 15
+        speakerName: Bramble
+      - lineIndex: 16
+        speakerName: Bramble
+      normalCardDialogueLines:
+      - Bramble smiles sadly.
+      - "\u201CHeh... I can tell, you know.\u201D"
+      - "\u201CYou\u2019ve got that look.\u201D"
+      - "\u201CLike someone who\u2019s already made up their mind.\u201D"
+      - ...
+      - "\u201CAnd that\u2019s alright. I won\u2019t stand in your way.\u201D"
+      - "\u201CI\u2019d rather be a good memory than another regret.\u201D"
+      - He forces a smile.
+      - "\u201CBesides... I think you\u2019ve already established your next move.\u201D"
+      - "\u201COr... the universe just doesn\u2019t have a plan for us together.\u201D"
+      - ...
+      - "\u201CJust promise me one thing.\u201D"
+      - "\u201CDon\u2019t disappear without saying farewell.\u201D"
+      - ...
+      normalCardSpeakerChanges:
       - lineIndex: 1
         speakerName: Bramble
       - lineIndex: 2
         speakerName: Bramble
-    hasTalkedToCharacter: 0
-  - characterName: Ash
-    characterObject: {fileID: 967956426}
-    characterButton: {fileID: 967956428}
-    characterRectTransform: {fileID: 967956427}
-    normalPosition: {x: 702, y: -15}
-    focusedPosition: {x: -690, y: -107}
-    introLinesBeforeChoices:
-    - The ant sits alone.
-    - "He doesn\u2019t acknowledge you at first."
-    - Only when you sit down, he looks you up and down.
-    - "\u201COh... Most people avoid me. I\u2019m Ash.\u201D"
-    introSpeakerChanges:
-    - lineIndex: 3
-      speakerName: Ash
-    cardChoiceSettings:
-      useCardChoiceAfterIntro: 0
-      flagRules: []
-      specialCard: {fileID: 0}
-      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
-      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
-      specialCardDialogueLines: []
-      specialCardSpeakerChanges: []
-      normalCardDialogueLines: []
-      normalCardSpeakerChanges: []
-    choices:
-    - buttonText: Why?
-      resultLines:
-      - "\u201CYou\u2019d have to ask them.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-    - buttonText: Can I trust that guy?
-      resultLines:
-      - "\u201CYou mean the leader?\u201D"
-      - "\u201C...\u201D"
-      - "\u201CInteresting...\u201D"
-      - "\u201C... that you\u2019re asking.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-      - lineIndex: 2
-        speakerName: Ash
       - lineIndex: 3
-        speakerName: Ash
-      - lineIndex: 4
-        speakerName: Ash
-    - buttonText: "\u201CWhy are you here?\u201D"
-      resultLines:
-      - "\u201CSame reason as everyone else.\u201D"
-      - "\u201C...\u201D"
-      - "\u201CI made a mistake.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-      - lineIndex: 2
-        speakerName: Ash
-      - lineIndex: 3
-        speakerName: Ash
+        speakerName: Bramble
+      - lineIndex: 5
+        speakerName: Bramble
+      - lineIndex: 6
+        speakerName: Bramble
+      - lineIndex: 8
+        speakerName: Bramble
+      - lineIndex: 9
+        speakerName: Bramble
+      - lineIndex: 11
+        speakerName: Bramble
+      - lineIndex: 12
+        speakerName: Bramble
+    choices: []
     hasTalkedToCharacter: 0
   hideTalkedCharacters: 1
-  endGatheringAfterFirstCharacter: 0
+  endGatheringAfterFirstCharacter: 1
   choicePanel: {fileID: 1604306687}
   choiceButtons:
   - {fileID: 1276547425}
@@ -1720,76 +1673,52 @@ MonoBehaviour:
   - {fileID: 625179528}
   - {fileID: 1914149424}
   nextSceneButton: {fileID: 0}
-  autoNextSceneName: SixthAct
+  autoNextSceneName: EndingScreen
   introDialogueLines:
-  - Back in your cabin, you look out of your window.
-  - "First\u2026 nothing."
-  - "Then\u2026 after a while\u2026 the settlement slowly comes to life."
-  - Doors open, smoke rises from chimneys.
-  - You decide to also leave your cabin.
-  - 'Outside, the smell of freshly baked bread drifts through the air.
+  - "As you leave the hall alongside the other members, you\u2019re met with sweet
+    and herby\r\nnotes."
+  - Long wooden tables filled with different foods have been set up.
+  - The others start feasting, laughing and chatting.
+  - Some wave as you pass, others greet you with warm smiles.
+  - 'For a moment, you forget where you are.
 
 '
+  - "Everything feels\u2026 normal."
   - "\u2026"
-  - "\u201CThere you are.\u201D\r\n"
-  - 'You turn around.
-
-'
-  - Brother Garrick approaches you.
-  - "\u201CThe morning service is about to begin.\u201D\r\n"
-  - ' He gestures you to follow.'
-  - "\u201CCome.\u201D"
-  - Garrick leads you to the largest building in the settlement.
-  - 'Most of the wooden benches with strange carvings are already occupied by other
-
-    people.'
-  - The stained-glass windows cast a beautiful light on the whole room.
-  - A symbol hangs at the end of the hall.
-  - "The same symbol you\u2019ve been seeing all throughout this place."
+  - Brother Garrick approaches you from behind.
+  - He places a hand on your shoulder.
+  - "\u201CDo not be shy.\u201D\r\n"
+  - "\u201CNo soul should break their fast alone.\u201D"
+  - With that, he disappears into the crowd.
   - "\u2026"
-  - You take a seat.
-  - The hall gradually falls silent.
-  - The hooded stranger enters the hall and walks over to stand before the crowd.
-  - ' Every eye in the room is fixed on him.'
+  - Your gaze wanders across the gathering.
+  - Bramble notices you immediately.
+  - "\u201CThere you are!\u201D"
+  - He enthusiastically waves a loaf of bread in the air.
+  - "\u201CCome! Sit with me!\u201D\r\n"
   - "\u2026"
-  - "\u201CMy brothers and sisters.\u201D"
-  - "\u201CAnother day has been gifted to us.\u201D"
-  - "\u201CAnother chance to walk the path laid before us.\u201D"
-  - "\u201C\u2026 Many spend their lives searching for purpose.\u201D"
-  - "\u201CBut purpose is not found, it is embraced.\u201D"
-  - Several members bow their heads.
-  - The man continues speaking.
-  - His voice is calm and comforting.
-  - Yet your thoughts begin to drift.
-  - ' You find yourself staring at the symbol.'
-  - "What does it mean and why is it everywhere\u2026?"
-  - The speech becomes a muffled background voice in your mind.
+  - "Not far \u2013 Ozric sits alone."
+  - His posture is straight.
+  - A bowl of untouched stew before him.
+  - His eyes are closed. He is praying.
   - "\u2026"
-  - "You think about Ash\u2026 the cards\u2026 the strange things you\u2019ve learned\u2026"
-  - '*Applause*'
-  - "You shake your head quickly, realizing you\u2019ve completely lost track of
-    the sermon."
-  - "\u201CMay the Flesh guide us.\u201D"
-  - "\u201CMay the Flesh preserve us.\u201D"
-  - " \u201CMay the Flesh embrace us.\u201D"
-  - "\u201CMay the Flesh embrace us.\u201D"
-  - ' The service is over.
-
-'
-  - And judging by your stomach, not a moment too soon.
-  - The smell of food is already coming in from outside.
-  - As you turn to leave, something catches your eye.
-  - 'Beneath the bench in front of you lies a card.
-
-'
+  - He opens his eyes and notices you looking at him.
+  - He gives you a nod, gesturing you to join him.
+  - "\u2026"
+  - Who should you join?
   afterNoteDialogueLines: []
   choices: []
   endingLines:
-  - Strange.
-  - You don't remember seeing it when you sat down.
+  - Eventually, the morning feast comes to an end.
+  - One by one, the members return to their duties
+  - You decide to spend the rest of the day resting.
+  - Evening is still far.
+  - Perhaps a few hours of peace will do you some good.
+  - You return to your cabin.
   - ...
+  - And before long, you drift into a light sleep.
   useCardChoiceAfterEnding: 0
-  maxDisplayedCardChoices: 2
+  maxDisplayedCardChoices: 9
   endingCardChoiceSettings:
     specialCard: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
     specialRouteFlag: Ash Burn the Cult
@@ -1881,44 +1810,17 @@ MonoBehaviour:
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
-    lineIndex: 7
+    lineIndex: 9
     speakerName: Brother Garrick
   - section: 0
     lineIndex: 10
     speakerName: Brother Garrick
   - section: 0
-    lineIndex: 12
-    speakerName: Brother Garrick
+    lineIndex: 15
+    speakerName: Bramble
   - section: 0
-    lineIndex: 24
-    speakerName: ???
-  - section: 0
-    lineIndex: 25
-    speakerName: ???
-  - section: 0
-    lineIndex: 26
-    speakerName: ???
-  - section: 0
-    lineIndex: 27
-    speakerName: ???
-  - section: 0
-    lineIndex: 28
-    speakerName: ???
-  - section: 0
-    lineIndex: 39
-    speakerName: Everyone
-  - section: 0
-    lineIndex: 40
-    speakerName: ???
-  - section: 0
-    lineIndex: 41
-    speakerName: ???
-  - section: 0
-    lineIndex: 42
-    speakerName: ???
-  - section: 0
-    lineIndex: 43
-    speakerName: Everyone
+    lineIndex: 17
+    speakerName: Bramble
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
   revealBackgroundAfterLine: 2
@@ -1927,25 +1829,390 @@ MonoBehaviour:
   characterObject: {fileID: 2107327382}
   characterImage: {fileID: 2107327383}
   characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
-  characterAppearsAtIntroLine: 7
-  characterLeavesAtIntroLine: 13
+  characterAppearsAtIntroLine: -1
+  characterLeavesAtIntroLine: -1
   fadeCharacterIn: 1
   characterFadeDuration: 1
   fadingCharacters:
-  - characterName: Cult Leader
+  - characterName: Brother Garrick
     characterObject: {fileID: 2107327382}
     characterImage: {fileID: 2107327383}
-    characterSprite: {fileID: 7038205560192504604, guid: 2d530da878aa544409d5d61e815d0366, type: 3}
-    appearsAtIntroLine: 24
-    leavesAtIntroLine: 43
+    characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
+    appearsAtIntroLine: 7
+    leavesAtIntroLine: 12
+    hasAppeared: 0
+    hasLeft: 0
+  - characterName: Bramble
+    characterObject: {fileID: 2107327382}
+    characterImage: {fileID: 2107327383}
+    characterSprite: {fileID: -4898879085011860537, guid: ce40e181fc2a27943b4bba2ef86e646f, type: 3}
+    appearsAtIntroLine: 15
+    leavesAtIntroLine: 19
+    hasAppeared: 0
+    hasLeft: 0
+  - characterName: Ozric
+    characterObject: {fileID: 2107327382}
+    characterImage: {fileID: 2107327383}
+    characterSprite: {fileID: -2779423337244529728, guid: 0388586e3f094e841804ac3b7aa7b9bb, type: 3}
+    appearsAtIntroLine: 21
+    leavesAtIntroLine: 26
     hasAppeared: 0
     hasLeft: 0
   backgroundRenderer: {fileID: 1195310581}
   backgroundChanges:
-  - section: 0
-    lineIndex: 13
-    backgroundSprite: {fileID: 5622580813765265097, guid: 97d31274d872bea4980c943d312247f4, type: 3}
+  - section: 4
+    lineIndex: 5
+    backgroundSprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
   typingSpeed: 0.03
+--- !u!114 &846230695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846230691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468227ba0a633754e8652290fc781563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalFlagDialogueController
+  textBox: {fileID: 1604306687}
+  nameText: {fileID: 1065098609}
+  dialogueText: {fileID: 1479537607}
+  defaultSpeakerName: YOU
+  introDialogueLines:
+  - '*Whisper... Whisper...*'
+  - You wake up to voices outside.
+  - "The sun had already set... you slept far longer than you meant to.\t"
+  - Rubbing your eyes, you look out of the window.
+  - ...
+  - "\u201CWhat is happening?\u201D"
+  - You see a few hooded figures gathered around the bonfire.
+  - The rest of the settlement seems to be gone.
+  - The hooded figures stand in a circle.
+  - In the middle of the circle, someone kneels on the ground.
+  - For a moment his head lifts and his eyes find yours.
+  - The hooded figures close in around him.
+  - Through your window you can hear muffled chanting.
+  - "\u201CMay the Flesh embrace you!\u201D"
+  - You press your back against the wall, looking away from the window in panic.
+  - "You can\u2019t see what happens next."
+  - Just bloodcurdling screams.
+  - Then it goes quiet.
+  - You hold your mouth closed. Not letting out a single breath.
+  introSpeakerChanges: []
+  backgroundRenderer: {fileID: 1195310581}
+  introBackgroundChanges: []
+  routes:
+  - routeName: Ash Ending
+    requiredFlags:
+    - ASHBURN
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 967956426}
+    characterImage: {fileID: 967956429}
+    characterSprite: {fileID: 8549132265923387089, guid: 24f68009caa5e1146889df013ef3c39f, type: 3}
+    characterAppearsAtLine: 8
+    characterLeavesAtLine: 30
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - "You don\u2019t move."
+    - '*Knock Knock*'
+    - ...
+    - "You are scared they might find you next. You don\u2019t answer."
+    - '*Knock Knock*'
+    - "\u201CIt\u2019s me.\u201D"
+    - Ash.
+    - You let out a breath and open the door.
+    - Quietly he slips inside. His expression is worried.
+    - "\u201CYou saw, didn\u2019t you.\u201D"
+    - ...
+    - "\u201CI hoped you didn\u2019t.\u201D"
+    - He leans against the wall taking a deep breath.
+    - "\u201CNow you know what this place really is.\u201D"
+    - "\u201CThe gathering will begin soon. We must act now.\u201D"
+    - "\u201CI\u2019ve made my decision.\u201D"
+    - He looks toward the window.
+    - "\u201CI can\u2019t stay here anymore.\u201D"
+    - "\u201CAnd neither can you.\u201D"
+    - "\u201CThe others aren\u2019t evil. Most of them are just afraid.\u201D"
+    - He sighs.
+    - "\u201CI know where the Oil is stored.\u201D"
+    - "\u201CEnough to turn this place to ash.\u201D"
+    - "\u201COnce the evening bell rings, everyone will gather in the hall.\u201D"
+    - "\u201CWe\u2019ll set the cabins ablaze... that\u2019s our distraction.\u201D"
+    - He looks at you.
+    - "\u201CNo more lies. No more Flesh. Just freedom.\u201D"
+    - ...
+    - "\u201CAre you with me?\u201D"
+    - Before you can answer, the bell rings.
+    - '*Ding! Ding! Ding! *'
+    - That night... I broke free.
+    - Ash and I set the whole settlement on fire.
+    - 'We stood at the treeline and listened to it burn. Then we ran... and never
+      looked
+
+      back.'
+    - Now, we live in a small cabin, far from any soul.
+    - "We don\u2019t know what became of the others. Bramble... Ozric..."
+    - "And after what I witnessed that night... I don\u2019t want to."
+    - The End
+    speakerChanges:
+    - lineIndex: 5
+      speakerName: Ash
+    - lineIndex: 9
+      speakerName: Ash
+    - lineIndex: 11
+      speakerName: Ash
+    - lineIndex: 13
+      speakerName: Ash
+    - lineIndex: 14
+      speakerName: Ash
+    - lineIndex: 15
+      speakerName: Ash
+    - lineIndex: 17
+      speakerName: Ash
+    - lineIndex: 18
+      speakerName: Ash
+    - lineIndex: 19
+      speakerName: Ash
+    - lineIndex: 21
+      speakerName: Ash
+    - lineIndex: 22
+      speakerName: Ash
+    - lineIndex: 23
+      speakerName: Ash
+    - lineIndex: 24
+      speakerName: Ash
+    - lineIndex: 26
+      speakerName: Ash
+    - lineIndex: 28
+      speakerName: Ash
+    backgroundChanges:
+    - lineIndex: 31
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  - routeName: Bramble Escape
+    requiredFlags:
+    - BRAMBLEESCAPE
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 942175340}
+    characterImage: {fileID: 942175343}
+    characterSprite: {fileID: -4898879085011860537, guid: ce40e181fc2a27943b4bba2ef86e646f, type: 3}
+    characterAppearsAtLine: 4
+    characterLeavesAtLine: 17
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - You stay frozen against the wall.
+    - The door opens... slowly, carefully.
+    - "\u201C...It\u2019s just me.\u201D"
+    - Bramble.
+    - None of his usual noise. He steps in and quietly closes the door.
+    - He sees you trembling by the window.
+    - "\u201CYou saw it. Didn\u2019t you.\u201D"
+    - ...
+    - "\u201CI hoped you\u2019d sleep through it.\u201D"
+    - "\u201CYou remember what I told you? How everyone runs to the bonfire the second
+      the\r\nbell rings?"
+    - "\u201CThat\u2019s the moment no one\u2019s watching the treeline.\u201D"
+    - "\u201CWhen it rings tonight...\u201D"
+    - "\u201CWe run.\u201D"
+    - "\u201CThe other way. Into the dark. And we don\u2019t stop.\u201D"
+    - Bramble grips your arm.
+    - "\u201CPromise me you won\u2019t freeze. Promise me you\u2019ll run.\u201D"
+    - "\u201CI promise.\u201D"
+    - When the bell rang, everyone rushed to the fire.
+    - We were the only two moving the other way.
+    - We ran until the bonfire was just a glow behind the trees... and we kept running.
+    - "I don\u2019t know if they ever noticed we were gone."
+    - But Bramble was right. There was a world out there.
+    - And we found it together.
+    - The End
+    speakerChanges:
+    - lineIndex: 2
+      speakerName: Bramble
+    - lineIndex: 6
+      speakerName: Bramble
+    - lineIndex: 7
+      speakerName: Bramble
+    - lineIndex: 8
+      speakerName: Bramble
+    - lineIndex: 9
+      speakerName: Bramble
+    - lineIndex: 10
+      speakerName: Bramble
+    - lineIndex: 11
+      speakerName: Bramble
+    - lineIndex: 12
+      speakerName: Bramble
+    - lineIndex: 13
+      speakerName: Bramble
+    - lineIndex: 15
+      speakerName: Bramble
+    backgroundChanges:
+    - lineIndex: 17
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  - routeName: Ozric Eternal
+    requiredFlags:
+    - OZRICETERNAL
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 590094279}
+    characterImage: {fileID: 590094282}
+    characterSprite: {fileID: -2779423337244529728, guid: 0388586e3f094e841804ac3b7aa7b9bb, type: 3}
+    characterAppearsAtLine: 4
+    characterLeavesAtLine: 29
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - '*Knock. Knock. *'
+    - You remain frozen against the wall.
+    - ...
+    - Slowly the door opens.
+    - Ozric steps inside.
+    - You let out a deep breath.
+    - He studies you for a moment.
+    - ...
+    - "\u201CYou saw it.\u201D"
+    - His voice is calm. Too calm.
+    - "\u201CFew are meant to.\u201D"
+    - He lowers his head.
+    - "\u201CI prayed you would sleep through the ceremony.\u201D"
+    - ...
+    - "\u201CBut now there is little time.\u201D"
+    - Ozric notices your fear.
+    - ...
+    - "\u201CIt is difficult. The first time always is.\u201D"
+    - He places a hand on your shoulder.
+    - "\u201CBut suffering gives birth to understanding.\u201D"
+    - "\u201CAnd understanding gives birth to purpose.\u201D"
+    - ...
+    - "\u201CCome.\u201D"
+    - "\u201CThe evening service awaits.\u201D"
+    - "\u201CYou need not carry this burden alone.\u201D"
+    - He gives you a warm smile.
+    - "\u201CYou are one of us now.\u201D"
+    - '*Ding! Ding! Ding! *'
+    - "\u201CShall we?\u201D"
+    - The years passed quietly. Eventually, I stopped asking questions.
+    - I learned the prayers, the rituals...
+    - I learned to look away.
+    - And when lost souls arrived at our gates, I welcomed them with open arms.
+    - Just as Ozric once welcomed me.
+    - May the Flesh embrace you.
+    - The End
+    speakerChanges:
+    - lineIndex: 8
+      speakerName: Ozric
+    - lineIndex: 10
+      speakerName: Ozric
+    - lineIndex: 12
+      speakerName: Ozric
+    - lineIndex: 13
+      speakerName: Ozric
+    - lineIndex: 14
+      speakerName: Ozric
+    - lineIndex: 17
+      speakerName: Ozric
+    - lineIndex: 19
+      speakerName: Ozric
+    - lineIndex: 20
+      speakerName: Ozric
+    - lineIndex: 20
+      speakerName: Ozric
+    - lineIndex: 21
+      speakerName: Ozric
+    - lineIndex: 22
+      speakerName: Ozric
+    - lineIndex: 23
+      speakerName: Ozric
+    - lineIndex: 24
+      speakerName: Ozric
+    - lineIndex: 26
+      speakerName: Ozric
+    - lineIndex: 28
+      speakerName: Ozric
+    backgroundChanges:
+    - lineIndex: 29
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  - routeName: Game Over
+    requiredFlags:
+    - GAMEOVER
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 1129492682}
+    characterImage: {fileID: 1129492684}
+    characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
+    characterAppearsAtLine: 6
+    characterLeavesAtLine: 20
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - ...
+    - "\u201CKnock. Knock.\u201D"
+    - ...
+    - "\u201CKnock. Knock.\u201D"
+    - You remain silent.
+    - The door slowly opens.
+    - Brother Garrick stands in the doorway.
+    - Behind him are several hooded figures.
+    - "\u201CThere you are.\u201D"
+    - "\u201CWe\u2019ve been looking for you.\u201D"
+    - His smile is gentle.
+    - "\u201CThe leader wishes to speak to you.\u201D"
+    - "\u201CI- I saw nothing! I promise!\u201D"
+    - Garrick sighs.
+    - "\u201CI know... that\u2019s what worries us.\u201D"
+    - "\u201CA soul like yours... a soul without purpose... is a dangerous thing.\u201D"
+    - He extends his hand.
+    - "\u201CCome.\u201D"
+    - "\u201CThe flesh shall embrace you.\u201D"
+    - I screamed. I begged. I prayed.
+    - But their chanting drowned out my voice.
+    - "And as the circle closed around me...\t"
+    - I finally understood.
+    - Nobody ever left.
+    - May the Flesh embrace you.
+    - The End
+    speakerChanges:
+    - lineIndex: 8
+      speakerName: Brother Garrick
+    - lineIndex: 9
+      speakerName: Brother Garrick
+    - lineIndex: 11
+      speakerName: Brother Garrick
+    - lineIndex: 14
+      speakerName: Brother Garrick
+    - lineIndex: 15
+      speakerName: Brother Garrick
+    - lineIndex: 17
+      speakerName: Brother Garrick
+    - lineIndex: 18
+      speakerName: Brother Garrick
+    backgroundChanges:
+    - lineIndex: 20
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  fallbackRoute:
+    routeName: 
+    requiredFlags: []
+    forbiddenFlags: []
+    useCharacter: 0
+    characterObject: {fileID: 0}
+    characterImage: {fileID: 0}
+    characterSprite: {fileID: 0}
+    characterAppearsAtLine: 0
+    characterLeavesAtLine: -1
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines: []
+    speakerChanges: []
+    backgroundChanges: []
+  typingSpeed: 0.03
+  nextSceneButton: {fileID: 0}
+  autoNextSceneName: EndingScreen
+  debugRoutes: 1
 --- !u!1 &942175340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,8 +2249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -249}
-  m_SizeDelta: {x: 355.5411, y: 486.04}
+  m_AnchoredPosition: {x: -0, y: -69.41032}
+  m_SizeDelta: {x: 854.9961, y: 1140.545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942175342
 MonoBehaviour:
@@ -2119,8 +2386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 702, y: -15}
-  m_SizeDelta: {x: 319.6662, y: 458.19}
+  m_AnchoredPosition: {x: -33, y: -175}
+  m_SizeDelta: {x: 1089.6744, y: 1212.094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967956428
 MonoBehaviour:
@@ -2220,27 +2487,6 @@ MonoBehaviour:
   hoverText: {fileID: 2115950804}
   textToShow: Ash
   offset: {x: 20, y: 25}
---- !u!1 &985915835 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8586723027462438960, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-  m_PrefabInstance: {fileID: 1613863808}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &985915836 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1522624847424839217, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-  m_PrefabInstance: {fileID: 1613863808}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 985915835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
---- !u!224 &985915838 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-  m_PrefabInstance: {fileID: 1613863808}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1011540779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,8 +2661,28 @@ PrefabInstance:
       value: GameState
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: routeFlag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: playedCard
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: playedSpecialRoute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: addTestCardsOnStart
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: routeFlags.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: 'routeFlags.Array.data[0]'
+      value: GAMEOVER
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: testCardsToAdd.Array.size
@@ -2425,7 +2691,7 @@ PrefabInstance:
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: 'testCardsToAdd.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+      objectReference: {fileID: 11400000, guid: 85740473d308047449365116d321447f, type: 2}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: 'testCardsToAdd.Array.data[1]'
       value: 
@@ -2480,7 +2746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296, y: 23}
+  m_AnchoredPosition: {x: 15, y: -57}
   m_SizeDelta: {x: 1143.1055, y: 1187.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129492684
@@ -3217,103 +3483,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1312784324900461756, guid: 731684afd6d8913489f07d461455a505, type: 3}
   m_PrefabInstance: {fileID: 4928992701158937879}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1613863808
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1582250157}
-    m_Modifications:
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -10.889893
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -35.526093
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5738259419998493947, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8586723027462438960, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
-      propertyPath: m_Name
-      value: BigCardPanel
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d7e3f4a0047b2fb429fc08cd50e8546f, type: 3}
 --- !u!1 &1725586200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4418,24 +4587,18 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 745127505}
-    - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 985915838}
-    - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
-      insertIndex: 3
       addedObject: {fileID: 1129492683}
     - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
-      insertIndex: 4
+      insertIndex: 2
       addedObject: {fileID: 590094280}
     - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
-      insertIndex: 5
+      insertIndex: 3
       addedObject: {fileID: 942175341}
     - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
-      insertIndex: 6
+      insertIndex: 4
       addedObject: {fileID: 967956427}
     - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
-      insertIndex: 7
+      insertIndex: 5
       addedObject: {fileID: 2107327385}
     - targetCorrespondingSourceObject: {fileID: 4939668028687885924, guid: 731684afd6d8913489f07d461455a505, type: 3}
       insertIndex: -1
@@ -4465,6 +4628,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3325800201850910146, guid: 731684afd6d8913489f07d461455a505, type: 3}
       insertIndex: -1
       addedObject: {fileID: 846230693}
+    - targetCorrespondingSourceObject: {fileID: 3325800201850910146, guid: 731684afd6d8913489f07d461455a505, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 846230695}
   m_SourcePrefab: {fileID: 100100000, guid: 731684afd6d8913489f07d461455a505, type: 3}
 --- !u!1001 &5610278484889980061
 PrefabInstance:
@@ -4520,15 +4686,15 @@ PrefabInstance:
       objectReference: {fileID: 6355524124129821454, guid: 7773e6f4fcb9b704eba8d367b8ed6bac, type: 3}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.b
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.g
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.r
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9048767490938709724, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Name

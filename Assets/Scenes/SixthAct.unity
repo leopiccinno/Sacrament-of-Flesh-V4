@@ -645,8 +645,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -690, y: -107}
-  m_SizeDelta: {x: 335.35, y: 476.7444}
+  m_AnchoredPosition: {x: 29, y: -47}
+  m_SizeDelta: {x: 1038.9299, y: 1099.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590094281
 MonoBehaviour:
@@ -1673,7 +1673,7 @@ MonoBehaviour:
   - {fileID: 625179528}
   - {fileID: 1914149424}
   nextSceneButton: {fileID: 0}
-  autoNextSceneName: 
+  autoNextSceneName: SeventhAct
   introDialogueLines:
   - "As you leave the hall alongside the other members, you\u2019re met with sweet
     and herby\r\nnotes."
@@ -1864,6 +1864,355 @@ MonoBehaviour:
     lineIndex: 5
     backgroundSprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
   typingSpeed: 0.03
+--- !u!114 &846230695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846230691}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468227ba0a633754e8652290fc781563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinalFlagDialogueController
+  textBox: {fileID: 1604306687}
+  nameText: {fileID: 1065098609}
+  dialogueText: {fileID: 1479537607}
+  defaultSpeakerName: YOU
+  introDialogueLines:
+  - '*Whisper... Whisper...*'
+  - You wake up to voices outside.
+  - "The sun had already set... you slept far longer than you meant to.\t"
+  - Rubbing your eyes, you look out of the window.
+  - ...
+  - "\u201CWhat is happening?\u201D"
+  - You see a few hooded figures gathered around the bonfire.
+  - The rest of the settlement seems to be gone.
+  - The hooded figures stand in a circle.
+  - In the middle of the circle, someone kneels on the ground.
+  - For a moment his head lifts and his eyes find yours.
+  - The hooded figures close in around him.
+  - Through your window you can hear muffled chanting.
+  - "\u201CMay the Flesh embrace you!\u201D"
+  - You press your back against the wall, looking away from the window in panic.
+  - "You can\u2019t see what happens next."
+  - Just bloodcurdling screams.
+  - Then it goes quiet.
+  - You hold your mouth closed. Not letting out a single breath.
+  introSpeakerChanges: []
+  backgroundRenderer: {fileID: 1195310581}
+  introBackgroundChanges: []
+  routes:
+  - routeName: Ash Ending
+    requiredFlags:
+    - ASHBURN
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 967956426}
+    characterImage: {fileID: 967956429}
+    characterSprite: {fileID: 8549132265923387089, guid: 24f68009caa5e1146889df013ef3c39f, type: 3}
+    characterAppearsAtLine: 8
+    characterLeavesAtLine: 30
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - "You don\u2019t move."
+    - '*Knock Knock*'
+    - ...
+    - "You are scared they might find you next. You don\u2019t answer."
+    - '*Knock Knock*'
+    - "\u201CIt\u2019s me.\u201D"
+    - Ash.
+    - You let out a breath and open the door.
+    - Quietly he slips inside. His expression is worried.
+    - "\u201CYou saw, didn\u2019t you.\u201D"
+    - ...
+    - "\u201CI hoped you didn\u2019t.\u201D"
+    - He leans against the wall taking a deep breath.
+    - "\u201CNow you know what this place really is.\u201D"
+    - "\u201CThe gathering will begin soon. We must act now.\u201D"
+    - "\u201CI\u2019ve made my decision.\u201D"
+    - He looks toward the window.
+    - "\u201CI can\u2019t stay here anymore.\u201D"
+    - "\u201CAnd neither can you.\u201D"
+    - "\u201CThe others aren\u2019t evil. Most of them are just afraid.\u201D"
+    - He sighs.
+    - "\u201CI know where the Oil is stored.\u201D"
+    - "\u201CEnough to turn this place to ash.\u201D"
+    - "\u201COnce the evening bell rings, everyone will gather in the hall.\u201D"
+    - "\u201CWe\u2019ll set the cabins ablaze... that\u2019s our distraction.\u201D"
+    - He looks at you.
+    - "\u201CNo more lies. No more Flesh. Just freedom.\u201D"
+    - ...
+    - "\u201CAre you with me?\u201D"
+    - Before you can answer, the bell rings.
+    - '*Ding! Ding! Ding! *'
+    - That night... I broke free.
+    - Ash and I set the whole settlement on fire.
+    - 'We stood at the treeline and listened to it burn. Then we ran... and never
+      looked
+
+      back.'
+    - Now, we live in a small cabin, far from any soul.
+    - "We don\u2019t know what became of the others. Bramble... Ozric..."
+    - "And after what I witnessed that night... I don\u2019t want to."
+    - The End
+    speakerChanges:
+    - lineIndex: 5
+      speakerName: Ash
+    - lineIndex: 9
+      speakerName: Ash
+    - lineIndex: 11
+      speakerName: Ash
+    - lineIndex: 13
+      speakerName: Ash
+    - lineIndex: 14
+      speakerName: Ash
+    - lineIndex: 15
+      speakerName: Ash
+    - lineIndex: 17
+      speakerName: Ash
+    - lineIndex: 18
+      speakerName: Ash
+    - lineIndex: 19
+      speakerName: Ash
+    - lineIndex: 21
+      speakerName: Ash
+    - lineIndex: 22
+      speakerName: Ash
+    - lineIndex: 23
+      speakerName: Ash
+    - lineIndex: 24
+      speakerName: Ash
+    - lineIndex: 26
+      speakerName: Ash
+    - lineIndex: 28
+      speakerName: Ash
+    backgroundChanges:
+    - lineIndex: 31
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  - routeName: Bramble Escape
+    requiredFlags:
+    - BRAMBLEESCAPE
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 942175340}
+    characterImage: {fileID: 942175343}
+    characterSprite: {fileID: -4898879085011860537, guid: ce40e181fc2a27943b4bba2ef86e646f, type: 3}
+    characterAppearsAtLine: 4
+    characterLeavesAtLine: 17
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - You stay frozen against the wall.
+    - The door opens... slowly, carefully.
+    - "\u201C...It\u2019s just me.\u201D"
+    - Bramble.
+    - None of his usual noise. He steps in and quietly closes the door.
+    - He sees you trembling by the window.
+    - "\u201CYou saw it. Didn\u2019t you.\u201D"
+    - ...
+    - "\u201CI hoped you\u2019d sleep through it.\u201D"
+    - "\u201CYou remember what I told you? How everyone runs to the bonfire the second
+      the\r\nbell rings?"
+    - "\u201CThat\u2019s the moment no one\u2019s watching the treeline.\u201D"
+    - "\u201CWhen it rings tonight...\u201D"
+    - "\u201CWe run.\u201D"
+    - "\u201CThe other way. Into the dark. And we don\u2019t stop.\u201D"
+    - Bramble grips your arm.
+    - "\u201CPromise me you won\u2019t freeze. Promise me you\u2019ll run.\u201D"
+    - "\u201CI promise.\u201D"
+    - When the bell rang, everyone rushed to the fire.
+    - We were the only two moving the other way.
+    - We ran until the bonfire was just a glow behind the trees... and we kept running.
+    - "I don\u2019t know if they ever noticed we were gone."
+    - But Bramble was right. There was a world out there.
+    - And we found it together.
+    - The End
+    speakerChanges:
+    - lineIndex: 2
+      speakerName: Bramble
+    - lineIndex: 6
+      speakerName: Bramble
+    - lineIndex: 7
+      speakerName: Bramble
+    - lineIndex: 8
+      speakerName: Bramble
+    - lineIndex: 9
+      speakerName: Bramble
+    - lineIndex: 10
+      speakerName: Bramble
+    - lineIndex: 11
+      speakerName: Bramble
+    - lineIndex: 12
+      speakerName: Bramble
+    - lineIndex: 13
+      speakerName: Bramble
+    - lineIndex: 15
+      speakerName: Bramble
+    backgroundChanges:
+    - lineIndex: 17
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  - routeName: Ozric Eternal
+    requiredFlags:
+    - OZRICETERNAL
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 590094279}
+    characterImage: {fileID: 590094282}
+    characterSprite: {fileID: -2779423337244529728, guid: 0388586e3f094e841804ac3b7aa7b9bb, type: 3}
+    characterAppearsAtLine: 4
+    characterLeavesAtLine: 29
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - '*Knock. Knock. *'
+    - You remain frozen against the wall.
+    - ...
+    - Slowly the door opens.
+    - Ozric steps inside.
+    - You let out a deep breath.
+    - He studies you for a moment.
+    - ...
+    - "\u201CYou saw it.\u201D"
+    - His voice is calm. Too calm.
+    - "\u201CFew are meant to.\u201D"
+    - He lowers his head.
+    - "\u201CI prayed you would sleep through the ceremony.\u201D"
+    - ...
+    - "\u201CBut now there is little time.\u201D"
+    - Ozric notices your fear.
+    - ...
+    - "\u201CIt is difficult. The first time always is.\u201D"
+    - He places a hand on your shoulder.
+    - "\u201CBut suffering gives birth to understanding.\u201D"
+    - "\u201CAnd understanding gives birth to purpose.\u201D"
+    - ...
+    - "\u201CCome.\u201D"
+    - "\u201CThe evening service awaits.\u201D"
+    - "\u201CYou need not carry this burden alone.\u201D"
+    - He gives you a warm smile.
+    - "\u201CYou are one of us now.\u201D"
+    - '*Ding! Ding! Ding! *'
+    - "\u201CShall we?\u201D"
+    - The years passed quietly. Eventually, I stopped asking questions.
+    - I learned the prayers, the rituals...
+    - I learned to look away.
+    - And when lost souls arrived at our gates, I welcomed them with open arms.
+    - Just as Ozric once welcomed me.
+    - May the Flesh embrace you.
+    - The End
+    speakerChanges:
+    - lineIndex: 8
+      speakerName: Ozric
+    - lineIndex: 10
+      speakerName: Ozric
+    - lineIndex: 12
+      speakerName: Ozric
+    - lineIndex: 13
+      speakerName: Ozric
+    - lineIndex: 14
+      speakerName: Ozric
+    - lineIndex: 17
+      speakerName: Ozric
+    - lineIndex: 19
+      speakerName: Ozric
+    - lineIndex: 20
+      speakerName: Ozric
+    - lineIndex: 20
+      speakerName: Ozric
+    - lineIndex: 21
+      speakerName: Ozric
+    - lineIndex: 22
+      speakerName: Ozric
+    - lineIndex: 23
+      speakerName: Ozric
+    - lineIndex: 24
+      speakerName: Ozric
+    - lineIndex: 26
+      speakerName: Ozric
+    - lineIndex: 28
+      speakerName: Ozric
+    backgroundChanges:
+    - lineIndex: 29
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  - routeName: Game Over
+    requiredFlags:
+    - GAMEOVER
+    forbiddenFlags: []
+    useCharacter: 1
+    characterObject: {fileID: 1129492682}
+    characterImage: {fileID: 1129492684}
+    characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
+    characterAppearsAtLine: 6
+    characterLeavesAtLine: 20
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines:
+    - ...
+    - "\u201CKnock. Knock.\u201D"
+    - ...
+    - "\u201CKnock. Knock.\u201D"
+    - You remain silent.
+    - The door slowly opens.
+    - Brother Garrick stands in the doorway.
+    - Behind him are several hooded figures.
+    - "\u201CThere you are.\u201D"
+    - "\u201CWe\u2019ve been looking for you.\u201D"
+    - His smile is gentle.
+    - "\u201CThe leader wishes to speak to you.\u201D"
+    - "\u201CI- I saw nothing! I promise!\u201D"
+    - Garrick sighs.
+    - "\u201CI know... that\u2019s what worries us.\u201D"
+    - "\u201CA soul like yours... a soul without purpose... is a dangerous thing.\u201D"
+    - He extends his hand.
+    - "\u201CCome.\u201D"
+    - "\u201CThe flesh shall embrace you.\u201D"
+    - I screamed. I begged. I prayed.
+    - But their chanting drowned out my voice.
+    - "And as the circle closed around me...\t"
+    - I finally understood.
+    - Nobody ever left.
+    - May the Flesh embrace you.
+    - The End
+    speakerChanges:
+    - lineIndex: 8
+      speakerName: Brother Garrick
+    - lineIndex: 9
+      speakerName: Brother Garrick
+    - lineIndex: 11
+      speakerName: Brother Garrick
+    - lineIndex: 14
+      speakerName: Brother Garrick
+    - lineIndex: 15
+      speakerName: Brother Garrick
+    - lineIndex: 17
+      speakerName: Brother Garrick
+    - lineIndex: 18
+      speakerName: Brother Garrick
+    backgroundChanges:
+    - lineIndex: 20
+      backgroundSprite: {fileID: -424432191247617607, guid: ebcb9fad037ce7147a7553a37590659e, type: 3}
+  fallbackRoute:
+    routeName: 
+    requiredFlags: []
+    forbiddenFlags: []
+    useCharacter: 0
+    characterObject: {fileID: 0}
+    characterImage: {fileID: 0}
+    characterSprite: {fileID: 0}
+    characterAppearsAtLine: 0
+    characterLeavesAtLine: -1
+    fadeCharacter: 1
+    characterFadeDuration: 1
+    dialogueLines: []
+    speakerChanges: []
+    backgroundChanges: []
+  typingSpeed: 0.03
+  nextSceneButton: {fileID: 0}
+  autoNextSceneName: 
+  debugRoutes: 1
 --- !u!1 &942175340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1900,8 +2249,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 230, y: -249}
-  m_SizeDelta: {x: 355.5411, y: 486.04}
+  m_AnchoredPosition: {x: -0, y: -69.41032}
+  m_SizeDelta: {x: 854.9961, y: 1140.545}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &942175342
 MonoBehaviour:
@@ -2037,8 +2386,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 702, y: -15}
-  m_SizeDelta: {x: 319.6662, y: 458.19}
+  m_AnchoredPosition: {x: -33, y: -175}
+  m_SizeDelta: {x: 1089.6744, y: 1212.094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967956428
 MonoBehaviour:
@@ -2325,15 +2674,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: addTestCardsOnStart
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: routeFlags.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: 'routeFlags.Array.data[0]'
-      value: ASHFALSE
+      value: GAMEOVER
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: testCardsToAdd.Array.size
@@ -2397,7 +2746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -296, y: 23}
+  m_AnchoredPosition: {x: 15, y: -57}
   m_SizeDelta: {x: 1143.1055, y: 1187.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129492684
@@ -4279,6 +4628,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3325800201850910146, guid: 731684afd6d8913489f07d461455a505, type: 3}
       insertIndex: -1
       addedObject: {fileID: 846230693}
+    - targetCorrespondingSourceObject: {fileID: 3325800201850910146, guid: 731684afd6d8913489f07d461455a505, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 846230695}
   m_SourcePrefab: {fileID: 100100000, guid: 731684afd6d8913489f07d461455a505, type: 3}
 --- !u!1001 &5610278484889980061
 PrefabInstance:
