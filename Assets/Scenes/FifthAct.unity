@@ -168,6 +168,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 745127503}
     - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
+      propertyPath: actDialogueManager
+      value: 
+      objectReference: {fileID: 846230693}
+    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
       propertyPath: possibleCards.Array.size
       value: 9
       objectReference: {fileID: 0}
@@ -1484,7 +1488,7 @@ MonoBehaviour:
     - lineIndex: 4
       speakerName: Ozric
     cardChoiceSettings:
-      useCardChoiceAfterIntro: 0
+      useCardChoiceAfterIntro: 1
       flagRules: []
       specialCard: {fileID: 0}
       specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
@@ -1635,78 +1639,7 @@ MonoBehaviour:
       - lineIndex: 2
         speakerName: Bramble
     hasTalkedToCharacter: 0
-  - characterName: Ash
-    characterObject: {fileID: 967956426}
-    characterButton: {fileID: 967956428}
-    characterRectTransform: {fileID: 967956427}
-    normalPosition: {x: 702, y: -15}
-    focusedPosition: {x: -690, y: -107}
-    introLinesBeforeChoices:
-    - The ant sits alone.
-    - "He doesn\u2019t acknowledge you at first."
-    - Only when you sit down, he looks you up and down.
-    - "\u201COh... Most people avoid me. I\u2019m Ash.\u201D"
-    introSpeakerChanges:
-    - lineIndex: 3
-      speakerName: Ash
-    cardChoiceSettings:
-      useCardChoiceAfterIntro: 0
-      flagRules: []
-      specialCard: {fileID: 0}
-      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
-      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
-      specialCardDialogueLines: []
-      specialCardSpeakerChanges: []
-      normalCardDialogueLines: []
-      normalCardSpeakerChanges: []
-    choices:
-    - buttonText: Why?
-      resultLines:
-      - "\u201CYou\u2019d have to ask them.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-    - buttonText: Can I trust that guy?
-      resultLines:
-      - "\u201CYou mean the leader?\u201D"
-      - "\u201C...\u201D"
-      - "\u201CInteresting...\u201D"
-      - "\u201C... that you\u2019re asking.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-      - lineIndex: 2
-        speakerName: Ash
-      - lineIndex: 3
-        speakerName: Ash
-      - lineIndex: 4
-        speakerName: Ash
-    - buttonText: "\u201CWhy are you here?\u201D"
-      resultLines:
-      - "\u201CSame reason as everyone else.\u201D"
-      - "\u201C...\u201D"
-      - "\u201CI made a mistake.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-      - lineIndex: 2
-        speakerName: Ash
-      - lineIndex: 3
-        speakerName: Ash
-    hasTalkedToCharacter: 0
-  hideTalkedCharacters: 1
+  hideTalkedCharacters: 0
   endGatheringAfterFirstCharacter: 0
   choicePanel: {fileID: 1604306687}
   choiceButtons:
@@ -1789,7 +1722,7 @@ MonoBehaviour:
   - You don't remember seeing it when you sat down.
   - ...
   useCardChoiceAfterEnding: 0
-  maxDisplayedCardChoices: 2
+  maxDisplayedCardChoices: 4
   endingCardChoiceSettings:
     specialCard: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
     specialRouteFlag: Ash Burn the Cult
@@ -1922,7 +1855,7 @@ MonoBehaviour:
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
   revealBackgroundAfterLine: 2
-  fadeBlackOverlay: 1
+  fadeBlackOverlay: 0
   fadeDuration: 1
   characterObject: {fileID: 2107327382}
   characterImage: {fileID: 2107327383}

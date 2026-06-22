@@ -1602,7 +1602,7 @@ MonoBehaviour:
     - lineIndex: 6
       speakerName: Ash
     - lineIndex: 7
-      speakerName: 
+      speakerName: Ash
   - buttonText: Something feels wrong here.
     resultLines:
     - Ash remains silent.

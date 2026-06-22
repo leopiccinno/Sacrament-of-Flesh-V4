@@ -19,7 +19,8 @@ public class RandomCardPickup : MonoBehaviour
     public Image cardIconHUDImage;
 
     [Header("Dialogue After Pickup")]
-    public IntroDialogueController dialogueManager;
+    public IntroDialogueController introDialogueManager;
+    public ActDialogueController actDialogueManager;
     public bool continueDialogueAfterPickup = true;
 
     [Header("Runtime Info")]
@@ -40,45 +41,45 @@ public class RandomCardPickup : MonoBehaviour
     }
 
     private void ChooseRandomCard()
-{
-    if (possibleCards == null || possibleCards.Length == 0)
     {
-        Debug.LogWarning("No possible cards assigned to RandomCardPickup.");
-        return;
-    }
-
-    List<CardData> availableCards = new List<CardData>();
-
-    foreach (CardData card in possibleCards)
-    {
-        if (card == null)
-            continue;
-
-        if (GameState.Instance == null || !GameState.Instance.HasCollectedCard(card))
+        if (possibleCards == null || possibleCards.Length == 0)
         {
-            availableCards.Add(card);
+            Debug.LogWarning("No possible cards assigned to RandomCardPickup.");
+            return;
         }
+
+        List<CardData> availableCards = new List<CardData>();
+
+        foreach (CardData card in possibleCards)
+        {
+            if (card == null)
+                continue;
+
+            if (GameState.Instance == null || !GameState.Instance.HasCollectedCard(card))
+            {
+                availableCards.Add(card);
+            }
+        }
+
+        if (availableCards.Count == 0)
+        {
+            Debug.LogWarning("Alle möglichen Karten wurden bereits eingesammelt.");
+
+            gameObject.SetActive(false);
+            return;
+        }
+
+        int randomIndex = Random.Range(0, availableCards.Count);
+        selectedCard = availableCards[randomIndex];
+
+        if (smallCardImage != null && selectedCard != null)
+        {
+            smallCardImage.sprite = selectedCard.smallSprite;
+            smallCardImage.preserveAspect = true;
+        }
+
+        Debug.Log("Random card selected: " + selectedCard.cardName);
     }
-
-    if (availableCards.Count == 0)
-    {
-        Debug.LogWarning("Alle möglichen Karten wurden bereits eingesammelt.");
-
-        gameObject.SetActive(false);
-        return;
-    }
-
-    int randomIndex = Random.Range(0, availableCards.Count);
-    selectedCard = availableCards[randomIndex];
-
-    if (smallCardImage != null && selectedCard != null)
-    {
-        smallCardImage.sprite = selectedCard.smallSprite;
-        smallCardImage.preserveAspect = true;
-    }
-
-    Debug.Log("Random card selected: " + selectedCard.cardName);
-}
 
     public void OnCardClicked()
     {
@@ -112,31 +113,37 @@ public class RandomCardPickup : MonoBehaviour
     }
 
     private void CollectCard()
-{
-    isInspectingCard = false;
-    playerHasCard = true;
-
-    if (bigCardPanel != null)
-        bigCardPanel.SetActive(false);
-
-    if (GameState.Instance != null)
     {
-        GameState.Instance.SetCollectedCard(selectedCard);
+        isInspectingCard = false;
+        playerHasCard = true;
+
+        if (bigCardPanel != null)
+            bigCardPanel.SetActive(false);
+
+        if (GameState.Instance != null)
+        {
+            GameState.Instance.SetCollectedCard(selectedCard);
+        }
+
+        if (PersistentCardHUD.Instance != null)
+        {
+            PersistentCardHUD.Instance.RefreshCardIcon();
+        }
+
+        gameObject.SetActive(false);
+
+        if (continueDialogueAfterPickup)
+        {
+            if (actDialogueManager != null)
+            {
+                actDialogueManager.StartAfterNoteDialogue();
+            }
+            else if (introDialogueManager != null)
+            {
+                introDialogueManager.StartAfterNoteDialogue();
+            }
+        }
     }
-
-    if (PersistentCardHUD.Instance != null)
-    {
-        PersistentCardHUD.Instance.RefreshCardIcon();
-    }
-
-    gameObject.SetActive(false);
-
-    if (continueDialogueAfterPickup && dialogueManager != null)
-    {
-        dialogueManager.StartAfterNoteDialogue();
-    }
-}
-
 
     public bool HasCard()
     {

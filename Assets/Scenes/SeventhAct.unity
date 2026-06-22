@@ -2682,7 +2682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: 'routeFlags.Array.data[0]'
-      value: GAMEOVER
+      value: ASHBURN
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: testCardsToAdd.Array.size
