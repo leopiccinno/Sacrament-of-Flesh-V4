@@ -48,6 +48,25 @@ public class ActDialogueController : MonoBehaviour
     }
 
     [System.Serializable]
+    public class FadingCharacter
+    {
+        public string characterName;
+        public GameObject characterObject;
+        public Image characterImage;
+        public Sprite characterSprite;
+
+        [Tooltip("Bei welcher Intro-Zeile erscheinen. -1 = nie.")]
+        public int appearsAtIntroLine = -1;
+
+        [Tooltip("Bei welcher Intro-Zeile verschwinden. -1 = nie.")]
+        public int leavesAtIntroLine = -1;
+
+        [HideInInspector] public bool hasAppeared;
+        [HideInInspector] public bool hasLeft;
+        [HideInInspector] public Coroutine fadeCoroutine;
+    }
+
+    [System.Serializable]
     public class SpeakerChangeInChoice
     {
         public int lineIndex;
@@ -189,6 +208,9 @@ public class ActDialogueController : MonoBehaviour
     public bool fadeCharacterIn = true;
     public float characterFadeDuration = 1f;
 
+    [Header("Multiple Fading Characters")]
+    public FadingCharacter[] fadingCharacters;
+
     [Header("Background Change")]
     public SpriteRenderer backgroundRenderer;
     public BackgroundChange[] backgroundChanges;
@@ -239,6 +261,7 @@ public class ActDialogueController : MonoBehaviour
 
         SetupBlackOverlay();
         SetupIntroCharacterAtStart();
+        SetupFadingCharactersAtStart();
         SetupGatheringCharactersAtStart();
         SetupBackgroundChanges();
 
@@ -305,6 +328,37 @@ public class ActDialogueController : MonoBehaviour
 
         characterHasAppeared = false;
         characterHasLeft = false;
+    }
+
+    private void SetupFadingCharactersAtStart()
+    {
+        if (fadingCharacters == null)
+            return;
+
+        foreach (FadingCharacter fc in fadingCharacters)
+        {
+            if (fc == null)
+                continue;
+
+            fc.hasAppeared = false;
+            fc.hasLeft = false;
+
+            if (fc.characterImage != null && fc.characterSprite != null)
+            {
+                fc.characterImage.sprite = fc.characterSprite;
+                fc.characterImage.preserveAspect = true;
+            }
+
+            if (fc.characterObject != null)
+                fc.characterObject.SetActive(false);
+
+            if (fc.characterImage != null)
+            {
+                Color color = fc.characterImage.color;
+                color.a = 0f;
+                fc.characterImage.color = color;
+            }
+        }
     }
 
     private void SetupGatheringCharactersAtStart()
@@ -415,6 +469,7 @@ public class ActDialogueController : MonoBehaviour
         CheckBlackOverlayReveal();
         CheckIntroCharacterAppearance();
         CheckIntroCharacterLeaves();
+        CheckFadingCharacters();
         CheckBackgroundChange();
         ApplySpeakerNameForCurrentLine();
 
@@ -660,6 +715,126 @@ public class ActDialogueController : MonoBehaviour
             characterObject.SetActive(false);
 
         characterFadeCoroutine = null;
+    }
+
+    private void CheckFadingCharacters()
+    {
+        if (fadingCharacters == null)
+            return;
+
+        if (state != DialogueState.IntroDialogue)
+            return;
+
+        foreach (FadingCharacter fc in fadingCharacters)
+        {
+            if (fc == null)
+                continue;
+
+            if (!fc.hasAppeared &&
+                fc.appearsAtIntroLine >= 0 &&
+                currentLineIndex >= fc.appearsAtIntroLine)
+            {
+                fc.hasAppeared = true;
+                ShowFadingCharacter(fc);
+            }
+
+            if (!fc.hasLeft &&
+                fc.leavesAtIntroLine >= 0 &&
+                currentLineIndex >= fc.leavesAtIntroLine)
+            {
+                fc.hasLeft = true;
+                HideFadingCharacter(fc);
+            }
+        }
+    }
+
+    private void ShowFadingCharacter(FadingCharacter fc)
+    {
+        if (fc.characterObject != null)
+            fc.characterObject.SetActive(true);
+
+        if (fc.characterImage != null && fc.characterSprite != null)
+        {
+            fc.characterImage.sprite = fc.characterSprite;
+            fc.characterImage.preserveAspect = true;
+        }
+
+        if (fc.characterImage != null)
+        {
+            if (fc.fadeCoroutine != null)
+                StopCoroutine(fc.fadeCoroutine);
+
+            if (fadeCharacterIn)
+                fc.fadeCoroutine = StartCoroutine(FadeFadingCharacter(fc, 0f, 1f, false));
+            else
+            {
+                Color color = fc.characterImage.color;
+                color.a = 1f;
+                fc.characterImage.color = color;
+            }
+        }
+    }
+
+    private void HideFadingCharacter(FadingCharacter fc)
+    {
+        if (fc.characterImage != null && fadeCharacterIn)
+        {
+            if (fc.fadeCoroutine != null)
+                StopCoroutine(fc.fadeCoroutine);
+
+            fc.fadeCoroutine = StartCoroutine(FadeFadingCharacter(fc, 1f, 0f, true));
+        }
+        else
+        {
+            if (fc.characterImage != null)
+            {
+                Color color = fc.characterImage.color;
+                color.a = 0f;
+                fc.characterImage.color = color;
+            }
+
+            if (fc.characterObject != null)
+                fc.characterObject.SetActive(false);
+        }
+    }
+
+    private IEnumerator FadeFadingCharacter(FadingCharacter fc, float from, float to, bool deactivateAtEnd)
+    {
+        float timer = 0f;
+
+        if (fc.characterImage != null)
+        {
+            Color startColor = fc.characterImage.color;
+            startColor.a = from;
+            fc.characterImage.color = startColor;
+        }
+
+        while (timer < characterFadeDuration)
+        {
+            timer += Time.deltaTime;
+            float alpha = Mathf.Lerp(from, to, timer / characterFadeDuration);
+
+            if (fc.characterImage != null)
+            {
+                Color color = fc.characterImage.color;
+                color.a = alpha;
+                fc.characterImage.color = color;
+            }
+
+            yield return null;
+        }
+
+        if (fc.characterImage != null)
+        {
+            Color finalColor = fc.characterImage.color;
+            finalColor.a = to;
+            fc.characterImage.color = finalColor;
+        }
+
+        if (deactivateAtEnd && fc.characterObject != null)
+            fc.characterObject.SetActive(false);
+
+        fc.fadeCoroutine = null;
     }
 
     private void CheckBackgroundChange()

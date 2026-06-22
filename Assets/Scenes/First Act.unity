@@ -1150,34 +1150,13 @@ MonoBehaviour:
   textBox: {fileID: 1604306687}
   nameText: {fileID: 1065098609}
   dialogueText: {fileID: 1479537607}
-  characterObject: {fileID: 1129492682}
-  characterImage: {fileID: 1129492684}
-  characterSprite: {fileID: -1441392894857797069, guid: c703b8dc8030bb04b8de87776b18c28d, type: 3}
-  characterAppearsAtIntroLine: 24
-  fadeCharacterIn: 1
-  characterFadeDuration: 1
-  backgroundRenderer: {fileID: 0}
-  secondBackground: {fileID: 0}
-  changeBackgroundAtIntroLine: 8
-  thirdBackground: {fileID: 0}
-  changeBackgroundAtIntroLine2: -1
-  characterLeavesAtIntroLine: -1
-  gatheringCharactersObject: {fileID: 0}
-  gatheringAppearsAtIntroLine: -1
-  defaultSpeakerName: YOU
-  speakerChanges:
-  - section: 0
-    lineIndex: 30
-    speakerName: Stranger
-  - section: 0
-    lineIndex: 31
-    speakerName: Stranger
-  - section: 0
-    lineIndex: 32
-    speakerName: Stranger
-  - section: 1
-    lineIndex: 32
-    speakerName: Stranger
+  blackOverlay: {fileID: 0}
+  useNoteInteraction: 0
+  button: {fileID: 0}
+  bigNotePanel: {fileID: 0}
+  useGatheringCharacters: 0
+  gatheringCharacters: []
+  hideTalkedCharacters: 1
   choicePanel: {fileID: 1604306687}
   choiceButtons:
   - {fileID: 1426696602}
@@ -1191,43 +1170,54 @@ MonoBehaviour:
   - {fileID: 619485680}
   nextSceneButton: {fileID: 400745357}
   autoNextSceneName: 
-  introLines:
-  - "\u201EThe cold night air bites at your skin as you leave your home behind.\""
-  - "\u201EFor a moment you consider turning back.\""
+  introDialogueLines:
+  - The cold night air bites at your skin as you leave your home behind.
+  - For a moment you consider turning back.
   - The poison is still waiting on the table for you.
-  - The invitation could be a trap...
-  - ...or just the drunken ramblings of a madman.
-  - Yet... your feet keep moving.
+  - "The invitation could be a trap\u2026"
+  - "\u2026or just the drunken ramblings of a madman."
+  - "Yet\u2026 your feet keep moving."
   - The old well is located deep in the forest.
   - So far away from civilization, that only a few villagers ever occasionally visit
     it.
-  - The thought of nobody hearing your screams if something were to happen makes
-    you deeply uncomfortable.
+  - 'The thought of nobody hearing your screams if something were to happen makes
+
+    you
+    deeply uncomfortable.
+
+'
   - You continue walking.
   - '*Whooshhhh*'
-  - The deeper you go - the wind blows stronger and the path grows darker.
-  - "\u201CWe offer purpose.\u201D"
-  - The words from the note echo in your mind...
-  - The stranger somehow knew...
+  - ' The deeper you go - the wind blows stronger and the path grows darker.'
+  - " \u201CWe offer purpose.\u201D "
+  - "The words from the note echo in your mind\u2026"
+  - " The stranger somehow knew\u2026"
   - Not that you had lost your job, not that you were poor.
   - Something much worse.
   - They knew what you were about to do.
-  - ...
+  - "\u2026"
   - A faint orange light appears ahead.
   - You immediately stop walking.
   - The light moves between the shadows of the trees.
-  - Slowly. Not like somebody is wandering around. But waiting. For you...
+  - "Slowly. Not like somebody is wandering around. But waiting. For you\u2026"
   - You take a few steps forward, trying not to make any noise.
   - A tall figure finally emerges from the darkness.
-  - The knight with broad shoulders looks at you, while one hand holds a lantern
-    and the other is laying on the handle of his sword.
+  - 'The knight with broad shoulders looks at you, while one hand holds a lantern
+    and
+
+    the other is laying on the handle of his sword.'
   - His armor is old but meticulously maintained.
-  - The flame inside his lantern flickers due to the strong wind.
-  - He studies you for a moment.
-  - Then he nods.
+  - ' The flame inside his lantern flickers due to the strong wind.
+
+'
+  - ' He studies you for a moment.
+
+'
+  - Then he nods
   - "\u201CAs expected,\u201D"
-  - "\u201C...\u201D"
+  - "\u201C\u2026\u201D"
   - "\u201CYou received the invitation.\u201D"
+  afterNoteDialogueLines: []
   choices:
   - buttonText: "\u201CYes.\u201D"
     resultLines:
@@ -1296,6 +1286,44 @@ MonoBehaviour:
     - lineIndex: 3
       speakerName: YOU
   endingLines: []
+  useCardChoiceAfterEnding: 0
+  maxDisplayedCardChoices: 2
+  endingCardChoiceSettings:
+    specialCard: {fileID: 0}
+    specialRouteFlag: SPECIAL_CARD_ROUTE
+    normalRouteFlag: NORMAL_CARD_ROUTE
+    specialCardDialogueLines: []
+    specialCardSpeakerChanges: []
+    normalCardDialogueLines: []
+    normalCardSpeakerChanges: []
+  defaultSpeakerName: YOU
+  speakerChanges:
+  - section: 0
+    lineIndex: 30
+    speakerName: Stranger
+  - section: 0
+    lineIndex: 31
+    speakerName: Stranger
+  - section: 0
+    lineIndex: 32
+    speakerName: Stranger
+  - section: 1
+    lineIndex: 32
+    speakerName: Stranger
+  pauseMarker: '[PAUSE]'
+  useBlackOverlay: 0
+  revealBackgroundAfterLine: 2
+  fadeBlackOverlay: 1
+  fadeDuration: 1
+  characterObject: {fileID: 1129492682}
+  characterImage: {fileID: 1129492684}
+  characterSprite: {fileID: -1441392894857797069, guid: c703b8dc8030bb04b8de87776b18c28d, type: 3}
+  characterAppearsAtIntroLine: 24
+  characterLeavesAtIntroLine: -1
+  fadeCharacterIn: 1
+  characterFadeDuration: 1
+  backgroundRenderer: {fileID: 0}
+  backgroundChanges: []
   typingSpeed: 0.03
 --- !u!1 &1011540779
 GameObject:

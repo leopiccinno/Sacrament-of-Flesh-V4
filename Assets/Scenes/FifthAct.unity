@@ -1140,7 +1140,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 296, y: 236}
+  m_AnchoredPosition: {x: 544, y: 236}
   m_SizeDelta: {x: 300, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &626835244
@@ -1249,7 +1249,7 @@ MonoBehaviour:
   useNoteInteraction: 0
   button: {fileID: 0}
   bigNotePanel: {fileID: 0}
-  useGatheringCharacters: 1
+  useGatheringCharacters: 0
   gatheringCharacters:
   - characterName: Ozric
     characterObject: {fileID: 590094279}
@@ -1473,118 +1473,309 @@ MonoBehaviour:
   - {fileID: 1276547425}
   - {fileID: 1495494174}
   - {fileID: 626835246}
+  - {fileID: 1732602059}
   choiceButtonLabels:
   - {fileID: 1916228578}
   - {fileID: 1296338164}
   - {fileID: 625179528}
+  - {fileID: 1914149424}
   nextSceneButton: {fileID: 0}
-  autoNextSceneName: FourthAct
+  autoNextSceneName: 
   introDialogueLines:
-  - The crowd falls silent, as a tall figure approaches the bonfire.
-  - "Brother Garrick lowers his head respectfully \u2013 the others follow."
-  - "You try to get a better look at the stranger\u2019s face, but their hood hinders
-    you from\r\ndoing so."
-  - He stands still for a moment. Then he raises his Hand.
+  - Back in your cabin, you look out of your window.
+  - "First\u2026 nothing."
+  - "Then\u2026 after a while\u2026 the settlement slowly comes to life."
+  - Doors open, smoke rises from chimneys.
+  - You decide to also leave your cabin.
+  - 'Outside, the smell of freshly baked bread drifts through the air.
+
+'
+  - "\u2026"
+  - "\u201CThere you are.\u201D\r\n"
+  - 'You turn around.
+
+'
+  - Brother Garrick approaches you.
+  - "\u201CThe morning service is about to begin.\u201D\r\n"
+  - ' He gestures you to follow.'
+  - "\u201CCome.\u201D"
+  - Garrick leads you to the largest building in the settlement.
+  - 'Most of the wooden benches with strange carvings are already occupied by other
+
+    people.'
+  - The stained-glass windows cast a beautiful light on the whole room.
+  - A symbol hangs at the end of the hall.
+  - "The same symbol you\u2019ve been seeing all throughout this place."
+  - "\u2026"
+  - You take a seat.
+  - The hall gradually falls silent.
+  - The hooded stranger enters the hall and walks over to stand before the crowd.
+  - ' Every eye in the room is fixed on him.'
+  - "\u2026"
   - "\u201CMy brothers and sisters.\u201D"
-  - "\u201CTonight we welcome another lost soul.\u201D"
-  - "\u201CA jester who arrived troubled by hardship.\u201D"
-  - "\u201CJust like many of us once did.\u201D"
-  - Several people in the crowd nod.
-  - "\u201CThe world beyond these woods... its cruel...\u201D"
-  - "\u201CThey believe in taking everything you\u2019ve got to give - Your money,
-    your time, your\r\ndignity.\u201D"
-  - "\u201CBut here \u2013 no soul is discarded or forgotten. No soul shall suffer
-    alone.\u201D"
-  - '*applause*'
-  - The crowd murmurs in agreement.
-  - A strange warmth spreads through the gathering.
-  - And for the first time since being dismissed from court, you feel like you belong.
-  - '"Tonight we share food."'
-  - '"We share stories."'
-  - '"And we give thanks for another soul finding their way home."'
-  - Several faces turn toward you.
-  - Some smiling.
-  - Some merely watching.
-  - '"You are welcome here."'
-  - '"May the Flesh embrace you."'
-  - '"May the Flesh embrace you."'
-  - 'The stranger turns around and leaves, while all the others start to embrace
-    in
+  - "\u201CAnother day has been gifted to us.\u201D"
+  - "\u201CAnother chance to walk the path laid before us.\u201D"
+  - "\u201C\u2026 Many spend their lives searching for purpose.\u201D"
+  - "\u201CBut purpose is not found, it is embraced.\u201D"
+  - Several members bow their heads.
+  - The man continues speaking.
+  - His voice is calm and comforting.
+  - Yet your thoughts begin to drift.
+  - ' You find yourself staring at the symbol.'
+  - "What does it mean and why is it everywhere\u2026?"
+  - The speech becomes a muffled background voice in your mind.
+  - "\u2026"
+  - "You think about Ash\u2026 the cards\u2026 the strange things you\u2019ve learned\u2026"
+  - '*Applause*'
+  - "You shake your head quickly, realizing you\u2019ve completely lost track of
+    the sermon."
+  - "\u201CMay the Flesh guide us.\u201D"
+  - "\u201CMay the Flesh preserve us.\u201D"
+  - " \u201CMay the Flesh embrace us.\u201D"
+  - "\u201CMay the Flesh embrace us.\u201D"
+  - ' The service is over.
 
-    conversations.'
-  - "\u201CI should talk to some of the others, before going to bed.\u201D"
+'
+  - And judging by your stomach, not a moment too soon.
+  - The smell of food is already coming in from outside.
+  - As you turn to leave, something catches your eye.
+  - 'Beneath the bench in front of you lies a card.
+
+'
+  - Strange.
+  - You don't remember seeing it when you sat down.
+  - ...
   afterNoteDialogueLines: []
-  choices: []
+  choices:
+  - buttonText: "I think they\u2019re good people."
+    resultLines:
+    - Ash stares into the fire for several seconds.
+    - "\u201CMaybe.\u201D"
+    - "\u201CMost of them are.\u201D"
+    - He continues poking the logs.
+    - "\u201CGood people can belong to bad things.\u201D"
+    - "\u201CAnd bad people can belong to good things.\u201D"
+    - "\u201CLife rarely makes the distinction for us.\u201D"
+    - ...
+    speakerChanges:
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 2
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
+    - lineIndex: 5
+      speakerName: Ash
+    - lineIndex: 6
+      speakerName: Ash
+  - buttonText: "I haven\u2019t decided yet."
+    resultLines:
+    - Ash nods slowly.
+    - "\u201CA reasonable answer.\u201D"
+    - "\u201CMost people let their judgement take over too quickly.\u201D"
+    - "\u201CThey arrive desperate.\u201D"
+    - "\u201CDesperate people tend to believe the first person who offers them\r\nkindness.\u201D"
+    - He glances at you for the first time.
+    - "\u201CYou don\u2019t seem desperate enough for such foolish behavior.\u201D"
+    - "\u201CThat\u2019s probably good.\u201D"
+    speakerChanges:
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 2
+      speakerName: Ash
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
+    - lineIndex: 6
+      speakerName: Ash
+    - lineIndex: 7
+      speakerName: 
+  - buttonText: Something feels wrong here.
+    resultLines:
+    - Ash remains silent.
+    - For a moment you wonder if you said too much.
+    - Then he lets out a quiet breath.
+    - "\u201CInteresting.\u201D"
+    - "\u201CMost newcomers don\u2019t feel this way.\u201D"
+    - "\u201CNot this early at least.\u201D"
+    - He studies your expression.
+    - "\u201CTrust your intuition \u2013 it is there for a reason.\u201D"
+    speakerChanges:
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
+    - lineIndex: 5
+      speakerName: Ash
+    - lineIndex: 7
+      speakerName: Ash
+  - buttonText: Why are you asking?
+    resultLines:
+    - "A faint smile appears on Ash\u2019s face."
+    - "\u201CThere it is.\u201D"
+    - "\u201CWhat is there?\u201D"
+    - "\u201CThe question behind the question.\u201D"
+    - "\u201CWhat do you mean by that?\u201D"
+    - Ash shrugs.
+    - "\u201CNothing.\u201D"
+    - "\u201COr perhaps everything.\u201D"
+    - ...
+    - "\u201CLet\u2019s just say I enjoy guessing what people\u2019s true intentions
+      are.\u201D"
+    speakerChanges:
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 6
+      speakerName: Ash
+    - lineIndex: 7
+      speakerName: Ash
+    - lineIndex: 8
+      speakerName: Ash
+    - lineIndex: 9
+      speakerName: Ash
   endingLines:
-  - You take one last look around the gathering.
-  - A yawn escapes your lips, and you feel your eyes get heavy.
-  - "\u201CI should go to sleep now...\u201D"
-  - 'As you turn to your cabin, the bonfire crackles behind you and several members
+  - Ash tosses a piece of wood onto the fire.
+  - Sparks drift into the sky.
+  - 'Waking hour is slowly approaching.
 
-    nod
-    at you as you pass.'
-  - You reach your door.
-  - '*Creakkk*'
-  - Your room greets you with the same stillness as before.
-  - Before taking off your garment, you reach into your pocket.
-  - The cards.
-  - "\u201CMaybe I will find out more about these cards tomorrow.\u201D"
-  - You extinguish the candle and snuggle into your new bed.
-  - You close your eyes...
-  - ... and you doze of.
-  useCardChoiceAfterEnding: 0
+'
+  - "\u201CTell me.\u201D"
+  - "\u201CDid Brother Garrick tell you what this place actually is?\u201D"
+  - "\u2026"
+  - You hesitate to answer. Suddenly you remember the cards.
+  useCardChoiceAfterEnding: 1
   maxDisplayedCardChoices: 2
   endingCardChoiceSettings:
-    specialCard: {fileID: 0}
-    specialRouteFlag: SPECIAL_CARD_ROUTE
-    normalRouteFlag: NORMAL_CARD_ROUTE
-    specialCardDialogueLines: []
-    specialCardSpeakerChanges: []
-    normalCardDialogueLines: []
-    normalCardSpeakerChanges: []
+    specialCard: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+    specialRouteFlag: Ash Burn the Cult
+    normalRouteFlag: Ash Ending false
+    specialCardDialogueLines:
+    - "Ash let\u2019s out a quiet chuckle."
+    - "\u201COf course he didn\u2019t\u201D"
+    - He tosses another piece of wood into the fire.
+    - "\u201CLet me put it this way...\u201D"
+    - "\u201CPeople come here looking for salvation.\u201D"
+    - "\u201CA second chance.\u201D"
+    - "\u201CA place to belong.\u201D"
+    - ...
+    - "\u201CAnd most of them find exactly that. At least for a while.\u201D"
+    - "\u201CThe Leader has a talent for telling people what they need to hear.\u201D"
+    - "\u201CThey stop asking questions.\u201D"
+    - "\u201CPerhaps that\u2019s why Garrick never talks about the truth behind this
+      place.\u201D"
+    - "\u201CIf he did, some people might want to leave before they\u2019ve become
+      comfortable.\u201D"
+    - ...
+    - "\u201CWell has anyone ever actually left this place then?\u201D"
+    - Ash freezes.
+    - ...
+    - "\u201CWhy would you ask that?\u201D"
+    - "You aren\u2019t sure."
+    - The thought simply appeared.
+    - 'Ash studies you for a moment before taking a quick look towards the sleeping
+
+      cabins.'
+    - "\u201CNot openly... well not that I\u2019ve seen...\u201D"
+    - The fire crackles.
+    - "\u201CYet somehow we never seem to run out of empty rooms.\u201D"
+    - "\u201CStrange, isn\u2019t it.\u201D"
+    - You stand up.
+    - Quietly you make your way back to your cabin.
+    specialCardSpeakerChanges:
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
+    - lineIndex: 5
+      speakerName: Ash
+    - lineIndex: 6
+      speakerName: Ash
+    - lineIndex: 7
+      speakerName: Ash
+    - lineIndex: 8
+      speakerName: Ash
+    - lineIndex: 9
+      speakerName: Ash
+    - lineIndex: 10
+      speakerName: Ash
+    - lineIndex: 11
+      speakerName: Ash
+    - lineIndex: 12
+      speakerName: Ash
+    - lineIndex: 13
+      speakerName: Ash
+    - lineIndex: 17
+      speakerName: Ash
+    - lineIndex: 21
+      speakerName: Ash
+    - lineIndex: 23
+      speakerName: Ash
+    - lineIndex: 24
+      speakerName: Ash
+    normalCardDialogueLines:
+    - "\u201CWhatever you were trying to do... it won\u2019t work.\u201D"
+    - "\u201CI thought I could trust you, but seems you are just like the others.\u201D"
+    - "\u201CI think it\u2019s time for you to leave me alone now.\u201D"
+    - ...
+    - "\u201CI said leave.\u201D"
+    - You stand up.
+    - Quietly you make your way back to your cabin.
+    normalCardSpeakerChanges:
+    - lineIndex: 0
+      speakerName: Ash
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 2
+      speakerName: Ash
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
-    lineIndex: 4
-    speakerName: ???
-  - section: 0
-    lineIndex: 5
-    speakerName: ???
-  - section: 0
-    lineIndex: 6
-    speakerName: ???
-  - section: 0
     lineIndex: 7
-    speakerName: ???
-  - section: 0
-    lineIndex: 9
-    speakerName: ???
+    speakerName: Brother Garrick
   - section: 0
     lineIndex: 10
-    speakerName: ???
-  - section: 0
-    lineIndex: 11
-    speakerName: ???
+    speakerName: Brother Garrick
   - section: 0
     lineIndex: 12
-    speakerName: Everyone
-  - section: 0
-    lineIndex: 16
-    speakerName: ???
-  - section: 0
-    lineIndex: 17
-    speakerName: ???
-  - section: 0
-    lineIndex: 18
-    speakerName: ???
-  - section: 0
-    lineIndex: 22
-    speakerName: ???
-  - section: 0
-    lineIndex: 23
-    speakerName: ???
+    speakerName: Brother Garrick
   - section: 0
     lineIndex: 24
+    speakerName: ???
+  - section: 0
+    lineIndex: 25
+    speakerName: ???
+  - section: 0
+    lineIndex: 26
+    speakerName: ???
+  - section: 0
+    lineIndex: 27
+    speakerName: ???
+  - section: 0
+    lineIndex: 28
+    speakerName: ???
+  - section: 0
+    lineIndex: 39
+    speakerName: Everyone
+  - section: 0
+    lineIndex: 40
+    speakerName: ???
+  - section: 0
+    lineIndex: 41
+    speakerName: ???
+  - section: 0
+    lineIndex: 42
+    speakerName: ???
+  - section: 0
+    lineIndex: 43
     speakerName: Everyone
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
@@ -1593,16 +1784,22 @@ MonoBehaviour:
   fadeDuration: 1
   characterObject: {fileID: 2107327382}
   characterImage: {fileID: 2107327383}
-  characterSprite: {fileID: 7038205560192504604, guid: 2d530da878aa544409d5d61e815d0366, type: 3}
-  characterAppearsAtIntroLine: 0
-  characterLeavesAtIntroLine: 24
+  characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
+  characterAppearsAtIntroLine: 7
+  characterLeavesAtIntroLine: 14
   fadeCharacterIn: 1
   characterFadeDuration: 1
+  fadingCharacters:
+  - characterName: Cult Leader
+    characterObject: {fileID: 2107327382}
+    characterImage: {fileID: 2107327383}
+    characterSprite: {fileID: 7038205560192504604, guid: 2d530da878aa544409d5d61e815d0366, type: 3}
+    appearsAtIntroLine: 24
+    leavesAtIntroLine: 43
+    hasAppeared: 0
+    hasLeft: 0
   backgroundRenderer: {fileID: 1195310581}
-  backgroundChanges:
-  - section: 4
-    lineIndex: 5
-    backgroundSprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
+  backgroundChanges: []
   typingSpeed: 0.03
 --- !u!1 &942175340
 GameObject:
@@ -1999,97 +2196,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1016067864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1016067866}
-  - component: {fileID: 1016067865}
-  m_Layer: 0
-  m_Name: Bonfire_Night_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1016067865
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016067864}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 5764413889798776969, guid: 626a80b233220f44a906f137ebf34443, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &1016067866
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016067864}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 963.0547, y: 540.4261, z: 0}
-  m_LocalScale: {x: 99.1411, y: 98.706604, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1040523880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2142,6 +2248,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameState
       objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: addTestCardsOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: testCardsToAdd.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: 'testCardsToAdd.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: 'testCardsToAdd.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f5f8962e8d69a22429c2a65ccd060780, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2318,7 +2440,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -401, y: 236}
+  m_AnchoredPosition: {x: -552, y: 236}
   m_SizeDelta: {x: 300, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1276547423
@@ -2829,7 +2951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: 236}
+  m_AnchoredPosition: {x: 182, y: 236}
   m_SizeDelta: {x: 300, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1495494172
@@ -3050,6 +3172,127 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1732602055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1732602056}
+  - component: {fileID: 1732602058}
+  - component: {fileID: 1732602057}
+  - component: {fileID: 1732602059}
+  m_Layer: 5
+  m_Name: How long have you been here? (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1732602056
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732602055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1914149426}
+  m_Father: {fileID: 1604306688}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -185, y: 236}
+  m_SizeDelta: {x: 300, y: 73}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1732602057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732602055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1732602058
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732602055}
+  m_CullTransparentMesh: 1
+--- !u!114 &1732602059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1732602055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1732602057}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1891679651
 GameObject:
   m_ObjectHideFlags: 0
@@ -3181,6 +3424,143 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1300326811}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1914149423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1914149426}
+  - component: {fileID: 1914149425}
+  - component: {fileID: 1914149424}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1914149424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914149423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: How long have you been here?
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: beebf09f2700f0e478b011960898190c, type: 2}
+  m_sharedMaterial: {fileID: -6694821813931009864, guid: beebf09f2700f0e478b011960898190c, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4292598783
+  m_fontColor: {r: 1, g: 0.8584906, b: 0.8584906, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 24
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1914149425
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914149423}
+  m_CullTransparentMesh: 1
+--- !u!224 &1914149426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914149423}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1732602056}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3805,6 +4185,9 @@ PrefabInstance:
       addedObject: {fileID: 1276547422}
     - targetCorrespondingSourceObject: {fileID: 1312784324900461756, guid: 731684afd6d8913489f07d461455a505, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1732602056}
+    - targetCorrespondingSourceObject: {fileID: 1312784324900461756, guid: 731684afd6d8913489f07d461455a505, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1495494171}
     - targetCorrespondingSourceObject: {fileID: 1312784324900461756, guid: 731684afd6d8913489f07d461455a505, type: 3}
       insertIndex: -1
@@ -3865,7 +4248,7 @@ PrefabInstance:
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 5764413889798776969, guid: 626a80b233220f44a906f137ebf34443, type: 3}
+      objectReference: {fileID: 6355524124129821454, guid: 7773e6f4fcb9b704eba8d367b8ed6bac, type: 3}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.b
       value: 0.764151
@@ -3899,4 +4282,3 @@ SceneRoots:
   - {fileID: 2022042320}
   - {fileID: 4928992701158937879}
   - {fileID: 1040523880}
-  - {fileID: 1016067866}
