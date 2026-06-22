@@ -21,6 +21,13 @@ public class ActDialogueController : MonoBehaviour
         Finished
     }
 
+    private enum CardChoiceContext
+    {
+        None,
+        Ending,
+        GatheringCharacter
+    }
+
     public enum DialogueSection
     {
         IntroDialogue,
@@ -85,6 +92,68 @@ public class ActDialogueController : MonoBehaviour
     }
 
     [System.Serializable]
+    public class FlagBasedCardDialogueRule
+    {
+        [Header("Rule Name")]
+        public string ruleName;
+
+        [Header("Flag Conditions")]
+        [Tooltip("Diese Flags MUSS der Spieler besitzen, damit diese Regel gilt.")]
+        public string[] requiredFlags;
+
+        [Tooltip("Diese Flags DARF der Spieler NICHT besitzen, damit diese Regel gilt.")]
+        public string[] forbiddenFlags;
+
+        [Header("Dialogue")]
+        [TextArea(2, 5)]
+        public string[] dialogueLines;
+
+        public SpeakerChangeInChoice[] speakerChanges;
+
+        [Header("Optional Route Flag")]
+        [Tooltip("Wenn false, wird durch diese Regel keine neue Route Flag gesetzt.")]
+        public bool setRouteFlag = false;
+
+        public string routeFlagToSet = "";
+
+        [Tooltip("Nur für Debug/Status im GameState.")]
+        public bool countsAsSpecialRoute = false;
+    }
+
+    [System.Serializable]
+    public class CharacterCardChoiceSettings
+    {
+        [Header("Enable")]
+        public bool useCardChoiceAfterIntro = false;
+
+        [Header("Flag Rules Before Card Check")]
+        [Tooltip("Diese Regeln werden zuerst geprüft. Wenn eine Regel passt, ist die gespielte Karte egal.")]
+        public FlagBasedCardDialogueRule[] flagRules;
+
+        [Header("Special Card")]
+        public CardData specialCard;
+
+        [Header("Flags If No Flag Rule Matches")]
+        [Tooltip("Flag, die gesetzt wird, wenn die Special Card gespielt wird.")]
+        public string specialRouteFlag = "SPECIAL_CHARACTER_CARD_ROUTE";
+
+        [Tooltip("Flag, die gesetzt wird, wenn eine andere Karte gespielt wird.")]
+        public string normalRouteFlag = "NORMAL_CHARACTER_CARD_ROUTE";
+
+        [Header("Dialogue If Special Card Is Played")]
+        [TextArea(2, 5)]
+        public string[] specialCardDialogueLines;
+
+        public SpeakerChangeInChoice[] specialCardSpeakerChanges;
+
+        [Header("Dialogue If Any Other Card Is Played")]
+        [TextArea(2, 5)]
+        public string[] normalCardDialogueLines;
+
+        public SpeakerChangeInChoice[] normalCardSpeakerChanges;
+    }
+
+    [System.Serializable]
     public class GatheringCharacter
     {
         [Header("Character Object")]
@@ -102,6 +171,9 @@ public class ActDialogueController : MonoBehaviour
         public string[] introLinesBeforeChoices;
 
         public SpeakerChangeInChoice[] introSpeakerChanges;
+
+        [Header("Optional Card Choice After Intro")]
+        public CharacterCardChoiceSettings cardChoiceSettings;
 
         [Header("Dialogue Choices")]
         public DialogueChoice[] choices;
@@ -153,6 +225,9 @@ public class ActDialogueController : MonoBehaviour
 
     [Tooltip("Wenn true, verschwindet ein Character dauerhaft, nachdem man mit ihm gesprochen hat.")]
     public bool hideTalkedCharacters = true;
+
+    [Tooltip("Wenn true, kann der Spieler nur EINEN Gathering Character auswählen. Danach starten direkt die Ending Lines.")]
+    public bool endGatheringAfterFirstCharacter = false;
 
     [Header("Choice UI")]
     public GameObject choicePanel;
@@ -219,6 +294,7 @@ public class ActDialogueController : MonoBehaviour
     public float typingSpeed = 0.03f;
 
     private DialogueState state = DialogueState.IntroDialogue;
+    private CardChoiceContext currentCardChoiceContext = CardChoiceContext.None;
 
     private string[] currentLines;
     private int currentLineIndex = 0;
@@ -986,10 +1062,20 @@ public class ActDialogueController : MonoBehaviour
         }
         else if (state == DialogueState.CharacterIntroLines)
         {
-            if (currentCharacter != null)
+            if (currentCharacter != null &&
+                currentCharacter.cardChoiceSettings != null &&
+                currentCharacter.cardChoiceSettings.useCardChoiceAfterIntro)
+            {
+                ShowGatheringCharacterCardChoices();
+            }
+            else if (currentCharacter != null)
+            {
                 ShowChoicesForCharacter(currentCharacter);
+            }
             else
+            {
                 ShowGatheringCharacters();
+            }
         }
         else if (state == DialogueState.BranchLines)
         {
@@ -1007,8 +1093,7 @@ public class ActDialogueController : MonoBehaviour
         }
         else if (state == DialogueState.CardResultLines)
         {
-            currentCardResultSpeakerChanges = null;
-            Finish();
+            FinishCardResultLines();
         }
     }
 
@@ -1134,6 +1219,20 @@ public class ActDialogueController : MonoBehaviour
 
     private void ShowEndingCardChoices()
     {
+        currentCardChoiceContext = CardChoiceContext.Ending;
+        ShowCardChoicesForCollectedCards(OnEndingCardSelected);
+    }
+
+    private void ShowGatheringCharacterCardChoices()
+    {
+        currentCardChoiceContext = CardChoiceContext.GatheringCharacter;
+        ShowCardChoicesForCollectedCards(OnGatheringCharacterCardSelected);
+    }
+
+    private delegate void CardChoiceCallback(int cardIndex);
+
+    private void ShowCardChoicesForCollectedCards(CardChoiceCallback callback)
+    {
         state = DialogueState.ShowingChoices;
 
         if (textBox != null)
@@ -1186,7 +1285,7 @@ public class ActDialogueController : MonoBehaviour
 
                 int cardIndex = i;
                 choiceButtons[i].onClick.RemoveAllListeners();
-                choiceButtons[i].onClick.AddListener(() => OnEndingCardSelected(cardIndex));
+                choiceButtons[i].onClick.AddListener(() => callback(cardIndex));
             }
             else
             {
@@ -1259,6 +1358,150 @@ public class ActDialogueController : MonoBehaviour
         }
     }
 
+    public void OnGatheringCharacterCardSelected(int cardIndex)
+    {
+        if (currentCharacter == null)
+            return;
+
+        if (currentCharacter.cardChoiceSettings == null)
+            return;
+
+        if (GameState.Instance == null)
+            return;
+
+        if (GameState.Instance.collectedCards == null)
+            return;
+
+        if (cardIndex < 0 || cardIndex >= GameState.Instance.collectedCards.Count)
+            return;
+
+        HideChoiceButtons();
+
+        CardData selectedCard = GameState.Instance.collectedCards[cardIndex];
+        CharacterCardChoiceSettings settings = currentCharacter.cardChoiceSettings;
+
+        FlagBasedCardDialogueRule matchingFlagRule = GetMatchingFlagRule(settings.flagRules);
+
+        if (matchingFlagRule != null)
+        {
+            if (matchingFlagRule.setRouteFlag)
+            {
+                GameState.Instance.SetPlayedCardRoute(
+                    selectedCard,
+                    matchingFlagRule.routeFlagToSet,
+                    matchingFlagRule.countsAsSpecialRoute
+                );
+            }
+
+            currentCardResultSpeakerChanges = matchingFlagRule.speakerChanges;
+
+            StartLines(
+                matchingFlagRule.dialogueLines,
+                DialogueState.CardResultLines
+            );
+
+            return;
+        }
+
+        bool isSpecialCard =
+            settings.specialCard != null &&
+            selectedCard == settings.specialCard;
+
+        if (isSpecialCard)
+        {
+            GameState.Instance.SetPlayedCardRoute(
+                selectedCard,
+                settings.specialRouteFlag,
+                true
+            );
+
+            currentCardResultSpeakerChanges = settings.specialCardSpeakerChanges;
+
+            StartLines(
+                settings.specialCardDialogueLines,
+                DialogueState.CardResultLines
+            );
+        }
+        else
+        {
+            GameState.Instance.SetPlayedCardRoute(
+                selectedCard,
+                settings.normalRouteFlag,
+                false
+            );
+
+            currentCardResultSpeakerChanges = settings.normalCardSpeakerChanges;
+
+            StartLines(
+                settings.normalCardDialogueLines,
+                DialogueState.CardResultLines
+            );
+        }
+    }
+
+    private FlagBasedCardDialogueRule GetMatchingFlagRule(FlagBasedCardDialogueRule[] rules)
+    {
+        if (rules == null || rules.Length == 0)
+            return null;
+
+        if (GameState.Instance == null)
+            return null;
+
+        foreach (FlagBasedCardDialogueRule rule in rules)
+        {
+            if (rule == null)
+                continue;
+
+            bool hasRequiredFlags = GameState.Instance.HasAllRouteFlags(rule.requiredFlags);
+            bool hasForbiddenFlags = GameState.Instance.HasAnyRouteFlag(rule.forbiddenFlags);
+
+            if (hasRequiredFlags && !hasForbiddenFlags)
+            {
+                return rule;
+            }
+        }
+
+        return null;
+    }
+
+    private void FinishCardResultLines()
+    {
+        currentCardResultSpeakerChanges = null;
+
+        if (currentCardChoiceContext == CardChoiceContext.GatheringCharacter)
+        {
+            currentCardChoiceContext = CardChoiceContext.None;
+
+            if (currentCharacter != null)
+            {
+                if (currentCharacter.choices != null && currentCharacter.choices.Length > 0)
+                {
+                    ShowChoicesForCharacter(currentCharacter);
+                }
+                else
+                {
+                    FinishCurrentCharacterConversation();
+                }
+            }
+            else
+            {
+                ShowGatheringCharacters();
+            }
+
+            return;
+        }
+
+        if (currentCardChoiceContext == CardChoiceContext.Ending)
+        {
+            currentCardChoiceContext = CardChoiceContext.None;
+            Finish();
+            return;
+        }
+
+        currentCardChoiceContext = CardChoiceContext.None;
+        Finish();
+    }
+
     private void ShowGatheringCharacters()
     {
         state = DialogueState.SelectingCharacter;
@@ -1328,6 +1571,11 @@ public class ActDialogueController : MonoBehaviour
         {
             StartLines(selectedCharacter.introLinesBeforeChoices, DialogueState.CharacterIntroLines);
         }
+        else if (selectedCharacter.cardChoiceSettings != null &&
+                 selectedCharacter.cardChoiceSettings.useCardChoiceAfterIntro)
+        {
+            ShowGatheringCharacterCardChoices();
+        }
         else
         {
             ShowChoicesForCharacter(selectedCharacter);
@@ -1356,6 +1604,9 @@ public class ActDialogueController : MonoBehaviour
             else
             {
                 character.characterObject.SetActive(false);
+
+                if (character.characterButton != null)
+                    character.characterButton.interactable = false;
             }
         }
     }
@@ -1451,6 +1702,13 @@ public class ActDialogueController : MonoBehaviour
         currentChoice = null;
         currentCharacter = null;
 
+        if (endGatheringAfterFirstCharacter)
+        {
+            HideAllGatheringCharacters();
+            StartEndingDialogue();
+            return;
+        }
+
         if (AllCharactersTalkedTo())
             StartEndingDialogue();
         else
@@ -1539,6 +1797,9 @@ public class ActDialogueController : MonoBehaviour
         {
             if (character != null && character.characterObject != null)
                 character.characterObject.SetActive(false);
+
+            if (character != null && character.characterButton != null)
+                character.characterButton.interactable = false;
         }
     }
 }

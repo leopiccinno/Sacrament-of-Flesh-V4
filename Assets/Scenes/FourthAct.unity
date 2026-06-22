@@ -1274,6 +1274,16 @@ MonoBehaviour:
       speakerName: Ozric
     - lineIndex: 4
       speakerName: Ozric
+    cardChoiceSettings:
+      useCardChoiceAfterIntro: 0
+      flagRules: []
+      specialCard: {fileID: 0}
+      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
+      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
+      specialCardDialogueLines: []
+      specialCardSpeakerChanges: []
+      normalCardDialogueLines: []
+      normalCardSpeakerChanges: []
     choices:
     - buttonText: How long have you been here?
       resultLines:
@@ -1341,6 +1351,16 @@ MonoBehaviour:
       speakerName: Bramble
     - lineIndex: 4
       speakerName: Bramble
+    cardChoiceSettings:
+      useCardChoiceAfterIntro: 0
+      flagRules: []
+      specialCard: {fileID: 0}
+      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
+      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
+      specialCardDialogueLines: []
+      specialCardSpeakerChanges: []
+      normalCardDialogueLines: []
+      normalCardSpeakerChanges: []
     choices:
     - buttonText: You seem happy here
       resultLines:
@@ -1420,6 +1440,16 @@ MonoBehaviour:
     introSpeakerChanges:
     - lineIndex: 3
       speakerName: Ash
+    cardChoiceSettings:
+      useCardChoiceAfterIntro: 0
+      flagRules: []
+      specialCard: {fileID: 0}
+      specialRouteFlag: SPECIAL_CHARACTER_CARD_ROUTE
+      normalRouteFlag: NORMAL_CHARACTER_CARD_ROUTE
+      specialCardDialogueLines: []
+      specialCardSpeakerChanges: []
+      normalCardDialogueLines: []
+      normalCardSpeakerChanges: []
     choices:
     - buttonText: Why?
       resultLines:
@@ -1631,8 +1661,8 @@ MonoBehaviour:
   maxDisplayedCardChoices: 2
   endingCardChoiceSettings:
     specialCard: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
-    specialRouteFlag: Ash Burn the Cult
-    normalRouteFlag: Ash Ending false
+    specialRouteFlag: ASHBURN
+    normalRouteFlag: ASHFALSE
     specialCardDialogueLines:
     - "Ash let\u2019s out a quiet chuckle."
     - "\u201COf course he didn\u2019t\u201D"
@@ -2211,7 +2241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: addTestCardsOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: testCardsToAdd.Array.size

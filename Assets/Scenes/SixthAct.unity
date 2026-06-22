@@ -1363,49 +1363,95 @@ MonoBehaviour:
       speakerName: Ozric
     - lineIndex: 46
       speakerName: Ozric
-    choices:
-    - buttonText: How long have you been here?
-      resultLines:
-      - "\u201CLong enough.\u201D"
-      - "\u201CTime doesn\u2019t matter. Purpose does.\u201D"
-      - "\u201CSee you around. May the Flesh embrace you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ozric
+    cardChoiceSettings:
+      useCardChoiceAfterIntro: 1
+      flagRules:
+      - ruleName: Already took ash route
+        requiredFlags:
+        - ASHBURN
+        forbiddenFlags: []
+        dialogueLines:
+        - His smile drops.
+        - "\u201CI just think, you may need to stop hanging around withered souls
+          first.\u201D"
+        - "\u201CJust a word of advice.\u201D"
+        - Ozric turns back around and leaves.
+        - ...
+        speakerChanges:
+        - lineIndex: 1
+          speakerName: Ozric
+        - lineIndex: 2
+          speakerName: Ozric
+        setRouteFlag: 0
+        routeFlagToSet: 
+        countsAsSpecialRoute: 0
+      specialCard: {fileID: 11400000, guid: 85740473d308047449365116d321447f, type: 2}
+      specialRouteFlag: OZRICETERNAL
+      normalRouteFlag: GAMEOVER
+      specialCardDialogueLines:
+      - "Ozric let\u2019s out a quiet breath."
+      - "\u201CI see myself in you. You\u2019re a good soul.\u201D"
+      - ...
+      - "\u201CTell me, do you know what peace is?\u201D"
+      - "\u201CTrue peace.\u201D"
+      - ...
+      - "\u201CI\u2019ve spent years searching for it...\u201D"
+      - "\u201CAnd when I stopped searching... I found it.\u201D"
+      - A faint smile appears on his face.
+      - "\u201CPerhaps one day, you will too.\u201D"
+      - "\u201CI shall have the honour of welcoming you.\u201D"
+      - "\u201CWe are friends now.\u201D"
+      - "\u201CRight?\u201D"
+      - You stay silent for a while.
+      - "\u201CYes, Ozric. You are my friend.\u201D"
+      - "\u201CWell, see you around. Friend.\u201D"
+      - Smiling, he turns back around and leaves.
+      - ...
+      specialCardSpeakerChanges:
       - lineIndex: 1
-        speakerName: Ozric
-      - lineIndex: 2
-        speakerName: Ozric
-    - buttonText: "\u201CWho was that guy?\u201D"
-      resultLines:
-      - His eyes brighten
-      - "\u201CA remarkable man.\u201D"
-      - "\u201CWithout him, many of us would have perished.\u201D"
-      - "\u201CI certainly would have.\u201D"
-      - "\u201CSee you around. May the Flesh embrace you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: YOU
-      - lineIndex: 1
-        speakerName: Ozric
-      - lineIndex: 2
         speakerName: Ozric
       - lineIndex: 3
         speakerName: Ozric
       - lineIndex: 4
         speakerName: Ozric
-    - buttonText: "\u201CWhat exactly is this place?\u201D"
-      resultLines:
-      - "\u201CHome.\u201D"
-      - "\u201CFor those the world has abandoned.\u201D"
-      - "\u201CSee you around. May the Flesh embrace you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
+      - lineIndex: 6
         speakerName: Ozric
+      - lineIndex: 7
+        speakerName: Ozric
+      - lineIndex: 9
+        speakerName: Ozric
+      - lineIndex: 10
+        speakerName: Ozric
+      - lineIndex: 11
+        speakerName: Ozric
+      - lineIndex: 12
+        speakerName: Ozric
+      - lineIndex: 14
+        speakerName: Ozric
+      - lineIndex: 15
+        speakerName: Ozric
+      normalCardDialogueLines:
+      - Ozric studies you for a moment.
+      - "\u201CI\u2019m sorry... but I believe I\u2019ve said all I can.\u201D"
+      - He folds his hands neatly.
+      - "\u201CSometimes what you\u2019re looking for is not where you are searching.\u201D"
+      - "\u201CIn time, you will find your path.\u201D"
+      - "\u201CBut I believe, you won\u2019 find it through me.\u201D"
+      - He bows his head slightly.
+      - "\u201CMay the Flesh guide you.\u201D"
+      - Without another word, Ozric quietly leaves.
+      normalCardSpeakerChanges:
       - lineIndex: 1
         speakerName: Ozric
-      - lineIndex: 2
+      - lineIndex: 3
         speakerName: Ozric
+      - lineIndex: 4
+        speakerName: Ozric
+      - lineIndex: 5
+        speakerName: Ozric
+      - lineIndex: 7
+        speakerName: Ozric
+    choices: []
     hasTalkedToCharacter: 0
   - characterName: Bramble
     characterObject: {fileID: 942175340}
@@ -1506,48 +1552,54 @@ MonoBehaviour:
       speakerName: Bramble
     - lineIndex: 35
       speakerName: Bramble
-    choices:
-    - buttonText: You seem happy here
-      resultLines:
-      - "\u201CI am!\u201D"
-      - "\u201CMost days anyway.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Bramble
+    cardChoiceSettings:
+      useCardChoiceAfterIntro: 1
+      flagRules:
+      - ruleName: Already took Ash route
+        requiredFlags:
+        - ASHBURN
+        forbiddenFlags: []
+        dialogueLines:
+        - "\u201CForget about it.\u201D"
+        - "\u201CIt\u2019s probably a stupid idea.\u201D"
+        - "\u201CI\u2019m sorry, my minds all over the place.\u201D"
+        - ...
+        speakerChanges:
+        - lineIndex: 0
+          speakerName: Bramble
+        - lineIndex: 1
+          speakerName: Bramble
+        - lineIndex: 2
+          speakerName: Bramble
+        - lineIndex: 3
+          speakerName: Bramble
+        setRouteFlag: 0
+        routeFlagToSet: 
+        countsAsSpecialRoute: 0
+      specialCard: {fileID: 11400000, guid: b39c6c6934c77a54689c1f3befc1752c, type: 2}
+      specialRouteFlag: BRAMBLEESCAPE
+      normalRouteFlag: GAMEOVER
+      specialCardDialogueLines:
+      - Bramble chuckles at you being visibly off guard by his question.
+      - "\u201CI can see what you really think.\u201D"
+      - Bramble leans forward and looks into your eyes.
+      - "\u201CDid you know everyone runs to the square when the evening bell rings?\u201D"
+      - "\u201CEvery. Single. Time.\u201D"
+      - "\u201CLike they are trained. Or scared something might happen if they don\u2019t...\u201D"
+      - ...
+      - He grins.
+      - "\u201CWouldn\u2019t take much to get everybody\u2019s attention.\u201D"
+      - Bramble comes even closer. Whispering.
+      - "\u201CI know you don\u2019t like it here.\u201D"
+      - "\u201CI can see it in your eyes. They never lie...\u201D"
+      - "\u201CAnd I need you to promise me not to tell anyone.\u201D"
+      - "\u201CBut there is a world out there. Purpose. Freedom.\u201D"
+      - "\u201CBut I can\u2019t see that world without your help.\u201D"
+      - "\u201CWe\u2019ll talk later.\u201D"
+      - "\u201CToo many eyes and ears.\u201D"
+      - ...
+      specialCardSpeakerChanges:
       - lineIndex: 1
-        speakerName: Bramble
-      - lineIndex: 2
-        speakerName: Bramble
-    - buttonText: How long have you been here?
-      resultLines:
-      - "\u201CThree years.\u201D"
-      - "\u201COr four.\u201D"
-      - "\u201CActually... maybe five.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Bramble
-      - lineIndex: 1
-        speakerName: Bramble
-      - lineIndex: 2
-        speakerName: Bramble
-      - lineIndex: 3
-        speakerName: Bramble
-    - buttonText: What do the people here do all day?
-      resultLines:
-      - "\u201CMostly work.\u201D"
-      - "\u201CGather supplies, Pray, Eat, ...\u201D"
-      - "\u201CAttend sacrif- well ceremonies...!\u201D"
-      - "\u201C...\u201D"
-      - "\u201CActually, maybe forget about the last part.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Bramble
-      - lineIndex: 1
-        speakerName: Bramble
-      - lineIndex: 2
         speakerName: Bramble
       - lineIndex: 3
         speakerName: Bramble
@@ -1555,23 +1607,60 @@ MonoBehaviour:
         speakerName: Bramble
       - lineIndex: 5
         speakerName: Bramble
-    - buttonText: What do the people here do all day?
-      resultLines:
-      - "\u201CMostly work.\u201D"
-      - "\u201CGather supplies, Pray, Eat, ...\u201D"
-      - "\u201CAttend sacrif- well ceremonies...!\u201D"
-      - "\u201C...\u201D"
-      - "\u201CActually, maybe forget about the last part.\u201D"
-      - "\u201CWell definitely talk again, comrade! It was a pleasure meeting you.\u201D"
-      speakerChanges:
-      - lineIndex: 0
+      - lineIndex: 8
         speakerName: Bramble
+      - lineIndex: 10
+        speakerName: Bramble
+      - lineIndex: 11
+        speakerName: Bramble
+      - lineIndex: 12
+        speakerName: Bramble
+      - lineIndex: 13
+        speakerName: Bramble
+      - lineIndex: 14
+        speakerName: Bramble
+      - lineIndex: 15
+        speakerName: Bramble
+      - lineIndex: 16
+        speakerName: Bramble
+      normalCardDialogueLines:
+      - Bramble smiles sadly.
+      - "\u201CHeh... I can tell, you know.\u201D"
+      - "\u201CYou\u2019ve got that look.\u201D"
+      - "\u201CLike someone who\u2019s already made up their mind.\u201D"
+      - ...
+      - "\u201CAnd that\u2019s alright. I won\u2019t stand in your way.\u201D"
+      - "\u201CI\u2019d rather be a good memory than another regret.\u201D"
+      - He forces a smile.
+      - "\u201CBesides... I think you\u2019ve already established your next move.\u201D"
+      - "\u201COr... the universe just doesn\u2019t have a plan for us together.\u201D"
+      - ...
+      - "\u201CJust promise me one thing.\u201D"
+      - "\u201CDon\u2019t disappear without saying farewell.\u201D"
+      - ...
+      normalCardSpeakerChanges:
       - lineIndex: 1
         speakerName: Bramble
       - lineIndex: 2
         speakerName: Bramble
+      - lineIndex: 3
+        speakerName: Bramble
+      - lineIndex: 5
+        speakerName: Bramble
+      - lineIndex: 6
+        speakerName: Bramble
+      - lineIndex: 8
+        speakerName: Bramble
+      - lineIndex: 9
+        speakerName: Bramble
+      - lineIndex: 11
+        speakerName: Bramble
+      - lineIndex: 12
+        speakerName: Bramble
+    choices: []
     hasTalkedToCharacter: 0
   hideTalkedCharacters: 1
+  endGatheringAfterFirstCharacter: 1
   choicePanel: {fileID: 1604306687}
   choiceButtons:
   - {fileID: 1276547425}
@@ -1618,108 +1707,18 @@ MonoBehaviour:
   - "\u2026"
   - Who should you join?
   afterNoteDialogueLines: []
-  choices:
-  - buttonText: "I think they\u2019re good people."
-    resultLines:
-    - Ash stares into the fire for several seconds.
-    - "\u201CMaybe.\u201D"
-    - "\u201CMost of them are.\u201D"
-    - He continues poking the logs.
-    - "\u201CGood people can belong to bad things.\u201D"
-    - "\u201CAnd bad people can belong to good things.\u201D"
-    - "\u201CLife rarely makes the distinction for us.\u201D"
-    - ...
-    speakerChanges:
-    - lineIndex: 1
-      speakerName: Ash
-    - lineIndex: 2
-      speakerName: Ash
-    - lineIndex: 4
-      speakerName: Ash
-    - lineIndex: 5
-      speakerName: Ash
-    - lineIndex: 6
-      speakerName: Ash
-  - buttonText: "I haven\u2019t decided yet."
-    resultLines:
-    - Ash nods slowly.
-    - "\u201CA reasonable answer.\u201D"
-    - "\u201CMost people let their judgement take over too quickly.\u201D"
-    - "\u201CThey arrive desperate.\u201D"
-    - "\u201CDesperate people tend to believe the first person who offers them\r\nkindness.\u201D"
-    - He glances at you for the first time.
-    - "\u201CYou don\u2019t seem desperate enough for such foolish behavior.\u201D"
-    - "\u201CThat\u2019s probably good.\u201D"
-    speakerChanges:
-    - lineIndex: 1
-      speakerName: Ash
-    - lineIndex: 2
-      speakerName: Ash
-    - lineIndex: 3
-      speakerName: Ash
-    - lineIndex: 4
-      speakerName: Ash
-    - lineIndex: 6
-      speakerName: Ash
-    - lineIndex: 7
-      speakerName: 
-  - buttonText: Something feels wrong here.
-    resultLines:
-    - Ash remains silent.
-    - For a moment you wonder if you said too much.
-    - Then he lets out a quiet breath.
-    - "\u201CInteresting.\u201D"
-    - "\u201CMost newcomers don\u2019t feel this way.\u201D"
-    - "\u201CNot this early at least.\u201D"
-    - He studies your expression.
-    - "\u201CTrust your intuition \u2013 it is there for a reason.\u201D"
-    speakerChanges:
-    - lineIndex: 3
-      speakerName: Ash
-    - lineIndex: 4
-      speakerName: Ash
-    - lineIndex: 5
-      speakerName: Ash
-    - lineIndex: 7
-      speakerName: Ash
-  - buttonText: Why are you asking?
-    resultLines:
-    - "A faint smile appears on Ash\u2019s face."
-    - "\u201CThere it is.\u201D"
-    - "\u201CWhat is there?\u201D"
-    - "\u201CThe question behind the question.\u201D"
-    - "\u201CWhat do you mean by that?\u201D"
-    - Ash shrugs.
-    - "\u201CNothing.\u201D"
-    - "\u201COr perhaps everything.\u201D"
-    - ...
-    - "\u201CLet\u2019s just say I enjoy guessing what people\u2019s true intentions
-      are.\u201D"
-    speakerChanges:
-    - lineIndex: 1
-      speakerName: Ash
-    - lineIndex: 3
-      speakerName: Ash
-    - lineIndex: 6
-      speakerName: Ash
-    - lineIndex: 7
-      speakerName: Ash
-    - lineIndex: 8
-      speakerName: Ash
-    - lineIndex: 9
-      speakerName: Ash
+  choices: []
   endingLines:
-  - Ash tosses a piece of wood onto the fire.
-  - Sparks drift into the sky.
-  - 'Waking hour is slowly approaching.
-
-'
-  - "\u201CTell me.\u201D"
-  - "\u201CDid Brother Garrick tell you what this place actually is?\u201D"
-  - "\u2026"
-  - You hesitate to answer. Suddenly you remember the cards.
-  useCardChoiceAfterEnding: 1
-  maxDisplayedCardChoices: 2
+  - Eventually, the morning feast comes to an end.
+  - One by one, the members return to their duties
+  - You decide to spend the rest of the day resting.
+  - Evening is still far.
+  - Perhaps a few hours of peace will do you some good.
+  - You return to your cabin.
+  - ...
+  - And before long, you drift into a light sleep.
+  useCardChoiceAfterEnding: 0
+  maxDisplayedCardChoices: 9
   endingCardChoiceSettings:
     specialCard: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
     specialRouteFlag: Ash Burn the Cult
@@ -1860,7 +1859,10 @@ MonoBehaviour:
     hasAppeared: 0
     hasLeft: 0
   backgroundRenderer: {fileID: 1195310581}
-  backgroundChanges: []
+  backgroundChanges:
+  - section: 4
+    lineIndex: 5
+    backgroundSprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
   typingSpeed: 0.03
 --- !u!1 &942175340
 GameObject:
@@ -2310,8 +2312,28 @@ PrefabInstance:
       value: GameState
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: routeFlag
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: playedCard
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: playedSpecialRoute
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: addTestCardsOnStart
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: routeFlags.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: 'routeFlags.Array.data[0]'
+      value: ASHFALSE
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: testCardsToAdd.Array.size
@@ -2320,7 +2342,7 @@ PrefabInstance:
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: 'testCardsToAdd.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+      objectReference: {fileID: 11400000, guid: 85740473d308047449365116d321447f, type: 2}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: 'testCardsToAdd.Array.data[1]'
       value: 

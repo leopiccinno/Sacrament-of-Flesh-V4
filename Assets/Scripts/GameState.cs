@@ -15,6 +15,9 @@ public class GameState : MonoBehaviour
     public string routeFlag = "";
     public bool playedSpecialRoute = false;
 
+    [Header("All Route Flags")]
+    public List<string> routeFlags = new List<string>();
+
     [Header("Testing Only")]
     public bool addTestCardsOnStart = false;
     public CardData[] testCardsToAdd;
@@ -100,7 +103,66 @@ public class GameState : MonoBehaviour
         routeFlag = flag;
         playedSpecialRoute = isSpecialRoute;
 
+        AddRouteFlag(flag);
+
         Debug.Log("Played card: " + card.cardName + " | Route Flag: " + routeFlag + " | Special Route: " + playedSpecialRoute);
+    }
+
+    public void AddRouteFlag(string flag)
+    {
+        if (string.IsNullOrEmpty(flag))
+            return;
+
+        if (!routeFlags.Contains(flag))
+        {
+            routeFlags.Add(flag);
+            Debug.Log("Route Flag hinzugefügt: " + flag);
+        }
+    }
+
+    public bool HasRouteFlag(string flag)
+    {
+        if (string.IsNullOrEmpty(flag))
+            return false;
+
+        if (routeFlag == flag)
+            return true;
+
+        return routeFlags.Contains(flag);
+    }
+
+    public bool HasAllRouteFlags(string[] flags)
+    {
+        if (flags == null || flags.Length == 0)
+            return true;
+
+        foreach (string flag in flags)
+        {
+            if (string.IsNullOrEmpty(flag))
+                continue;
+
+            if (!HasRouteFlag(flag))
+                return false;
+        }
+
+        return true;
+    }
+
+    public bool HasAnyRouteFlag(string[] flags)
+    {
+        if (flags == null || flags.Length == 0)
+            return false;
+
+        foreach (string flag in flags)
+        {
+            if (string.IsNullOrEmpty(flag))
+                continue;
+
+            if (HasRouteFlag(flag))
+                return true;
+        }
+
+        return false;
     }
 
     public bool HasPlayedCard(CardData card)
@@ -109,13 +171,5 @@ public class GameState : MonoBehaviour
             return false;
 
         return playedCard == card;
-    }
-
-    public bool HasRouteFlag(string flag)
-    {
-        if (string.IsNullOrEmpty(flag))
-            return false;
-
-        return routeFlag == flag;
     }
 }
