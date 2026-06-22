@@ -1249,7 +1249,7 @@ MonoBehaviour:
   useNoteInteraction: 0
   button: {fileID: 0}
   bigNotePanel: {fileID: 0}
-  useGatheringCharacters: 0
+  useGatheringCharacters: 1
   gatheringCharacters:
   - characterName: Ozric
     characterObject: {fileID: 590094279}
@@ -1258,21 +1258,110 @@ MonoBehaviour:
     normalPosition: {x: -690, y: -107}
     focusedPosition: {x: -690, y: -107}
     introLinesBeforeChoices:
-    - The mantis notices you approaching.
-    - His posture immediately straightens.
-    - "\u201CThe newcomer.\u201D"
-    - "\u201CIt is good to see another soul find their way here.\u201D"
-    - "\u201CI am Ozric.\u201D"
+    - Ozric bows his head slightly
+    - "\u201CGood morning.\u201D\r\n"
+    - You sit down opposite of him.
+    - "\u2026\r\n"
+    - "\u201CI saw you speaking to Ash yesterday.\u201D"
+    - His statement catches you off guard.
+    - "\u201CShould I not have?\u201D"
+    - Ozric shakes his head.
+    - "\u201CYou are free to speak with whomever you wish.\u201D"
+    - "\u2026"
+    - "\u201CAlthough I do perceive his company as unsettling\u2026\u201D"
+    - ' He finally takes a spoonful of stew.
+
+'
+    - "\u201CHe asks too many questions\u2026 \u201C"
+    - "\u201CQuestions lead souls away from saving.\u201D"
+    - "\u2026"
+    - "\u201CStill \u2013 you are new.\u201D"
+    - "\u201CThere is much for you to learn.\u201D"
+    - "\u201CAnd much for me to teach.\u201D\r\n"
+    - A faint smile appears on his face.
+    - "\u201CIf you are willing.\u201D"
+    - You nod.
+    - "\u201CTeach me what?\u201D"
+    - Ozric sets down his spoon.
+    - "\u201CPatience\u2026 Discipline\u2026 Devotion\u2026\u201D"
+    - "\u2026"
+    - "\u201CThe things I lacked when I first arrived.\u201D"
+    - 'He studies you carefully.
+
+'
+    - "\u201CI was much like you one, you know.\u201D"
+    - "\u201CLost\u2026 Angry\u2026\u201D"
+    - "\u201CThen the Leader found me.\u201D"
+    - A faint smile appears on his face.
+    - "\u201CI owe him everything.\u201D"
+    - "\u201CA debt that I can truly never repay.\u201D"
+    - "\u2026"
+    - ' Ozric quietly resumes eating.'
+    - For a while, neither of you speak.
+    - "\u2026"
+    - "\u201CMany mistake doubt for wisdom.\u201D"
+    - "\u201CI used to. Now I know better.\u201D"
+    - "\u2026"
+    - Ozric picks up his bowl to his mouth to finish the rest of the stew.
+    - "\u2026"
+    - After putting the empty dish back on the table, he gives you a slight nod.
+    - "\u201CForgive me, I have duties to attend to.\u201D"
+    - "\u201CShould you wish to learn more\u2026\u201D"
+    - "\u201C\u2026 you only need to ask.\u201D"
+    - "\u201CMay the Flesh embrace you.\u201D"
+    - "\u2026"
+    - 'As Ozric turns to leave, his offer lingers in your mind.
+
+'
+    - "\u201CWait.\u201D"
+    - Surprised, Ozric turns around.
+    - You pull out a card.
     introSpeakerChanges:
-    - lineIndex: 0
-      speakerName: YOU
     - lineIndex: 1
-      speakerName: YOU
-    - lineIndex: 2
-      speakerName: Ozric
-    - lineIndex: 3
       speakerName: Ozric
     - lineIndex: 4
+      speakerName: Ozric
+    - lineIndex: 8
+      speakerName: Ozric
+    - lineIndex: 10
+      speakerName: Ozric
+    - lineIndex: 12
+      speakerName: Ozric
+    - lineIndex: 13
+      speakerName: Ozric
+    - lineIndex: 15
+      speakerName: Ozric
+    - lineIndex: 16
+      speakerName: Ozric
+    - lineIndex: 17
+      speakerName: Ozric
+    - lineIndex: 19
+      speakerName: Ozric
+    - lineIndex: 23
+      speakerName: Ozric
+    - lineIndex: 25
+      speakerName: Ozric
+    - lineIndex: 27
+      speakerName: Ozric
+    - lineIndex: 28
+      speakerName: Ozric
+    - lineIndex: 29
+      speakerName: Ozric
+    - lineIndex: 31
+      speakerName: Ozric
+    - lineIndex: 32
+      speakerName: Ozric
+    - lineIndex: 37
+      speakerName: Ozric
+    - lineIndex: 38
+      speakerName: Ozric
+    - lineIndex: 43
+      speakerName: Ozric
+    - lineIndex: 44
+      speakerName: Ozric
+    - lineIndex: 45
+      speakerName: Ozric
+    - lineIndex: 46
       speakerName: Ozric
     choices:
     - buttonText: How long have you been here?
@@ -1325,21 +1414,97 @@ MonoBehaviour:
     normalPosition: {x: 230, y: -249}
     focusedPosition: {x: -690, y: -107}
     introLinesBeforeChoices:
-    - Before you can say a word, the beetle waves enthusiastically.
-    - "\u201CYou made it!\u201D"
-    - "\u201CWell obviously you made it.\u201D"
-    - "\u201CYou\u2019re standing here!\u201D"
-    - "\u201CI\u2019m Bramble \u2013 it is so pleasant to meet you!\u201D"
+    - "\u201CWonderful!\u201D"
+    - "\u201CI was beginning to think I\u2019d have to eat all of this myself.\u201D\r\n"
+    - Bramble slides a Bowl of stew to you.
+    - "\u201CEat!\u201D"
+    - "\u201CTrust me. Breakfast is the best meal around here.\u201D"
+    - "\u201CActually, lunch is pretty good too\u2026 and dinner!\u201D\r\n"
+    - "\u2026"
+    - "\u201CI just like food.\u201D"
+    - He laughs
+    - "\u2026"
+    - "\u201CHow\u2019d you sleep?\u201D"
+    - "\u201CHopefully better than me\u2026 I dreamt I was chased by chickens.\u201D"
+    - "\u201CTerrifying creatures\u2026\u201D"
+    - You laugh.
+    - "\u201CChickens?\u201D"
+    - He grins.
+    - "\u201CI\u2019m glad you\u2019re laughing.\u201D"
+    - "\u201CMost spend their first morning staring down at their plate.\u201D"
+    - "\u201CI know I did.\u201D"
+    - "\u2026"
+    - ' Bramble tears of a piece of bread and hands it to you.'
+    - "\u201CActually, when I first arrived, I cried for three days straight.\u201D"
+    - He laughs awkwardly.
+    - "\u201CNot my proudest moment\u2026\u201D"
+    - "\u201CBut everyone was really kind.\u201D"
+    - '"Well, almost everyone."'
+    - ...
+    - '"Ozric barely spoke a word."'
+    - '"Ash kept to himself."'
+    - '"But I figured eventually we''d all become friends."'
+    - '"Life''s easier that way."
+
+'
+    - '...
+
+'
+    - '"Say..."'
+    - '"You don''t regret coming here, do you?"'
+    - ' Bramble pauses.
+
+'
+    - '"Because I''d hate to think I made a new friend only for them to disappear."'
+    - "\u2026"
+    - ' Something about his words catches your attention.'
+    - Suddenly, you remember cards in your pocket.
     introSpeakerChanges:
     - lineIndex: 0
-      speakerName: YOU
-    - lineIndex: 1
       speakerName: Bramble
-    - lineIndex: 2
+    - lineIndex: 1
       speakerName: Bramble
     - lineIndex: 3
       speakerName: Bramble
     - lineIndex: 4
+      speakerName: Bramble
+    - lineIndex: 5
+      speakerName: Bramble
+    - lineIndex: 7
+      speakerName: Bramble
+    - lineIndex: 10
+      speakerName: Bramble
+    - lineIndex: 11
+      speakerName: Bramble
+    - lineIndex: 12
+      speakerName: Bramble
+    - lineIndex: 16
+      speakerName: Bramble
+    - lineIndex: 17
+      speakerName: Bramble
+    - lineIndex: 18
+      speakerName: Bramble
+    - lineIndex: 21
+      speakerName: Bramble
+    - lineIndex: 23
+      speakerName: Bramble
+    - lineIndex: 24
+      speakerName: Bramble
+    - lineIndex: 25
+      speakerName: Bramble
+    - lineIndex: 27
+      speakerName: Bramble
+    - lineIndex: 28
+      speakerName: Bramble
+    - lineIndex: 29
+      speakerName: Bramble
+    - lineIndex: 30
+      speakerName: Bramble
+    - lineIndex: 32
+      speakerName: Bramble
+    - lineIndex: 33
+      speakerName: Bramble
+    - lineIndex: 35
       speakerName: Bramble
     choices:
     - buttonText: You seem happy here
@@ -1406,67 +1571,6 @@ MonoBehaviour:
       - lineIndex: 2
         speakerName: Bramble
     hasTalkedToCharacter: 0
-  - characterName: Ash
-    characterObject: {fileID: 967956426}
-    characterButton: {fileID: 967956428}
-    characterRectTransform: {fileID: 967956427}
-    normalPosition: {x: 702, y: -15}
-    focusedPosition: {x: -690, y: -107}
-    introLinesBeforeChoices:
-    - The ant sits alone.
-    - "He doesn\u2019t acknowledge you at first."
-    - Only when you sit down, he looks you up and down.
-    - "\u201COh... Most people avoid me. I\u2019m Ash.\u201D"
-    introSpeakerChanges:
-    - lineIndex: 3
-      speakerName: Ash
-    choices:
-    - buttonText: Why?
-      resultLines:
-      - "\u201CYou\u2019d have to ask them.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-    - buttonText: Can I trust that guy?
-      resultLines:
-      - "\u201CYou mean the leader?\u201D"
-      - "\u201C...\u201D"
-      - "\u201CInteresting...\u201D"
-      - "\u201C... that you\u2019re asking.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-      - lineIndex: 2
-        speakerName: Ash
-      - lineIndex: 3
-        speakerName: Ash
-      - lineIndex: 4
-        speakerName: Ash
-    - buttonText: "\u201CWhy are you here?\u201D"
-      resultLines:
-      - "\u201CSame reason as everyone else.\u201D"
-      - "\u201C...\u201D"
-      - "\u201CI made a mistake.\u201D"
-      - "\u201CI suggest you don\u2019t hang around me, if you want the others to
-        like you. Stay safe.\u201D"
-      speakerChanges:
-      - lineIndex: 0
-        speakerName: Ash
-      - lineIndex: 1
-        speakerName: Ash
-      - lineIndex: 2
-        speakerName: Ash
-      - lineIndex: 3
-        speakerName: Ash
-    hasTalkedToCharacter: 0
   hideTalkedCharacters: 1
   choicePanel: {fileID: 1604306687}
   choiceButtons:
@@ -1482,69 +1586,37 @@ MonoBehaviour:
   nextSceneButton: {fileID: 0}
   autoNextSceneName: 
   introDialogueLines:
-  - Back in your cabin, you look out of your window.
-  - "First\u2026 nothing."
-  - "Then\u2026 after a while\u2026 the settlement slowly comes to life."
-  - Doors open, smoke rises from chimneys.
-  - You decide to also leave your cabin.
-  - 'Outside, the smell of freshly baked bread drifts through the air.
+  - "As you leave the hall alongside the other members, you\u2019re met with sweet
+    and herby\r\nnotes."
+  - Long wooden tables filled with different foods have been set up.
+  - The others start feasting, laughing and chatting.
+  - Some wave as you pass, others greet you with warm smiles.
+  - 'For a moment, you forget where you are.
 
 '
+  - "Everything feels\u2026 normal."
   - "\u2026"
-  - "\u201CThere you are.\u201D\r\n"
-  - 'You turn around.
-
-'
-  - Brother Garrick approaches you.
-  - "\u201CThe morning service is about to begin.\u201D\r\n"
-  - ' He gestures you to follow.'
-  - "\u201CCome.\u201D"
-  - Garrick leads you to the largest building in the settlement.
-  - 'Most of the wooden benches with strange carvings are already occupied by other
-
-    people.'
-  - The stained-glass windows cast a beautiful light on the whole room.
-  - A symbol hangs at the end of the hall.
-  - "The same symbol you\u2019ve been seeing all throughout this place."
+  - Brother Garrick approaches you from behind.
+  - He places a hand on your shoulder.
+  - "\u201CDo not be shy.\u201D\r\n"
+  - "\u201CNo soul should break their fast alone.\u201D"
+  - With that, he disappears into the crowd.
   - "\u2026"
-  - You take a seat.
-  - The hall gradually falls silent.
-  - The hooded stranger enters the hall and walks over to stand before the crowd.
-  - ' Every eye in the room is fixed on him.'
+  - Your gaze wanders across the gathering.
+  - Bramble notices you immediately.
+  - "\u201CThere you are!\u201D"
+  - He enthusiastically waves a loaf of bread in the air.
+  - "\u201CCome! Sit with me!\u201D\r\n"
   - "\u2026"
-  - "\u201CMy brothers and sisters.\u201D"
-  - "\u201CAnother day has been gifted to us.\u201D"
-  - "\u201CAnother chance to walk the path laid before us.\u201D"
-  - "\u201C\u2026 Many spend their lives searching for purpose.\u201D"
-  - "\u201CBut purpose is not found, it is embraced.\u201D"
-  - Several members bow their heads.
-  - The man continues speaking.
-  - His voice is calm and comforting.
-  - Yet your thoughts begin to drift.
-  - ' You find yourself staring at the symbol.'
-  - "What does it mean and why is it everywhere\u2026?"
-  - The speech becomes a muffled background voice in your mind.
+  - "Not far \u2013 Ozric sits alone."
+  - His posture is straight.
+  - A bowl of untouched stew before him.
+  - His eyes are closed. He is praying.
   - "\u2026"
-  - "You think about Ash\u2026 the cards\u2026 the strange things you\u2019ve learned\u2026"
-  - '*Applause*'
-  - "You shake your head quickly, realizing you\u2019ve completely lost track of
-    the sermon."
-  - "\u201CMay the Flesh guide us.\u201D"
-  - "\u201CMay the Flesh preserve us.\u201D"
-  - " \u201CMay the Flesh embrace us.\u201D"
-  - "\u201CMay the Flesh embrace us.\u201D"
-  - ' The service is over.
-
-'
-  - And judging by your stomach, not a moment too soon.
-  - The smell of food is already coming in from outside.
-  - As you turn to leave, something catches your eye.
-  - 'Beneath the bench in front of you lies a card.
-
-'
-  - Strange.
-  - You don't remember seeing it when you sat down.
-  - ...
+  - He opens his eyes and notices you looking at him.
+  - He gives you a nod, gesturing you to join him.
+  - "\u2026"
+  - Who should you join?
   afterNoteDialogueLines: []
   choices:
   - buttonText: "I think they\u2019re good people."
@@ -1739,44 +1811,17 @@ MonoBehaviour:
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
-    lineIndex: 7
+    lineIndex: 9
     speakerName: Brother Garrick
   - section: 0
     lineIndex: 10
     speakerName: Brother Garrick
   - section: 0
-    lineIndex: 12
-    speakerName: Brother Garrick
+    lineIndex: 15
+    speakerName: Bramble
   - section: 0
-    lineIndex: 24
-    speakerName: ???
-  - section: 0
-    lineIndex: 25
-    speakerName: ???
-  - section: 0
-    lineIndex: 26
-    speakerName: ???
-  - section: 0
-    lineIndex: 27
-    speakerName: ???
-  - section: 0
-    lineIndex: 28
-    speakerName: ???
-  - section: 0
-    lineIndex: 39
-    speakerName: Everyone
-  - section: 0
-    lineIndex: 40
-    speakerName: ???
-  - section: 0
-    lineIndex: 41
-    speakerName: ???
-  - section: 0
-    lineIndex: 42
-    speakerName: ???
-  - section: 0
-    lineIndex: 43
-    speakerName: Everyone
+    lineIndex: 17
+    speakerName: Bramble
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
   revealBackgroundAfterLine: 2
@@ -1785,17 +1830,33 @@ MonoBehaviour:
   characterObject: {fileID: 2107327382}
   characterImage: {fileID: 2107327383}
   characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
-  characterAppearsAtIntroLine: 7
-  characterLeavesAtIntroLine: 14
+  characterAppearsAtIntroLine: -1
+  characterLeavesAtIntroLine: -1
   fadeCharacterIn: 1
   characterFadeDuration: 1
   fadingCharacters:
-  - characterName: Cult Leader
+  - characterName: Brother Garrick
     characterObject: {fileID: 2107327382}
     characterImage: {fileID: 2107327383}
-    characterSprite: {fileID: 7038205560192504604, guid: 2d530da878aa544409d5d61e815d0366, type: 3}
-    appearsAtIntroLine: 24
-    leavesAtIntroLine: 43
+    characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
+    appearsAtIntroLine: 7
+    leavesAtIntroLine: 12
+    hasAppeared: 0
+    hasLeft: 0
+  - characterName: Bramble
+    characterObject: {fileID: 2107327382}
+    characterImage: {fileID: 2107327383}
+    characterSprite: {fileID: -4898879085011860537, guid: ce40e181fc2a27943b4bba2ef86e646f, type: 3}
+    appearsAtIntroLine: 15
+    leavesAtIntroLine: 19
+    hasAppeared: 0
+    hasLeft: 0
+  - characterName: Ozric
+    characterObject: {fileID: 2107327382}
+    characterImage: {fileID: 2107327383}
+    characterSprite: {fileID: -2779423337244529728, guid: 0388586e3f094e841804ac3b7aa7b9bb, type: 3}
+    appearsAtIntroLine: 21
+    leavesAtIntroLine: 26
     hasAppeared: 0
     hasLeft: 0
   backgroundRenderer: {fileID: 1195310581}
@@ -4248,18 +4309,18 @@ PrefabInstance:
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6355524124129821454, guid: 7773e6f4fcb9b704eba8d367b8ed6bac, type: 3}
+      objectReference: {fileID: 5622580813765265097, guid: 97d31274d872bea4980c943d312247f4, type: 3}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.b
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.g
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7268609929543497657, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Color.r
-      value: 0.764151
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9048767490938709724, guid: ced5223c69eb4a24084dc2c9d7ec4a70, type: 3}
       propertyPath: m_Name
