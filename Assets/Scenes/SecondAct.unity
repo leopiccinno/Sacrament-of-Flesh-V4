@@ -1035,20 +1035,32 @@ MonoBehaviour:
   textBox: {fileID: 1604306687}
   nameText: {fileID: 1065098609}
   dialogueText: {fileID: 1479537607}
-  characterObject: {fileID: 1129492682}
-  characterImage: {fileID: 1129492684}
-  characterSprite: {fileID: -1441392894857797069, guid: c703b8dc8030bb04b8de87776b18c28d, type: 3}
-  characterAppearsAtIntroLine: 1
-  characterLeavesAtIntroLine: 14
-  fadeCharacterIn: 1
-  characterFadeDuration: 1
-  backgroundRenderer: {fileID: 1195310581}
-  secondBackground: {fileID: 6355524124129821454, guid: 7773e6f4fcb9b704eba8d367b8ed6bac, type: 3}
-  changeBackgroundAtIntroLine: 8
-  thirdBackground: {fileID: 5764413889798776969, guid: 626a80b233220f44a906f137ebf34443, type: 3}
-  changeBackgroundAtIntroLine2: 22
+  blackOverlay: {fileID: 0}
+  useNoteInteraction: 0
+  button: {fileID: 0}
+  bigNotePanel: {fileID: 0}
+  useGatheringCharacters: 0
   gatheringCharacters: []
   hideTalkedCharacters: 0
+  choicePanel: {fileID: 1604306687}
+  choiceButtons: []
+  choiceButtonLabels: []
+  nextSceneButton: {fileID: 0}
+  autoNextSceneName: ThirdAct
+  introDialogueLines: []
+  afterNoteDialogueLines: []
+  choices: []
+  endingLines: []
+  useCardChoiceAfterEnding: 0
+  maxDisplayedCardChoices: 2
+  endingCardChoiceSettings:
+    specialCard: {fileID: 0}
+    specialRouteFlag: SPECIAL_CARD_ROUTE
+    normalRouteFlag: NORMAL_CARD_ROUTE
+    specialCardDialogueLines: []
+    specialCardSpeakerChanges: []
+    normalCardDialogueLines: []
+    normalCardSpeakerChanges: []
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
@@ -1060,49 +1072,21 @@ MonoBehaviour:
   - section: 0
     lineIndex: 13
     speakerName: Brother Garrick
-  choicePanel: {fileID: 1604306687}
-  choiceButtons: []
-  choiceButtonLabels: []
-  nextSceneButton: {fileID: 0}
-  autoNextSceneName: ThirdAct
-  introLines:
-  - 'As you keep walking the trees begin to thin.
-
-'
-  - 'The knight stops.
-
-'
-  - 'Behind the trees you can see something that reminds you of a small village.
-
-'
-  - "Wooden buildings, warm lights, smoke rising from chimney, people\u2026\r\n"
-  - "Dozens of them \u2013 talking, laughing, living.\r\n"
-  - "A sight you haven\u2019t seen in years.\r\n"
-  - "It feels welcoming\u2026"
-  - "\u2026"
-  - The knight leads you to a small cabin.
-  - "\u201CThis will be yours.\u201D"
-  - "\u201CMine\u2026?\u201D"
-  - As the knight is about to leave, he stops at the doorway.
-  - "\u201CThe gathering draws near.\u201D"
-  - "\u201CTake a moment to settle yourself and come outside when you hear the bell
-    ring.\u201D"
-  - ' Without another word he leaves.'
-  - '*Ding! Ding! Ding! *'
-  - "\u201CI better get going.\u201D"
-  - ' As you prepare to leave something catches your eye.
-
-'
-  - 'A card. Peaking out from under the picture frame.
-
-'
-  - Slowly, you pull the card free.
-  - The illustration differs from the one you found earlier.
-  - You quickly shove it into your pocket.
-  - Arriving outside - the bonfire crackles, people are gathering.
-  - It appears they are waiting for something or someone.
-  - "And you begin to wonder\u2026 whether coming here was a mistake.\r\n"
-  endingLines: []
+  pauseMarker: '[PAUSE]'
+  useBlackOverlay: 0
+  revealBackgroundAfterLine: 2
+  fadeBlackOverlay: 1
+  fadeDuration: 1
+  characterObject: {fileID: 1129492682}
+  characterImage: {fileID: 1129492684}
+  characterSprite: {fileID: -1441392894857797069, guid: c703b8dc8030bb04b8de87776b18c28d, type: 3}
+  characterAppearsAtIntroLine: 1
+  characterLeavesAtIntroLine: 14
+  fadeCharacterIn: 1
+  characterFadeDuration: 1
+  fadingCharacters: []
+  backgroundRenderer: {fileID: 1195310581}
+  backgroundChanges: []
   typingSpeed: 0.03
 --- !u!114 &846230694
 MonoBehaviour:
@@ -1160,7 +1144,16 @@ MonoBehaviour:
   choices: []
   endingLines: []
   defaultSpeakerName: YOU
-  speakerChanges: []
+  speakerChanges:
+  - section: 0
+    lineIndex: 9
+    speakerName: Brother Garrick
+  - section: 0
+    lineIndex: 12
+    speakerName: Brother Garrick
+  - section: 0
+    lineIndex: 13
+    speakerName: Brother Garrick
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
   revealBackgroundAfterLine: 2

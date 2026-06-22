@@ -1480,52 +1480,71 @@ MonoBehaviour:
   - {fileID: 625179528}
   - {fileID: 1914149424}
   nextSceneButton: {fileID: 0}
-  autoNextSceneName: FifthAct
+  autoNextSceneName: 
   introDialogueLines:
-  - '*Chirp, Chirp*'
-  - Your eyes slowly open.
-  - The rays of the early morning sun seep through the window.
-  - It is still before the waking hour.
-  - Curious, you sit up.
-  - The room is terribly cold.
-  - You decide to look outside the window.
-  - Something outside catches your eye.
-  - The bonfire is still burning.
-  - And beside it...
-  - ... someone is sitting alone.
-  - It is Ash...
+  - Back in your cabin, you look out of your window.
+  - "First\u2026 nothing."
+  - "Then\u2026 after a while\u2026 the settlement slowly comes to life."
+  - Doors open, smoke rises from chimneys.
+  - You decide to also leave your cabin.
+  - 'Outside, the smell of freshly baked bread drifts through the air.
+
+'
+  - "\u2026"
+  - "\u201CThere you are.\u201D\r\n"
+  - 'You turn around.
+
+'
+  - Brother Garrick approaches you.
+  - "\u201CThe morning service is about to begin.\u201D\r\n"
+  - ' He gestures you to follow.'
+  - "\u201CCome.\u201D"
+  - Garrick leads you to the largest building in the settlement.
+  - 'Most of the wooden benches with strange carvings are already occupied by other
+
+    people.'
+  - The stained-glass windows cast a beautiful light on the whole room.
+  - A symbol hangs at the end of the hall.
+  - "The same symbol you\u2019ve been seeing all throughout this place."
+  - "\u2026"
+  - You take a seat.
+  - The hall gradually falls silent.
+  - The hooded stranger enters the hall and walks over to stand before the crowd.
+  - ' Every eye in the room is fixed on him.'
+  - "\u2026"
+  - "\u201CMy brothers and sisters.\u201D"
+  - "\u201CAnother day has been gifted to us.\u201D"
+  - "\u201CAnother chance to walk the path laid before us.\u201D"
+  - "\u201C\u2026 Many spend their lives searching for purpose.\u201D"
+  - "\u201CBut purpose is not found, it is embraced.\u201D"
+  - Several members bow their heads.
+  - The man continues speaking.
+  - His voice is calm and comforting.
+  - Yet your thoughts begin to drift.
+  - ' You find yourself staring at the symbol.'
+  - "What does it mean and why is it everywhere\u2026?"
+  - The speech becomes a muffled background voice in your mind.
+  - "\u2026"
+  - "You think about Ash\u2026 the cards\u2026 the strange things you\u2019ve learned\u2026"
+  - '*Applause*'
+  - "You shake your head quickly, realizing you\u2019ve completely lost track of
+    the sermon."
+  - "\u201CMay the Flesh guide us.\u201D"
+  - "\u201CMay the Flesh preserve us.\u201D"
+  - " \u201CMay the Flesh embrace us.\u201D"
+  - "\u201CMay the Flesh embrace us.\u201D"
+  - ' The service is over.
+
+'
+  - And judging by your stomach, not a moment too soon.
+  - The smell of food is already coming in from outside.
+  - As you turn to leave, something catches your eye.
+  - 'Beneath the bench in front of you lies a card.
+
+'
+  - Strange.
+  - You don't remember seeing it when you sat down.
   - ...
-  - At this hour?
-  - "He doesn\u2019t move, yet something tells you he knows you\u2019re observing
-    him."
-  - You quickly put on your garment and quietly leave your room.
-  - '*Creak...*'
-  - The cabin door creaks as you step outside.
-  - Cold air hits your face.
-  - Everyone is still sleeping. Quiet.
-  - Ash remains seated by the fire.
-  - His gaze fixated on the flames dancing in the wind.
-  - You slowly approach him.
-  - "\u201CCouldn\u2019t sleep?\u201D"
-  - He keeps watching the fire.
-  - "\u201CHow did you know?\u201D"
-  - "\u201CI saw you watching me from your window for the last minute.\u201D"
-  - A grin appears on his face.
-  - "\u201CI wasn\u2019t watching.\u201D"
-  - "\u201COf course not.\u201D"
-  - He chuckles.
-  - ...
-  - Ash pokes the burning logs with a stick.
-  - "\u201CMost members sleep well on their first night.\u201D"
-  - "\u201CYou didn\u2019t\u201D"
-  - "\u201CNeither did you\u201D"
-  - "\u201CFair point.\u201D"
-  - ...
-  - You sit down next to Ash.
-  - ...
-  - "For a while, neither of you speaks \u2013 the silence feels comfortable."
-  - ...
-  - "\u201CSo, what do you think of this place?\u201D"
   afterNoteDialogueLines: []
   choices:
   - buttonText: "I think they\u2019re good people."
@@ -1720,29 +1739,44 @@ MonoBehaviour:
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
-    lineIndex: 23
-    speakerName: Ash
+    lineIndex: 7
+    speakerName: Brother Garrick
+  - section: 0
+    lineIndex: 10
+    speakerName: Brother Garrick
+  - section: 0
+    lineIndex: 12
+    speakerName: Brother Garrick
+  - section: 0
+    lineIndex: 24
+    speakerName: ???
+  - section: 0
+    lineIndex: 25
+    speakerName: ???
   - section: 0
     lineIndex: 26
-    speakerName: Ash
+    speakerName: ???
   - section: 0
-    lineIndex: 29
-    speakerName: Ash
+    lineIndex: 27
+    speakerName: ???
   - section: 0
-    lineIndex: 33
-    speakerName: Ash
+    lineIndex: 28
+    speakerName: ???
   - section: 0
-    lineIndex: 35
-    speakerName: Ash
+    lineIndex: 39
+    speakerName: Everyone
+  - section: 0
+    lineIndex: 40
+    speakerName: ???
+  - section: 0
+    lineIndex: 41
+    speakerName: ???
   - section: 0
     lineIndex: 42
-    speakerName: Ash
-  - section: 4
-    lineIndex: 3
-    speakerName: Ash
-  - section: 4
-    lineIndex: 4
-    speakerName: Ash
+    speakerName: ???
+  - section: 0
+    lineIndex: 43
+    speakerName: Everyone
   pauseMarker: '[PAUSE]'
   useBlackOverlay: 0
   revealBackgroundAfterLine: 2
@@ -1750,17 +1784,22 @@ MonoBehaviour:
   fadeDuration: 1
   characterObject: {fileID: 2107327382}
   characterImage: {fileID: 2107327383}
-  characterSprite: {fileID: 8549132265923387089, guid: 24f68009caa5e1146889df013ef3c39f, type: 3}
-  characterAppearsAtIntroLine: 23
-  characterLeavesAtIntroLine: -1
+  characterSprite: {fileID: -1523655402355262621, guid: e7c7798346138ef42ac03e5dab0274af, type: 3}
+  characterAppearsAtIntroLine: 7
+  characterLeavesAtIntroLine: 14
   fadeCharacterIn: 1
   characterFadeDuration: 1
-  fadingCharacters: []
+  fadingCharacters:
+  - characterName: Cult Leader
+    characterObject: {fileID: 2107327382}
+    characterImage: {fileID: 2107327383}
+    characterSprite: {fileID: 7038205560192504604, guid: 2d530da878aa544409d5d61e815d0366, type: 3}
+    appearsAtIntroLine: 24
+    leavesAtIntroLine: 43
+    hasAppeared: 0
+    hasLeft: 0
   backgroundRenderer: {fileID: 1195310581}
-  backgroundChanges:
-  - section: 0
-    lineIndex: 17
-    backgroundSprite: {fileID: 4519201274074345407, guid: 6da929d3396d6264d94bc8de2185f33e, type: 3}
+  backgroundChanges: []
   typingSpeed: 0.03
 --- !u!1 &942175340
 GameObject:
@@ -2211,7 +2250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: addTestCardsOnStart
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
       propertyPath: testCardsToAdd.Array.size
