@@ -1249,7 +1249,7 @@ MonoBehaviour:
   useNoteInteraction: 0
   button: {fileID: 0}
   bigNotePanel: {fileID: 0}
-  useGatheringCharacters: 0
+  useGatheringCharacters: 1
   gatheringCharacters:
   - characterName: Ozric
     characterObject: {fileID: 590094279}
@@ -1480,43 +1480,39 @@ MonoBehaviour:
   nextSceneButton: {fileID: 0}
   autoNextSceneName: FourthAct
   introDialogueLines:
-  - 'The crowd falls silent, as a tall figure approaches the bonfire.
-
-'
+  - The crowd falls silent, as a tall figure approaches the bonfire.
   - "Brother Garrick lowers his head respectfully \u2013 the others follow."
   - "You try to get a better look at the stranger\u2019s face, but their hood hinders
     you from\r\ndoing so."
   - He stands still for a moment. Then he raises his Hand.
   - "\u201CMy brothers and sisters.\u201D"
   - "\u201CTonight we welcome another lost soul.\u201D"
-  - " \u201CA jester who arrived troubled by hardship.\u201D"
+  - "\u201CA jester who arrived troubled by hardship.\u201D"
   - "\u201CJust like many of us once did.\u201D"
   - Several people in the crowd nod.
-  - "\u201CThe world beyond these woods\u2026 its cruel\u2026\u201D"
+  - "\u201CThe world beyond these woods... its cruel...\u201D"
   - "\u201CThey believe in taking everything you\u2019ve got to give - Your money,
-    your time, your\r\ndignity.\u201D\r\n"
+    your time, your\r\ndignity.\u201D"
   - "\u201CBut here \u2013 no soul is discarded or forgotten. No soul shall suffer
     alone.\u201D"
-  - ' *applause*'
+  - '*applause*'
   - The crowd murmurs in agreement.
   - A strange warmth spreads through the gathering.
   - And for the first time since being dismissed from court, you feel like you belong.
   - '"Tonight we share food."'
   - '"We share stories."'
-  - '"And we give thanks for another soul finding their way home."
-
-'
+  - '"And we give thanks for another soul finding their way home."'
   - Several faces turn toward you.
-  - ' Some smiling.'
+  - Some smiling.
   - Some merely watching.
   - '"You are welcome here."'
   - '"May the Flesh embrace you."'
-  - '"May the Flesh embrace you."'
+  - '"May the Flesh embrace you." (Everyone)'
   - 'The stranger turns around and leaves, while all the others start to embrace
     in
 
     conversations.'
-  - " \u201CI should talk to some of the others, before going to bed.\u201D\r\n"
+  - "\u201CI should talk to some of the others, before going to bed.\u201D"
   afterNoteDialogueLines: []
   choices: []
   endingLines:
@@ -1594,7 +1590,7 @@ MonoBehaviour:
   characterFadeDuration: 1
   backgroundRenderer: {fileID: 1195310581}
   backgroundChanges:
-  - section: 3
+  - section: 4
     lineIndex: 5
     backgroundSprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
   typingSpeed: 0.03

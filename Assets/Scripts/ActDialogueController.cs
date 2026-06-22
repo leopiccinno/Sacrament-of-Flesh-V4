@@ -17,6 +17,7 @@ public class ActDialogueController : MonoBehaviour
         ShowingChoices,
         BranchLines,
         EndingLines,
+        CardResultLines,
         Finished
     }
 
@@ -26,7 +27,8 @@ public class ActDialogueController : MonoBehaviour
         AfterNoteDialogue,
         CharacterIntroLines,
         BranchLines,
-        EndingLines
+        EndingLines,
+        CardResultLines
     }
 
     [System.Serializable]
@@ -89,6 +91,29 @@ public class ActDialogueController : MonoBehaviour
         public bool hasTalkedToCharacter = false;
     }
 
+    [System.Serializable]
+    public class EndingCardChoiceSettings
+    {
+        [Header("Special Card")]
+        public CardData specialCard;
+
+        [Header("Route Flags")]
+        public string specialRouteFlag = "SPECIAL_CARD_ROUTE";
+        public string normalRouteFlag = "NORMAL_CARD_ROUTE";
+
+        [Header("Dialogue If Special Card Is Played")]
+        [TextArea(2, 5)]
+        public string[] specialCardDialogueLines;
+
+        public SpeakerChangeInChoice[] specialCardSpeakerChanges;
+
+        [Header("Dialogue If Any Other Card Is Played")]
+        [TextArea(2, 5)]
+        public string[] normalCardDialogueLines;
+
+        public SpeakerChangeInChoice[] normalCardSpeakerChanges;
+    }
+
     [Header("UI Elements")]
     public GameObject textBox;
     public TextMeshProUGUI nameText;
@@ -131,6 +156,11 @@ public class ActDialogueController : MonoBehaviour
 
     [TextArea(2, 5)]
     public string[] endingLines;
+
+    [Header("Ending Card Choice")]
+    public bool useCardChoiceAfterEnding = false;
+    public int maxDisplayedCardChoices = 2;
+    public EndingCardChoiceSettings endingCardChoiceSettings;
 
     [Header("Speaker Name Changes")]
     public string defaultSpeakerName = "YOU";
@@ -185,6 +215,7 @@ public class ActDialogueController : MonoBehaviour
 
     private DialogueChoice currentChoice;
     private GatheringCharacter currentCharacter;
+    private SpeakerChangeInChoice[] currentCardResultSpeakerChanges;
 
     private void Start()
     {
@@ -228,7 +259,8 @@ public class ActDialogueController : MonoBehaviour
                 state == DialogueState.AfterNoteDialogue ||
                 state == DialogueState.CharacterIntroLines ||
                 state == DialogueState.BranchLines ||
-                state == DialogueState.EndingLines)
+                state == DialogueState.EndingLines ||
+                state == DialogueState.CardResultLines)
             {
                 HandleEnter();
             }
@@ -717,6 +749,18 @@ public class ActDialogueController : MonoBehaviour
             }
         }
 
+        if (state == DialogueState.CardResultLines &&
+            currentCardResultSpeakerChanges != null)
+        {
+            foreach (SpeakerChangeInChoice speakerChange in currentCardResultSpeakerChanges)
+            {
+                if (speakerChange.lineIndex == currentLineIndex)
+                {
+                    speakerToUse = speakerChange.speakerName;
+                }
+            }
+        }
+
         nameText.text = speakerToUse;
     }
 
@@ -733,6 +777,9 @@ public class ActDialogueController : MonoBehaviour
 
         if (state == DialogueState.EndingLines)
             return DialogueSection.EndingLines;
+
+        if (state == DialogueState.CardResultLines)
+            return DialogueSection.CardResultLines;
 
         return DialogueSection.IntroDialogue;
     }
@@ -778,6 +825,14 @@ public class ActDialogueController : MonoBehaviour
         }
         else if (state == DialogueState.EndingLines)
         {
+            if (useCardChoiceAfterEnding)
+                ShowEndingCardChoices();
+            else
+                Finish();
+        }
+        else if (state == DialogueState.CardResultLines)
+        {
+            currentCardResultSpeakerChanges = null;
             Finish();
         }
     }
@@ -902,6 +957,133 @@ public class ActDialogueController : MonoBehaviour
         StartLines(currentChoice.resultLines, DialogueState.BranchLines);
     }
 
+    private void ShowEndingCardChoices()
+    {
+        state = DialogueState.ShowingChoices;
+
+        if (textBox != null)
+            textBox.SetActive(false);
+
+        if (choicePanel != null)
+            choicePanel.SetActive(true);
+
+        if (GameState.Instance == null)
+        {
+            Debug.LogWarning("GameState.Instance is null. Cannot show card choices.");
+            Finish();
+            return;
+        }
+
+        if (GameState.Instance.collectedCards == null || GameState.Instance.collectedCards.Count == 0)
+        {
+            Debug.LogWarning("Player has no collected cards.");
+            Finish();
+            return;
+        }
+
+        if (choiceButtons == null || choiceButtons.Length == 0)
+        {
+            Debug.LogWarning("No choice buttons assigned.");
+            Finish();
+            return;
+        }
+
+        int availableCardCount = GameState.Instance.collectedCards.Count;
+        int displayLimit = Mathf.Min(maxDisplayedCardChoices, availableCardCount, choiceButtons.Length);
+
+        for (int i = 0; i < choiceButtons.Length; i++)
+        {
+            if (choiceButtons[i] == null)
+                continue;
+
+            if (i < displayLimit)
+            {
+                CardData card = GameState.Instance.collectedCards[i];
+
+                choiceButtons[i].gameObject.SetActive(true);
+
+                if (choiceButtonLabels != null &&
+                    i < choiceButtonLabels.Length &&
+                    choiceButtonLabels[i] != null)
+                {
+                    choiceButtonLabels[i].text = card.cardName;
+                }
+
+                int cardIndex = i;
+                choiceButtons[i].onClick.RemoveAllListeners();
+                choiceButtons[i].onClick.AddListener(() => OnEndingCardSelected(cardIndex));
+            }
+            else
+            {
+                choiceButtons[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void OnEndingCardSelected(int cardIndex)
+    {
+        if (GameState.Instance == null)
+            return;
+
+        if (GameState.Instance.collectedCards == null)
+            return;
+
+        if (cardIndex < 0 || cardIndex >= GameState.Instance.collectedCards.Count)
+            return;
+
+        HideChoiceButtons();
+
+        CardData selectedCard = GameState.Instance.collectedCards[cardIndex];
+
+        bool isSpecialCard =
+            endingCardChoiceSettings != null &&
+            endingCardChoiceSettings.specialCard != null &&
+            selectedCard == endingCardChoiceSettings.specialCard;
+
+        if (isSpecialCard)
+        {
+            GameState.Instance.SetPlayedCardRoute(
+                selectedCard,
+                endingCardChoiceSettings.specialRouteFlag,
+                true
+            );
+
+            currentCardResultSpeakerChanges = endingCardChoiceSettings.specialCardSpeakerChanges;
+
+            StartLines(
+                endingCardChoiceSettings.specialCardDialogueLines,
+                DialogueState.CardResultLines
+            );
+        }
+        else
+        {
+            string normalFlag = "NORMAL_CARD_ROUTE";
+            string[] normalLines = null;
+
+            if (endingCardChoiceSettings != null)
+            {
+                normalFlag = endingCardChoiceSettings.normalRouteFlag;
+                normalLines = endingCardChoiceSettings.normalCardDialogueLines;
+                currentCardResultSpeakerChanges = endingCardChoiceSettings.normalCardSpeakerChanges;
+            }
+            else
+            {
+                currentCardResultSpeakerChanges = null;
+            }
+
+            GameState.Instance.SetPlayedCardRoute(
+                selectedCard,
+                normalFlag,
+                false
+            );
+
+            StartLines(
+                normalLines,
+                DialogueState.CardResultLines
+            );
+        }
+    }
+
     private void ShowGatheringCharacters()
     {
         state = DialogueState.SelectingCharacter;
@@ -911,6 +1093,12 @@ public class ActDialogueController : MonoBehaviour
 
         if (choicePanel != null)
             choicePanel.SetActive(false);
+
+        if (gatheringCharacters == null || gatheringCharacters.Length == 0)
+        {
+            StartEndingDialogue();
+            return;
+        }
 
         if (AllCharactersTalkedTo())
         {
@@ -1118,7 +1306,12 @@ public class ActDialogueController : MonoBehaviour
         if (endingLines != null && endingLines.Length > 0)
             StartLines(endingLines, DialogueState.EndingLines);
         else
-            Finish();
+        {
+            if (useCardChoiceAfterEnding)
+                ShowEndingCardChoices();
+            else
+                Finish();
+        }
     }
 
     private void HideTalkedCharactersBeforeEnding()

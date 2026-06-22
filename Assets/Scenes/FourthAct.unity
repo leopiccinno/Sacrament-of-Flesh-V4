@@ -1484,59 +1484,47 @@ MonoBehaviour:
   introDialogueLines:
   - '*Chirp, Chirp*'
   - Your eyes slowly open.
-  - 'The rays of the early morning sun seep through the window.
-
-'
-  - 'It is still before the waking hour.
-
-'
+  - The rays of the early morning sun seep through the window.
+  - It is still before the waking hour.
   - Curious, you sit up.
   - The room is terribly cold.
   - You decide to look outside the window.
-  - 'Something outside catches your eye.
-
-'
-  - 'The bonfire is still burning.
-
-'
-  - "And beside it\u2026"
-  - "\u2026 someone is sitting alone."
-  - "It is Ash\u2026"
-  - "\u2026"
+  - Something outside catches your eye.
+  - The bonfire is still burning.
+  - And beside it...
+  - ... someone is sitting alone.
+  - It is Ash...
+  - ...
   - At this hour?
   - "He doesn\u2019t move, yet something tells you he knows you\u2019re observing
     him."
-  - 'You quickly put on your garment and quietly leave your room.
-
-'
-  - "*Creak\u2026*"
+  - You quickly put on your garment and quietly leave your room.
+  - '*Creak...*'
   - The cabin door creaks as you step outside.
   - Cold air hits your face.
   - Everyone is still sleeping. Quiet.
   - Ash remains seated by the fire.
   - His gaze fixated on the flames dancing in the wind.
   - You slowly approach him.
-  - "\u201CCouldn\u2019t sleep?\u201D"
-  - ' He keeps watching the fire.'
+  - "\u201CCouldn\u2019t sleep?\u201D (Ash)"
+  - He keeps watching the fire.
   - "\u201CHow did you know?\u201D"
-  - " \u201CI saw you watching me from your window for the last minute.\u201D"
-  - 'A grin appears on his face.
-
-'
+  - "\u201CI saw you watching me from your window for the last minute.\u201D"
+  - A grin appears on his face.
   - "\u201CI wasn\u2019t watching.\u201D"
   - "\u201COf course not.\u201D"
   - He chuckles.
-  - "\u2026\r\n"
+  - ...
   - Ash pokes the burning logs with a stick.
   - "\u201CMost members sleep well on their first night.\u201D"
   - "\u201CYou didn\u2019t\u201D"
   - "\u201CNeither did you\u201D"
   - "\u201CFair point.\u201D"
-  - "\u2026"
+  - ...
   - You sit down next to Ash.
-  - "\u2026"
+  - ...
   - "For a while, neither of you speaks \u2013 the silence feels comfortable."
-  - "\u2026"
+  - ...
   - "\u201CSo, what do you think of this place?\u201D"
   afterNoteDialogueLines: []
   choices:
@@ -1548,8 +1536,8 @@ MonoBehaviour:
     - He continues poking the logs.
     - "\u201CGood people can belong to bad things.\u201D"
     - "\u201CAnd bad people can belong to good things.\u201D"
-    - "\u201CLife rarely makes the distinction for us.\u201D\r\n"
-    - "\u2026"
+    - "\u201CLife rarely makes the distinction for us.\u201D"
+    - ...
     speakerChanges:
     - lineIndex: 1
       speakerName: Ash
@@ -1569,7 +1557,7 @@ MonoBehaviour:
     - "\u201CThey arrive desperate.\u201D"
     - "\u201CDesperate people tend to believe the first person who offers them\r\nkindness.\u201D"
     - He glances at you for the first time.
-    - "\u201CYou don\u2019t seem desperate enough for such foolish behavior.\u201D\r\n"
+    - "\u201CYou don\u2019t seem desperate enough for such foolish behavior.\u201D"
     - "\u201CThat\u2019s probably good.\u201D"
     speakerChanges:
     - lineIndex: 1
@@ -1583,7 +1571,7 @@ MonoBehaviour:
     - lineIndex: 6
       speakerName: Ash
     - lineIndex: 7
-      speakerName: Ash
+      speakerName: 
   - buttonText: Something feels wrong here.
     resultLines:
     - Ash remains silent.
@@ -1592,9 +1580,7 @@ MonoBehaviour:
     - "\u201CInteresting.\u201D"
     - "\u201CMost newcomers don\u2019t feel this way.\u201D"
     - "\u201CNot this early at least.\u201D"
-    - 'He studies your expression.
-
-'
+    - He studies your expression.
     - "\u201CTrust your intuition \u2013 it is there for a reason.\u201D"
     speakerChanges:
     - lineIndex: 3
@@ -1605,7 +1591,7 @@ MonoBehaviour:
       speakerName: Ash
     - lineIndex: 7
       speakerName: Ash
-  - buttonText: 'Why are you asking? '
+  - buttonText: Why are you asking?
     resultLines:
     - "A faint smile appears on Ash\u2019s face."
     - "\u201CThere it is.\u201D"
@@ -1613,23 +1599,21 @@ MonoBehaviour:
     - "\u201CThe question behind the question.\u201D"
     - "\u201CWhat do you mean by that?\u201D"
     - Ash shrugs.
-    - "\u201CNothing.\u201D\r\n"
+    - "\u201CNothing.\u201D"
     - "\u201COr perhaps everything.\u201D"
-    - "\u2026"
+    - ...
     - "\u201CLet\u2019s just say I enjoy guessing what people\u2019s true intentions
       are.\u201D"
     speakerChanges:
     - lineIndex: 1
       speakerName: Ash
-    - lineIndex: 2
-      speakerName: Ash
     - lineIndex: 3
-      speakerName: Ash
-    - lineIndex: 4
       speakerName: Ash
     - lineIndex: 6
       speakerName: Ash
     - lineIndex: 7
+      speakerName: Ash
+    - lineIndex: 8
       speakerName: Ash
     - lineIndex: 9
       speakerName: Ash
@@ -1643,6 +1627,96 @@ MonoBehaviour:
   - "\u201CDid Brother Garrick tell you what this place actually is?\u201D"
   - "\u2026"
   - You hesitate to answer. Suddenly you remember the cards.
+  useCardChoiceAfterEnding: 1
+  maxDisplayedCardChoices: 2
+  endingCardChoiceSettings:
+    specialCard: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+    specialRouteFlag: Ash Burn the Cult
+    normalRouteFlag: Ash Ending false
+    specialCardDialogueLines:
+    - "Ash let\u2019s out a quiet chuckle."
+    - "\u201COf course he didn\u2019t\u201D"
+    - He tosses another piece of wood into the fire.
+    - "\u201CLet me put it this way...\u201D"
+    - "\u201CPeople come here looking for salvation.\u201D"
+    - "\u201CA second chance.\u201D"
+    - "\u201CA place to belong.\u201D"
+    - ...
+    - "\u201CAnd most of them find exactly that. At least for a while.\u201D"
+    - "\u201CThe Leader has a talent for telling people what they need to hear.\u201D"
+    - "\u201CThey stop asking questions.\u201D"
+    - "\u201CPerhaps that\u2019s why Garrick never talks about the truth behind this
+      place.\u201D"
+    - "\u201CIf he did, some people might want to leave before they\u2019ve become
+      comfortable.\u201D"
+    - ...
+    - "\u201CWell has anyone ever actually left this place then?\u201D"
+    - Ash freezes.
+    - ...
+    - "\u201CWhy would you ask that?\u201D"
+    - "You aren\u2019t sure."
+    - The thought simply appeared.
+    - 'Ash studies you for a moment before taking a quick look towards the sleeping
+
+      cabins.'
+    - "\u201CNot openly... well not that I\u2019ve seen...\u201D"
+    - The fire crackles.
+    - "\u201CYet somehow we never seem to run out of empty rooms.\u201D"
+    - "\u201CStrange, isn\u2019t it.\u201D"
+    - You stand up.
+    - Quietly you make your way back to your cabin.
+    specialCardSpeakerChanges:
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
+    - lineIndex: 5
+      speakerName: Ash
+    - lineIndex: 6
+      speakerName: Ash
+    - lineIndex: 7
+      speakerName: Ash
+    - lineIndex: 8
+      speakerName: Ash
+    - lineIndex: 9
+      speakerName: Ash
+    - lineIndex: 10
+      speakerName: Ash
+    - lineIndex: 11
+      speakerName: Ash
+    - lineIndex: 12
+      speakerName: Ash
+    - lineIndex: 13
+      speakerName: Ash
+    - lineIndex: 17
+      speakerName: Ash
+    - lineIndex: 21
+      speakerName: Ash
+    - lineIndex: 23
+      speakerName: Ash
+    - lineIndex: 24
+      speakerName: Ash
+    normalCardDialogueLines:
+    - "\u201CWhatever you were trying to do... it won\u2019t work.\u201D"
+    - "\u201CI thought I could trust you, but seems you are just like the others.\u201D"
+    - "\u201CI think it\u2019s time for you to leave me alone now.\u201D"
+    - ...
+    - "\u201CI said leave.\u201D"
+    - You stand up.
+    - Quietly you make your way back to your cabin.
+    normalCardSpeakerChanges:
+    - lineIndex: 0
+      speakerName: Ash
+    - lineIndex: 1
+      speakerName: Ash
+    - lineIndex: 2
+      speakerName: Ash
+    - lineIndex: 3
+      speakerName: Ash
+    - lineIndex: 4
+      speakerName: Ash
   defaultSpeakerName: YOU
   speakerChanges:
   - section: 0
@@ -2082,97 +2156,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1016067864
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1016067866}
-  - component: {fileID: 1016067865}
-  m_Layer: 0
-  m_Name: Bonfire_Night_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1016067865
-SpriteRenderer:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016067864}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_Sprite: {fileID: 5764413889798776969, guid: 626a80b233220f44a906f137ebf34443, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_SpriteSortPoint: 0
---- !u!4 &1016067866
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1016067864}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 963.0547, y: 540.4261, z: 0}
-  m_LocalScale: {x: 99.1411, y: 98.706604, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1040523880
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2225,6 +2208,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameState
       objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: addTestCardsOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: testCardsToAdd.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: 'testCardsToAdd.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 176908487252b3f47a5936f2e98a5858, type: 2}
+    - target: {fileID: 8313374251132418278, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+      propertyPath: 'testCardsToAdd.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: f5f8962e8d69a22429c2a65ccd060780, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4243,4 +4242,3 @@ SceneRoots:
   - {fileID: 2022042320}
   - {fileID: 4928992701158937879}
   - {fileID: 1040523880}
-  - {fileID: 1016067866}
