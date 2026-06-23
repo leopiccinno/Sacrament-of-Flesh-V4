@@ -514,6 +514,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ee6c5adc00f3694fbc7b219cb9e2d72, type: 3}
+--- !u!114 &1739635289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 162843325775963225, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+  m_PrefabInstance: {fileID: 795084272578566122}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f76a038390ba3743af2ce47cb84e707, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IntroDialogueController
 --- !u!114 &2090023779 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2270763840837954122, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
@@ -534,6 +545,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1373900820049315415, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: cardIconHUD
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373900820049315415, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: bigCardImage
       value: 
       objectReference: {fileID: 150232165}
@@ -545,6 +560,10 @@ PrefabInstance:
       propertyPath: cardIconHUDImage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1373900820049315415, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
+      propertyPath: introDialogueManager
+      value: 
+      objectReference: {fileID: 1739635289}
     - target: {fileID: 1373900820049315415, guid: a7705f17d52f94646a4b0f57ae63f19b, type: 3}
       propertyPath: possibleCards.Array.size
       value: 9

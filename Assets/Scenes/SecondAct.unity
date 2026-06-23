@@ -164,6 +164,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 846230694}
     - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
+      propertyPath: introDialogueManager
+      value: 
+      objectReference: {fileID: 846230694}
+    - target: {fileID: 7767433196385677738, guid: dd90f3fe8cbc3894fb30ef83d49c75ba, type: 3}
       propertyPath: possibleCards.Array.size
       value: 9
       objectReference: {fileID: 0}
@@ -1042,6 +1046,7 @@ MonoBehaviour:
   useGatheringCharacters: 0
   gatheringCharacters: []
   hideTalkedCharacters: 0
+  endGatheringAfterFirstCharacter: 0
   choicePanel: {fileID: 1604306687}
   choiceButtons: []
   choiceButtonLabels: []
