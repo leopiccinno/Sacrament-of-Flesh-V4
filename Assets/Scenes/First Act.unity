@@ -520,7 +520,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4279835097
-  m_fontColor: {r: 0.6666667, g: 0.0627451, b: 0.05490196, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1157,6 +1157,7 @@ MonoBehaviour:
   useGatheringCharacters: 0
   gatheringCharacters: []
   hideTalkedCharacters: 1
+  endGatheringAfterFirstCharacter: 0
   choicePanel: {fileID: 1604306687}
   choiceButtons:
   - {fileID: 1426696602}
@@ -1322,6 +1323,7 @@ MonoBehaviour:
   characterLeavesAtIntroLine: -1
   fadeCharacterIn: 1
   characterFadeDuration: 1
+  fadingCharacters: []
   backgroundRenderer: {fileID: 0}
   backgroundChanges: []
   typingSpeed: 0.03
@@ -2295,6 +2297,18 @@ PrefabInstance:
       value: 'Follow Him
 
 '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946699339350459157, guid: 731684afd6d8913489f07d461455a505, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946699339350459157, guid: 731684afd6d8913489f07d461455a505, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946699339350459157, guid: 731684afd6d8913489f07d461455a505, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7169302741998620940, guid: 731684afd6d8913489f07d461455a505, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

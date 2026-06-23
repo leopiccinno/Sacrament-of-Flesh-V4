@@ -1860,9 +1860,12 @@ MonoBehaviour:
     hasLeft: 0
   backgroundRenderer: {fileID: 1195310581}
   backgroundChanges:
+  - section: 0
+    lineIndex: 0
+    backgroundSprite: {fileID: 4519201274074345407, guid: 6da929d3396d6264d94bc8de2185f33e, type: 3}
   - section: 4
     lineIndex: 5
-    backgroundSprite: {fileID: 348505817706626259, guid: 28ee6c8a7fdee7644a457589344babb6, type: 3}
+    backgroundSprite: {fileID: 6355524124129821454, guid: 7773e6f4fcb9b704eba8d367b8ed6bac, type: 3}
   typingSpeed: 0.03
 --- !u!114 &846230695
 MonoBehaviour:
